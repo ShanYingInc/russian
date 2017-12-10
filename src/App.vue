@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Footer from "../src/components/Footer"
-import Header from "../src/components/Header"
-import Carousel from "../src/components/Carousel"
-import Card from "../src/components/Card"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import Carousel from "@/components/Carousel"
+import Card from "@/components/Card"
 
 export default {
   components:{
