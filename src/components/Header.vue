@@ -16,7 +16,7 @@
             <div class="nav">
                 <el-menu theme="line" :default-active="activeIndex" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
                 <el-menu-item index="1">最新消息</el-menu-item>
-                <el-menu-item index="2"><router-link to = "/test">本系介紹</router-link></el-menu-item>
+                <el-menu-item index="2"><router-link to = "/Introduction">本系介紹</router-link></el-menu-item>
                 <el-submenu index="3">
                     <template slot="title">本系成員</template>
                     <el-menu-item index="3-1">師資</el-menu-item>
@@ -103,8 +103,8 @@ export default {
         font-family:"Microsoft YaHei";
         position: relative;
         top:7vh;
-        left: -3.5vh;
-        width: 220vh;
+        left: -3vh;
+        width: 201vh;
     }
 
     .el-menu-item, .el-submenu__title{

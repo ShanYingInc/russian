@@ -51,10 +51,12 @@ export default {
         text-align:left;
         height: 20vh;
         width: 100%;
+        left:0vh;
+
         box-sizing: border-box;
         position: absolute;
         bottom: 100;
-        margin-top: 20vh;
-        left:0vh;
+        margin-top: 0vh;
+        
         }
 </style>

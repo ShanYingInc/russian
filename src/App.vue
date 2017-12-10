@@ -1,11 +1,13 @@
 <template>
   <el-container>
     <div id="app">
+      <Header />
       <router-view/>
-      <Header></Header>
-      <Carousel></Carousel>
-      <Card></Card>
-      <Footer></Footer>
+      <router-view name = "up"></router-view>
+      <router-view name = "down"></router-view>
+      <router-view name = "left" ></router-view>
+      <router-view name = "right"></router-view>
+      <Footer />
     </div>
   </el-container>
 </template>
