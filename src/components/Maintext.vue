@@ -38,10 +38,10 @@
     border: 100px solid transparent;
     transition:all 0.3s ease 0s;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     top:0vh;
-    width: 135vh;
-    left:15vh;
+    width: 100vh;
+    left:0vh;
 }
 .serviceBox:after,
 .serviceBox:before{
