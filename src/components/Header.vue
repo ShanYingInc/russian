@@ -19,7 +19,7 @@
                 <el-menu-item index="2"><router-link to = "/Introduction">本系介紹</router-link></el-menu-item>
                 <el-submenu index="3">
                     <template slot="title">本系成員</template>
-                    <el-menu-item index="3-1">師資</el-menu-item>
+                    <el-menu-item index="3-1"><router-link to = "/Member">師資</router-link></el-menu-item>
                     <el-menu-item index="3-2">歷屆系主任</el-menu-item>
                     <el-menu-item index="3-3">行政人員</el-menu-item>
                 </el-submenu>

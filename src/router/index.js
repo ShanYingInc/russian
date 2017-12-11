@@ -7,6 +7,7 @@ import Carousel from "@/components/Carousel"
 import Card from "@/components/Card"
 import Slider from "@/components/Slider"
 import Maintext from "@/components/Maintext"
+import Member from "@/components/Member"
 
 Vue.use(Router)
 
@@ -27,6 +28,12 @@ export default new Router({
         left:Slider,
         right:Maintext
       }
-    }
+    },
+    {
+      path: '/Member',
+      components: {
+        up:Member,
+      }
+    },
   ]
 })

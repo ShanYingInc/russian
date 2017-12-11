@@ -28,8 +28,9 @@ export default {
 
 <style>
 .slider{
-    top: 0vh;
+    top: 23vh;
     width: 50vh;
-    left: vh;
+    left:0.5vh;
+    position:absolute;
 }
 </style>

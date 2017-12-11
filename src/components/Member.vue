@@ -1,0 +1,163 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
+                    <div class="box-content">
+                        <div class="box-inner-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">Web Developer</span>
+                            <ul class="icon">
+                                <li><a class="fa fa-search" href="#"></a></li>
+                                <li><a class="fa fa-link" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
+                    <div class="box-content">
+                        <div class="box-inner-content">
+                            <h3 class="title">Kristiana</h3>
+                            <span class="post">Web Designer</span>
+                            <ul class="icon">
+                                <li><a class="fa fa-search" href="#"></a></li>
+                                <li><a class="fa fa-link" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style>
+.box{
+    overflow: hidden;
+    position: relative;
+}
+.box:before{
+    content: "";
+    display: block;
+    border: 30px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    opacity: 1;
+    z-index: 2;
+    transition: all 1s ease 0s;
+}
+.box:hover:before{ border: 1px solid rgba(255, 255, 255, 0.18); }
+.box:after{
+    content: "";
+    display: block;
+    border: 10px solid #fff;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    bottom: 35px;
+    right: 35px;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.box:hover:after{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: all 1s ease 0s;
+}
+.box:hover img{ transform: scale(1); }
+.box .box-content{
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    bottom: 45px;
+    right: 45px;
+    opacity: 1;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+}
+.box:hover .box-content{
+    top: 6px;
+    left: 6px;
+    bottom: 6px;
+    right: 6px;
+}
+.box .box-inner-content{
+    width: 100%;
+    padding-bottom: 20px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+.box:hover .box-inner-content{ opacity: 1; }
+.box .title{
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+.box .post{
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.box .icon li{ display: inline-block; }
+.box .icon li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #000;
+    transition: all 0.3s ease 0s;
+}
+.box .icon li a:hover{
+    background: #000;
+    color: #fff;
+}
+@media only screen and (max-width:990px){
+    .box{ margin-bottom: 30px; }
+}
+
+.container{
+    width:400px;
+    height:400px;
+
+    margin: 0px auto;
+    text-align: center;
+}
+
+.container div{
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
