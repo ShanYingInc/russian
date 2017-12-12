@@ -49,14 +49,19 @@ export default {
         font-family:"Microsoft YaHei";
         background-color: #34495E;
         text-align:left;
-        height: 20vh;
-        width: 100%;
+        /*height: 20vh;
+        
         left:0vh;
 
         box-sizing: border-box;
-        position: absolute;
-        bottom: 100;
-        margin-top: 0vh;
         
+        bottom: 100;
+        margin-top: 0vh;*/
+        position: relative;
+        width: 100%;
+        right: 0vh;
+        bottom: 0;
+        left: -4vh;
+        padding: 1rem;
         }
 </style>

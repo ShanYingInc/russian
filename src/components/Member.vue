@@ -1,150 +1,92 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <el-col :md="4" :sm="6">
-                <div class="box">
-                    <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
-                    <div class="box-content">
-                        <div class="box-inner-content">
-                            <h3 class="title">Williamson</h3>
-                            <span class="post">Web Developer</span>
-                            <ul class="icon">
-                                <li><a class="fa fa-search" href="#"></a></li>
-                                <li><a class="fa fa-link" href="#"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </el-col>
-    
-            <el-col :md="4" :sm="6">
-                <div class="box">
-                    <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
-                    <div class="box-content">
-                        <div class="box-inner-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
-                            <ul class="icon">
-                                <li><a class="fa fa-search" href="#"></a></li>
-                                <li><a class="fa fa-link" href="#"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                </el-col>
+<div class="container">
+    <div class="row">
+        <el-col :md="6" :sm="8">
+            <div class="box">
+                <img src="https://vuejs.org/images/logo.png" alt="">
+                <a href="#" class="box-content">
+                    <h4 class="title">Web designer</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.</p>
+                </a>
             </div>
-        </div>
+        </el-col>
+    </div>
+</div>
 </template>
+
 
 <style>
 .box{
-    overflow: hidden;
-    position: relative;
+    border:4px solid #fff;
+    box-shadow:0 0 4px grey;
+    position:relative;
 }
 .box:before{
     content: "";
-    display: block;
-    border: 30px solid rgba(255, 255, 255, 0.3);
     position: absolute;
-    top: 5px;
-    left: 5px;
-    bottom: 5px;
-    right: 5px;
-    opacity: 1;
-    z-index: 2;
-    transition: all 1s ease 0s;
-}
-.box:hover:before{ border: 1px solid rgba(255, 255, 255, 0.18); }
-.box:after{
-    content: "";
-    display: block;
-    border: 10px solid #fff;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    bottom: 35px;
-    right: 35px;
-    opacity: 1;
-    z-index: 1;
-    transition: all 0.3s ease 0s;
-}
-.box:hover:after{
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(45deg, #141414 0%, #691100 40%, #1b1b1b 100%);
+    opacity: 0.3;
+    transition:all 0.5s ease;
 }
 .box img{
-    width: 100%;
+    width:100%;
     height: auto;
-    transform: scale(1.1);
-    transition: all 1s ease 0s;
 }
-.box:hover img{ transform: scale(1); }
 .box .box-content{
-    padding: 20px;
-    text-align: center;
-    color: #fff;
+    background: rgba(0,0,0,0);
     position: absolute;
-    top: 45px;
-    left: 45px;
-    bottom: 45px;
-    right: 45px;
-    opacity: 1;
-    z-index: 2;
-    transition: all 0.3s ease 0s;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 38px;
+    transition: all 0.35s ease 0s;
 }
 .box:hover .box-content{
-    top: 6px;
-    left: 6px;
-    bottom: 6px;
-    right: 6px;
+    background: rgba(0,0,0,0.5);
 }
-.box .box-inner-content{
-    width: 100%;
-    padding-bottom: 20px;
-    opacity: 0;
+.box .box-content:after{
+    content: "";
+    border: 7px solid #fff;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.3s ease 0s;
+    top:21px;
+    left: 20px;
+    right: 30px;
+    height: 35%;
+    transition: all 0.35s ease 0s;
 }
-.box:hover .box-inner-content{ opacity: 1; }
+.box:hover .box-content:after{
+    top:60%;
+}
 .box .title{
-    font-size: 26px;
-    font-weight: bold;
-    margin: 0;
+    color:#fff;
+    font-size:20px;
+    font-weight: bolder;
+    text-transform:uppercase;
 }
-.box .post{
-    display: block;
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 10px;
+.box .description{
+    position: relative;
+    top:5%;
+    color:#fff;
+    opacity:0;
+    transition: all 0.35s ease 0s;
 }
-.box .icon{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.box:hover .description{
+    top:55%;
+    opacity:1;
 }
-.box .icon li{ display: inline-block; }
-.box .icon li a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    margin-right: 10px;
-    font-size: 18px;
-    color: #000;
-    transition: all 0.3s ease 0s;
+@media only screen and (max-width: 990px) {
+    .box{
+        margin-bottom:15px;
+    }
 }
-.box .icon li a:hover{
-    background: #000;
-    color: #fff;
-}
-@media only screen and (max-width:990px){
-    .box{ margin-bottom: 30px; }
+@media only screen and (max-width: 479px) {
+    .box .title{ font-size: 15px;}
+    .box .description{ font-size: 13px; }
+    .box:hover .description{ top:48%; }
 }
 </style>
