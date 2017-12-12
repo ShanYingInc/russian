@@ -128,7 +128,7 @@
     list-style: none;
 }
 .box .icon li{ display: inline-block; }
-.box .icon li a{
+.box .icon li a {
     display: block;
     width: 40px;
     height: 40px;
