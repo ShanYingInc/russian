@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-6">
+            <el-col :md="4" :sm="6">
                 <div class="box">
                     <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
                     <div class="box-content">
@@ -15,9 +15,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </el-col>
     
-            <div class="col-md-4 col-sm-6">
+            <el-col :md="4" :sm="6">
                 <div class="box">
                     <img src="https://pbs.twimg.com/profile_images/809002255773028352/9RBxuQQO.jpg" alt="">
                     <div class="box-content">
@@ -31,9 +31,9 @@
                         </div>
                     </div>
                 </div>
+                </el-col>
             </div>
         </div>
-    </div>
 </template>
 
 <style>
@@ -146,18 +146,5 @@
 }
 @media only screen and (max-width:990px){
     .box{ margin-bottom: 30px; }
-}
-
-.container{
-    width:400px;
-    height:400px;
-
-    margin: 0px auto;
-    text-align: center;
-}
-
-.container div{
-    display: inline-block;
-    vertical-align: top;
 }
 </style>
