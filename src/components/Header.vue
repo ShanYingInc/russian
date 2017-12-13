@@ -20,8 +20,8 @@
                 <el-submenu index="3">
                     <template slot="title">本系成員</template>
                     <el-menu-item index="3-1"><router-link to = "/Member">師資</router-link></el-menu-item>
-                    <el-menu-item index="3-2">歷屆系主任</el-menu-item>
-                    <el-menu-item index="3-3">行政人員</el-menu-item>
+                    <el-menu-item index="3-2"><router-link to = "/Director">歷屆系主任</router-link></el-menu-item>
+                    <el-menu-item index="3-3"><router-link to = "/Staff">行政人員</router-link></el-menu-item>
                 </el-submenu>
                     <el-submenu index="4">
                     <template slot="title">課程資訊</template>

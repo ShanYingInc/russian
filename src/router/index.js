@@ -8,6 +8,9 @@ import Card from "@/components/Card"
 import Slider from "@/components/Slider"
 import Maintext from "@/components/Maintext"
 import Member from "@/components/Member"
+import Member_add from "@/components/Member_add"
+import Director from "@/components/Director"
+import Staff from "@/components/Staff"
 
 Vue.use(Router)
 
@@ -33,6 +36,19 @@ export default new Router({
       path: '/Member',
       components: {
         up:Member,
+        down:Member_add
+      }
+    },
+    {
+      path: '/Director',
+      components: {
+        up:Director,
+      }
+    },
+    {
+      path: '/Staff',
+      components: {
+        up:Staff,
       }
     },
   ]

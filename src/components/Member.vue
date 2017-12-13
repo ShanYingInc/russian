@@ -1,92 +1,99 @@
 <template>
-<div class="container">
-    <div class="row">
-        <el-col :md="6" :sm="8">
-            <div class="box">
-                <img src="https://vuejs.org/images/logo.png" alt="">
-                <a href="#" class="box-content">
-                    <h4 class="title">Web designer</h4>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.</p>
-                </a>
-            </div>
-        </el-col>
+  <div>
+  <div class="location-contain">
+    <div class="locations" v-for="location in locations" :key="location">
+      <place :img="location.img" :desc="location.desc">
+        <h2>{{ location.name }}</h2>
+      </place>
     </div>
-</div>
+  </div>
+  </div>
 </template>
 
+<script>
+import Place from '@/components/Place'
+
+export default {
+  components: {
+    Place
+  },
+  data () {
+    return {
+      locations: [
+        {
+          name: 'moscow',
+          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/moscow.svg',
+          desc: `Moscow is the capital and most populous city of Russia, with 13.2 million residents within the city limits and 17.8 million within the urban area. Moscow has the status of a Russian federal city.`
+        },
+        {
+          name: 'paris',
+          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/paris1.svg',
+          desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`
+        },
+        {
+          name: 'rome',
+          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/rome.svg',
+          desc: `Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.`
+        },
+        {
+          name: 'paris',
+          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/paris2.svg',
+          desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style>
-.box{
-    border:4px solid #fff;
-    box-shadow:0 0 4px grey;
-    position:relative;
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'NTR', sans-serif;
 }
-.box:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0) linear-gradient(45deg, #141414 0%, #691100 40%, #1b1b1b 100%);
-    opacity: 0.3;
-    transition:all 0.5s ease;
+
+h1 {
+  text-align: center;
 }
-.box img{
-    width:100%;
-    height: auto;
+
+.location-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.box .box-content{
-    background: rgba(0,0,0,0);
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 38px;
-    transition: all 0.35s ease 0s;
+
+.place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px 20px;
+  margin: 10px;
 }
-.box:hover .box-content{
-    background: rgba(0,0,0,0.5);
+
+.place h2 {
+  margin: 0;
+  text-align: center;
 }
-.box .box-content:after{
-    content: "";
-    border: 7px solid #fff;
-    position: absolute;
-    top:21px;
-    left: 20px;
-    right: 30px;
-    height: 35%;
-    transition: all 0.35s ease 0s;
+
+.place img {
+  margin: 10px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
-.box:hover .box-content:after{
-    top:60%;
-}
-.box .title{
-    color:#fff;
-    font-size:20px;
-    font-weight: bolder;
-    text-transform:uppercase;
-}
-.box .description{
-    position: relative;
-    top:5%;
-    color:#fff;
-    opacity:0;
-    transition: all 0.35s ease 0s;
-}
-.box:hover .description{
-    top:55%;
-    opacity:1;
-}
-@media only screen and (max-width: 990px) {
-    .box{
-        margin-bottom:15px;
-    }
-}
-@media only screen and (max-width: 479px) {
-    .box .title{ font-size: 15px;}
-    .box .description{ font-size: 13px; }
-    .box:hover .description{ top:48%; }
-}
+
 </style>
