@@ -1,13 +1,11 @@
 <template>
-  <div>
-  <div class="location-contain">
-    <div class="locations" v-for="location in locations" :key="location">
-      <place :img="location.img" :desc="location.desc">
-        <h2>{{ location.name }}</h2>
-      </place>
-    </div>
-  </div>
-  </div>
+        <div class="location-contain">
+            <div class="locations" v-for="location in locations" :key="location">
+            <place :img="location.img" :desc="location.desc">
+                <h2>{{ location.name }}</h2>
+            </place>
+            </div>
+        </div>
 </template>
 
 <script>
@@ -50,7 +48,7 @@ export default {
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'NTR', sans-serif;
+  font-family: 'Microsoft YaHei';
 }
 
 h1 {
@@ -64,9 +62,12 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  top:10vh;
+
 }
 
-.place {
+.place {    
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

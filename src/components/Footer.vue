@@ -50,11 +50,8 @@ export default {
         background-color: #34495E;
         text-align:left;
         /*height: 20vh;
-        
         left:0vh;
-
         box-sizing: border-box;
-        
         bottom: 100;
         margin-top: 0vh;*/
         position: relative;
