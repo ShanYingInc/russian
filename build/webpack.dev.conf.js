@@ -25,7 +25,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     hot: true,
     compress: true,
     //host: HOST || config.dev.host,
-    host: '0.0.0.0',
+    host: '192.168.88.204',
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
