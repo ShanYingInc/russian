@@ -4,8 +4,10 @@
       <router-view/>
       <router-view name = "up"></router-view>
       <router-view name = "down"></router-view>
-      <router-view name = "left" ></router-view>
-      <router-view name = "right"></router-view>
+      <div id="middle">
+        <router-view name = "left"></router-view>
+        <router-view name = "right"></router-view>
+      </div>
       <Footer />
     </div>
 </template>
@@ -30,5 +32,12 @@ body {
 #app {
   display: flex;
   flex-direction: column;
+}
+
+#middle {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 </style>

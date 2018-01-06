@@ -1,5 +1,5 @@
 <template>
-    <el-container id="header">
+    <div id="header">
         <div class="header">
             <div class = "logo">
                 <img src = "http://www.tku.edu.tw/images/logo_x2.jpg">
@@ -65,7 +65,7 @@
                 </el-menu>
             </div>
 
-    </el-container>
+    </div>
 </template>
 <script>
 export default {};
@@ -73,6 +73,8 @@ export default {};
 <style>
 #header {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
