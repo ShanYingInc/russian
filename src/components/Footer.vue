@@ -1,57 +1,52 @@
 <template>
-    <el-container >
-        <el-footer>
-            <div class = "footer">
-            <ul>
-                <p style="font-size: 20px;">淡江大學俄國語文學系</p>
-                <li>
-                    <i class="el-icon-information">
-                        <a>25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室</a>
-                    </i>
-                </li><br>
-                <li>
-                    <i class="el-icon-circle-check">
-                        <a> TEL:(02)26215656轉2711  FAX:(02)26209907</a>
-                    </i>
-                </li><br>
-                <li>
-                    <i class="el-icon-message">
-                        <a> tfux@www2.tku.edu.tw</a>
-                    </i>
-                </li>
-                <li>
-                    <p>Copyright©2017 版權為淡江大學俄文系所有</p>
-                </li>
-            </ul>
-            </div>
-        </el-footer>
-    </el-container>
+  <div class = "footer">
+    <div class="left">
+      <ul>
+        <p style="font-size: 20px;">淡江大學俄國語文學系</p>
+        <li>
+          <p>25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室</p>
+        </li>
+        <li>
+          <p> TEL:(02)26215656轉2711  FAX:(02)26209907</p>
+        </li>
+        <li>
+          <p> tfux@www2.tku.edu.tw</p>
+        </li>
+        <li>
+          <p>Copyright©2017 版權為淡江大學俄文系所有</p>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <i class="fab fa-facebook-square"></i>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style>
-.footer a {
-  font-family: "Microsoft YaHei";
-  font-size: 12px;
-  color: #ffffff;
-}
-.footer p {
-  font-family: "Microsoft YaHei";
-  font-size: 13px;
-  color: #ffffff;
-}
-.footer {
+<style lang="sass">
+.footer
   font-family: "Microsoft YaHei";
   background-color: #34495e;
-  text-align: left;
-
-  padding: 1rem;
-}
-.el-footer {
-  width: 100vw;
-  padding: 0;
-}
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  .left
+    text-align: left;
+    a
+      font-family: "Microsoft YaHei";
+      font-size: 12px;
+      color: #ffffff;
+    p
+      font-family: "Microsoft YaHei";
+      font-size: 13px;
+      color: #ffffff;
+  .right
+    padding: 10px
+    i
+      font-size: 12em
+      color: white
 </style>

@@ -59,9 +59,9 @@
                     <el-menu-item index="9-2">101學年度</el-menu-item>
                     <el-menu-item index="9-3">102學年度</el-menu-item>
                 </el-submenu>
-                <el-menu-item index="9"><a href="https://www.ele.me" target="_blank">中文</a></el-menu-item>
+                <!-- <el-menu-item index="9"><a href="https://www.ele.me" target="_blank">中文</a></el-menu-item>
                 <el-menu-item index="10"><a href="https://www.ele.me" target="_blank">English</a></el-menu-item>
-                <el-menu-item index="11"><a href="https://www.ele.me" target="_blank">Русский</a></el-menu-item>
+                <el-menu-item index="11"><a href="https://www.ele.me" target="_blank">Русский</a></el-menu-item> -->
                 </el-menu>
             </div>
 
