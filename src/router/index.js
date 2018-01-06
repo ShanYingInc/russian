@@ -32,8 +32,7 @@ export default new Router({
     {
       path: '/Member',
       components: {
-        up:Member,
-        down:Member_add
+        up:Member
       }
     },
     {

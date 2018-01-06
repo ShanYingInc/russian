@@ -46,13 +46,35 @@ export default {
 }
 </script>
 
-<style>
-body {
-  width: 100vw;
-  height: 100vh;
-  font-family: 'NTR', sans-serif;
-  background: #eee;
-}
+<style lang="sass">
+
+h1
+  text-align: center;
+
+.location-contain
+  display: flex
+  justify-content: center
+  position: relative
+  top: 10vh
+
+.place
+  display: flex
+  flex-direction: column
+  width: 280px;
+  height: 320px;
+  justify-content: center;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px 20px;
+  margin: 10px;
+  h2
+    margin: 0;
+    text-align: center;
+  img
+    align-self: center;
+
+
+</style>
 
 h1 {
   text-align: center;

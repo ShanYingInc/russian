@@ -1,20 +1,21 @@
 <template>
-        <div class="location-contain">
-            <div class="locations" v-for="location in locations" :key="location">
-            <place :img="location.img" :desc="location.desc">
-                <h2>{{ location.name }}</h2>
-            </place>
-            </div>
+  <div class="location-contain">
+    <div class="locations" v-for="(location, index) in locations" :key="index">
+      <div class="place">
+        <div class="pic">
+          <img :src="location.img" height="150"/>
         </div>
+        <div class="text">
+          <h2>{{ location.name }}</h2>
+          <p>{{ location.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Place from '@/components/Place'
-
 export default {
-  components: {
-    Place
-  },
   data () {
     return {
       locations: [
@@ -44,57 +45,25 @@ export default {
 }
 </script>
 
-<style>
-body {
-  width: 100vw;
-  height: 100vh;
-  font-family: 'Microsoft YaHei';
-}
+<style lang="sass">
+.location-contain
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  margin: 10px
+  .locations
+    height: 100%
+    .place
+      display: flex
+      flex-direction: column
+      width: 250px
+      height: 100%
+      background: white
+      border: 1px solid #ddd
+      padding: 20px 20px
+      .pic
+        align-self: center
+      .text
 
-h1 {
-  text-align: center;
-}
-
-.location-contain {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  top:10vh;
-
-}
-
-.place {    
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 280px;
-  height: 320px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: white;
-  border: 1px solid #ddd;
-  padding: 20px 20px;
-  margin: 10px;
-}
-
-.place h2 {
-  margin: 0;
-  text-align: center;
-}
-
-.place img {
-  margin: 10px;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
 
 </style>

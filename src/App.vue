@@ -25,8 +25,12 @@ export default {
 </script>
 
 <style>
+
 body {
-  margin: 0
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Microsoft YaHei';
+  margin: 0;
 }
 
 #app {
