@@ -29,36 +29,29 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-    .footer a{
-        font-family:"Microsoft YaHei";
-        font-size: 12px;
-        color: 	#FFFFFF;
-    }
-    .footer p{
-        font-family:"Microsoft YaHei";
-        font-size: 13px;
-        color: 	#FFFFFF;
-    }
-    .footer{
-        font-family:"Microsoft YaHei";
-        background-color: #34495E;
-        text-align:left;
-        /*height: 20vh;
-        left:0vh;
-        box-sizing: border-box;
-        bottom: 100;
-        margin-top: 0vh;*/
-        position: relative;
-        width: 100%;
-        right: 0vh;
-        bottom: 0;
-        left: -4vh;
-        padding: 1rem;
-        }
+.footer a {
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  color: #ffffff;
+}
+.footer p {
+  font-family: "Microsoft YaHei";
+  font-size: 13px;
+  color: #ffffff;
+}
+.footer {
+  font-family: "Microsoft YaHei";
+  background-color: #34495e;
+  text-align: left;
+
+  padding: 1rem;
+}
+.el-footer {
+  width: 100vw;
+  padding: 0;
+}
 </style>

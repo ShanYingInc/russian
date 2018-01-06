@@ -1,9 +1,9 @@
 <template>
-    <el-container>
-        <el-header>
+    <el-container id="header">
+        <div class="header">
             <div class = "logo">
                 <img src = "http://www.tku.edu.tw/images/logo_x2.jpg">
-            </div>    
+            </div>
 
             <div class = "goindex">
                 <ul>
@@ -12,6 +12,7 @@
                 <li><a href="">網站地圖 | </a></li>
                 </ul>
             </div>
+        </div>
 
             <div class="nav">
                 <el-menu theme="line" :default-active="activeIndex" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
@@ -63,51 +64,49 @@
                 <el-menu-item index="11"><a href="https://www.ele.me" target="_blank">Русский</a></el-menu-item>
                 </el-menu>
             </div>
-        </el-header>
+
     </el-container>
 </template>
 <script>
-export default {
-  
-}
+export default {};
 </script>
 <style>
+#header {
+  height: 100%;
+}
 
-    .logo{
-        position:absolute;
-        left:20vh;
-        top:4vh;
-    }
+.header {
+  padding: 10px
+}
 
-    img{
-        width:700px;
-        height:70px;
-    }
+img {
+  width: 700px;
+  height: 100%;
+}
 
-    ul li{
-        display:inline;
-    }
-    
-    .goindex{
-        position:absolute;
-        right:22vh;
-        top:-1vh;
-    }
-    .goindex ul li a{
-        font-size: 15px;
-        font-family:"Microsoft YaHei";
-        color: #000000;
-    }
+ul li {
+  display: inline;
+}
 
-    .nav{
-        font-family:"Microsoft YaHei";
-        position: relative;
-        top:7vh;
-        left: -3vh;
-        width: 201vh;
-    }
+.goindex {
+  position: absolute;
+  right: 22vh;
+  top: -1vh;
+}
+.goindex ul li a {
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+  color: #000000;
+}
 
-    .el-menu-item, .el-submenu__title{
-        font-size: 18px;  
-    }
+.nav {
+  font-family: "Microsoft YaHei";
+  width: 100vw;
+  height: 100%
+}
+
+.el-menu-item,
+.el-submenu__title {
+  font-size: 18px;
+}
 </style>

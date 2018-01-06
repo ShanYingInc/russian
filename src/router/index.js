@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
 import Carousel from "@/components/Carousel"
 import Card from "@/components/Card"
 import Slider from "@/components/Slider"
