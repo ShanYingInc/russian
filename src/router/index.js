@@ -8,6 +8,8 @@ import Member from "@/components/Member"
 import Member_add from "@/components/Member_add"
 import Director from "@/components/Director"
 import Staff from "@/components/Staff"
+import StudentInformation from '../components/Introduction/StudentInformation.vue'
+import GraduatesInformation from '../components/Introduction/GraduatesInformation.vue'
 
 Vue.use(Router)
 
@@ -27,7 +29,21 @@ export default new Router({
       components: {
         left:Slider,
         right:Maintext
-      }
+      },
+      children: [
+        {
+          path: 'StudentInformation',
+          components: {
+            content: StudentInformation
+          }
+        },
+        {
+          path: 'GraduatesInformation',
+          components: {
+            content: GraduatesInformation
+          }
+        }
+      ]
     },
     {
       path: '/Member',

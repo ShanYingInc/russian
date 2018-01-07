@@ -2,8 +2,8 @@
   <el-menu default-active="1" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" id="slider">
     <el-menu-item-group>
       <el-menu-item index="1">大三出國留學</el-menu-item>
-      <el-menu-item index="2">學生資訊</el-menu-item>
-      <el-menu-item index="3">系友專區</el-menu-item>
+      <el-menu-item index="2"><router-link to="/Introduction/StudentInformation">學生資訊</router-link></el-menu-item>
+      <el-menu-item index="3"><router-link to="/Introduction/GraduatesInformation">系友專區</router-link></el-menu-item>
       <el-menu-item index="4">學術活動</el-menu-item>
       <el-menu-item index="5">活動花絮</el-menu-item>
       <el-menu-item index="6">戲劇公演</el-menu-item>
