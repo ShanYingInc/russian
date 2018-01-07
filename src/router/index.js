@@ -34,7 +34,7 @@ export default new Router({
       children: [
         {
           path: 'Fulltime',
-          component: Fulltime
+          component: Fulltime,
         },
         {
           path: 'Parttime',
