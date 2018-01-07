@@ -10,7 +10,6 @@
 </div>
 </template>
 
-
 <style lang="sass">
 #member
   display: flex

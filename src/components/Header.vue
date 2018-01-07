@@ -18,7 +18,7 @@
       el-menu-item(index='2')
         router-link(to='/Introduction') 本系介紹
       el-menu-item(index='3')
-        router-link(to='/Staff') 本系成員
+        router-link(to='/Staff/Fulltime') 本系成員
       el-submenu(index='4')
         template(slot='title') 課程資訊
         el-menu-item(index='4-1') 學期課表
