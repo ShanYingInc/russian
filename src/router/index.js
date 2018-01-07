@@ -47,6 +47,10 @@ export default new Router({
         {
           path: 'Administrative',
           component: Administrative
+        },
+        {
+          path: '*',
+          redirect: 'Fulltime'
         }
       ]
     },
