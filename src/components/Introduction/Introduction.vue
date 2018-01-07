@@ -19,6 +19,7 @@ export default {
 <style lang="sass">
 #introduction
   width: 100vw
+  height: 100%
   text-align: center
   animation: fadein 2s
   .content
