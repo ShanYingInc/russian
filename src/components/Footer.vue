@@ -22,11 +22,14 @@ export default {};
 
 <style lang="sass">
 #footer
+  width: 100vw
   font-family: "Microsoft YaHei";
   background-color: #34495e;
   display: flex
   flex-direction: row
   justify-content: space-between
+  position: absolute
+  bottom: 0
   .left
     text-align: left;
     a

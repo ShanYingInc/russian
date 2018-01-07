@@ -38,7 +38,9 @@ body
 
 #app
   display: flex
+  min-height: 100vh
   flex-direction: column
-
+  position: relative
+  padding-bottom: 212px
 
 </style>
