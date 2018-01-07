@@ -17,22 +17,8 @@
 </template>
 
 <script>
-</script>
+</script>x
 
 <style lang="sass">
-#maintext
-  width: 100%
-  padding-top: 20px
-  padding-left: 50px
-  padding-right: 50px
-  margin: 20px
-  text-align: center
-  border: 1px solid #ccc
-  border-radius: 5px
-  animation: fadein 2s
-@keyframes fadein
-  from
-    opacity: 0
-  to
-    opacity: 1
+
 </style>
