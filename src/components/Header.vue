@@ -6,9 +6,9 @@
     .goindex
       ul
         li.test(span='')
-          router-link(to='/') 回首頁
+          router-link(to='/') 回首頁|
         li
-          a(href='') 淡江大學
+          a(href='') 淡江大學|
         li
           a(href='') 網站地圖
   .nav
@@ -102,8 +102,7 @@ ul li {
   height: 100%
 }
 
-.el-menu-item,
 .el-submenu__title {
-  font-size: 18px;
+  font-family: "Microsoft YaHei";
 }
 </style>
