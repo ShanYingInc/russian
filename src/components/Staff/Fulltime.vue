@@ -1,11 +1,5 @@
 <template>
-<div id="member">
-  <div class="switch">
-    <div class="link"><router-link to='/Staff/Fulltime'>專任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Parttime'>兼任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Director'>歷屆系主任</router-link></div>
-    <div class="link"><router-link to='/Staff/Administrative'>行政人員</router-link></div>
-  </div>
+<div id="fulltime">
   <div class="location-contain">
     <div class="locations" v-for="(location, index) in locations" :key="index">
       <div class="place">
@@ -14,7 +8,10 @@
         </div>
         <div class="text">
           <h2>{{ location.name }}</h2>
-          <p>{{ location.desc }}</p>
+          <p>{{ location.title }}</p>
+          <p>{{ location.field }}</p>
+          <p>{{ location.email }}</p>
+          <p>{{ location.tax }}</p>
         </div>
       </div>
     </div>
@@ -30,22 +27,64 @@ export default {
         {
           name: '劉皇杏',
           img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.25_7dc7fdc7.jpg.w95_h117.jpg',
-          desc: `Moscow is the capital and most populous city of Russia, with 13.2 million residents within the city limits and 17.8 million within the urban area. Moscow has the status of a Russian federal city.`
+          title: '副教授兼系主任',
+          field: '大一俄語、俄國文學史',
+          email: '119342@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉3020'
         },
         {
-          name: 'paris',
-          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/paris1.svg',
-          desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`
+          name: '張慶國',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.20_6f455596.jpg.w95_h117.jpg',
+          title: '副教授',
+          field: '俄語會話（一）、俄語視聽練...',
+          email: '114804@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉2116'
         },
         {
-          name: 'rome',
-          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/rome.svg',
-          desc: `Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.`
+          name: '蘇淑燕',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.19_1b301054.jpg.w95_h117.jpg',
+          title: '副教授',
+          field: '俄羅斯概論、俄語語法(二)...',
+          email: '112556@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉2792、2964'
         },
         {
-          name: 'paris',
-          img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/paris2.svg',
-          desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`
+          name: '龔雅雪',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.12_e02df353.jpg.w95_h117.jpg',
+          title: '副教授',
+          field: '俄語會話(二)、俄語短篇名...',
+          email: '122500@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉3080'
+        },
+        {
+          name: '史薇塔',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.17_14c928f1.jpg.w90_h120.jpg',
+          title: '助理教授',
+          field: '俄語會話(一)、語會話（二...',
+          email: '136046@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉2495'
+        },
+        {
+          name: '那達怡',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.15_4b8b1291.jpg.w95_h117.jpg',
+          title: '助理教授',
+          field: '大三俄語、俄語會話(三)、...',
+          email: '133212@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉3081'
+        },
+        {
+          name: '郭昕宜',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.11_d4816f59.jpg.w95_h117.jpg',
+          title: '助理教授',
+          field: '大二俄語、俄羅斯文化概論',
+          email: '126230@mail.tku.edu.tw',
+          tax: '(02)2621-5656轉2324'
+        },
+        {
+          name: '鄭盈盈',
+          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.16_f64d08fe.jpg.w95_h117.jpg',
+          title: '助理教授',
+          field: '俄語語法(一)、商用俄語(...',
         }
       ]
     }
