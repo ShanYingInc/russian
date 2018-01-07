@@ -17,14 +17,8 @@
         router-link(to='/News') 最新消息
       el-menu-item(index='2')
         router-link(to='/Introduction') 本系介紹
-      el-submenu(index='3')
-        template(slot='title') 本系成員
-        el-menu-item(index='3-1')
-          router-link(to='/Member') 師資
-        el-menu-item(index='3-2')
-          router-link(to='/Director') 歷屆系主任
-        el-menu-item(index='3-3')
-          router-link(to='/Staff') 行政人員
+      el-menu-item(index='3')
+        router-link(to='/Staff') 本系成員
       el-submenu(index='4')
         template(slot='title') 課程資訊
         el-menu-item(index='4-1') 學期課表

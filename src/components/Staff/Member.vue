@@ -1,10 +1,10 @@
 <template>
 <div id="member">
   <div class="switch">
-    <div class="link"><a href="#">專任師資</a></div>
-    <div class="link"><a href="#">兼任師資</a></div>
-    <div class="link"><a href="#">歷屆系主任</a></div>
-    <div class="link"><a href="#">行政人員</a></div>
+    <div class="link"><router-link to='/Staff/Fulltime'>專任師資</router-link></div>
+    <div class="link"><router-link to='/Staff/Parttime'>兼任師資</router-link></div>
+    <div class="link"><router-link to='/Staff/Director'>歷屆系主任</router-link></div>
+    <div class="link"><router-link to='/Staff/Administrative'>行政人員</router-link></div>
   </div>
   <div class="location-contain">
     <div class="locations" v-for="(location, index) in locations" :key="index">

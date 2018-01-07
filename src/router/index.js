@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import IndexPage from '../components/Index/Index.vue'
 import News from '../components/News/News.vue'
 import Introduction from '../components/Introduction/Introduction.vue'
+import Staff from '../components/Staff/Member.vue'
 
 Vue.use(Router)
 
@@ -22,6 +23,28 @@ export default new Router({
     {
       path: '/Introduction',
       component: Introduction
+    },
+    {
+      path: '/Staff',
+      component: Staff,
+      children: [
+        {
+          path: 'Fulltime',
+          component: Fulltime,
+        },
+        {
+          path: 'Parttime',
+          component: Parttime,
+        },
+        {
+          path: 'Director',
+          component: Director,
+        },
+        {
+          path: 'Administrative',
+          component: Administrative,
+        }
+      ]
     },
     {
       path: '/Course',
