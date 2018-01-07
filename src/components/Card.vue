@@ -1,17 +1,22 @@
-<template lang="pug">
-#card.container
-  card(data-image='http://www.tfux.tku.edu.tw/img.php?img=450_83214392.jpg&dir=archive')
-    h1(slot='header') 戲劇公演
-    p(slot='content') 104學年度第20屆畢業公演
-  card(data-image='http://www.tfux.tku.edu.tw/img.php?img=416_4e48c74a.jpg&dir=archive')
-    h1(slot='header') 戲劇公演
-    p(slot='content') 103學年度第19屆畢業公演
-  card(data-image='http://www.tfux.tku.edu.tw/img.php?img=349_345464a8.jpg&dir=archive')
-    h1(slot='header') 戲劇公演
-    p(slot='content') 102學年度第18屆畢業公演
-  card(data-image='http://www.tfux.tku.edu.tw/img.php?img=271_e41914eb.jpg&dir=archive')
-    h1(slot='header') 戲劇公演
-    p(slot='content') 101學年度第17屆畢業公演
+<template>
+      <div id="card" class="container">
+        <card data-image="http://www.tfux.tku.edu.tw/img.php?img=450_83214392.jpg&dir=archive">
+          <h1 slot="header">戲劇公演</h1>
+          <p slot="content">104學年度第20屆畢業公演</p>
+        </card>
+        <card data-image="http://www.tfux.tku.edu.tw/img.php?img=416_4e48c74a.jpg&dir=archive">
+          <h1 slot="header">戲劇公演</h1>
+          <p slot="content">103學年度第19屆畢業公演</p>
+        </card>
+        <card data-image="http://www.tfux.tku.edu.tw/img.php?img=349_345464a8.jpg&dir=archive">
+          <h1 slot="header">戲劇公演</h1>
+          <p slot="content">102學年度第18屆畢業公演</p>
+        </card>
+        <card data-image="http://www.tfux.tku.edu.tw/img.php?img=271_e41914eb.jpg&dir=archive">
+          <h1 slot="header">戲劇公演</h1>
+          <p slot="content">101學年度第17屆畢業公演</p>
+        </card>
+      </div>
 
 </template>
 
@@ -27,10 +32,6 @@ export default {
 
 
 <style>
-#card {
-  margin-bottom: 50px
-}
-
 
 .title {
   font-family: "Raleway";

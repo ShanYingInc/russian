@@ -1,19 +1,26 @@
-<template lang="pug">
-#footer
-  .left
-    ul
-      p(style='font-size: 20px;') 淡江大學俄國語文學系
-      li
-        p 25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室
-      li
-        p  TEL:(02)26215656轉2711  FAX:(02)26209907
-      li
-        p  tfux@www2.tku.edu.tw
-      li
-        p Copyright©2017 版權為淡江大學俄文系所有
-  .right
-    i.fab.fa-facebook-square
-
+<template>
+  <div class = "footer">
+    <div class="left">
+      <ul>
+        <p style="font-size: 20px;">淡江大學俄國語文學系</p>
+        <li>
+          <p>25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室</p>
+        </li>
+        <li>
+          <p> TEL:(02)26215656轉2711  FAX:(02)26209907</p>
+        </li>
+        <li>
+          <p> tfux@www2.tku.edu.tw</p>
+        </li>
+        <li>
+          <p>Copyright©2017 版權為淡江大學俄文系所有</p>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <i class="fab fa-facebook-square"></i>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -21,7 +28,7 @@ export default {};
 </script>
 
 <style lang="sass">
-#footer
+.footer
   font-family: "Microsoft YaHei";
   background-color: #34495e;
   display: flex

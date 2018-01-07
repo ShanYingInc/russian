@@ -1,8 +1,15 @@
-<template lang="pug">
-#app
-  HeaderComponent
-  router-view
-  Footer
+<template>
+    <div id="app">
+      <HeaderComponent />
+      <router-view/>
+      <router-view name = "up"></router-view>
+      <router-view name = "down"></router-view>
+      <div id="middle">
+        <router-view name = "left"></router-view>
+        <router-view name = "right"></router-view>
+      </div>
+      <Footer />
+    </div>
 </template>
 
 <script>
@@ -27,18 +34,24 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style>
 
-body
-  width: 100vw
-  min-height: 100vh
-  font-family: 'Microsoft YaHei'
-  margin: 0
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Microsoft YaHei';
+  margin: 0;
+}
 
+#app {
+  display: flex;
+  flex-direction: column;
+}
 
-#app
-  display: flex
-  flex-direction: column
-
-
+#middle {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
 </style>
