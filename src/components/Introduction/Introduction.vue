@@ -1,5 +1,5 @@
 <template lang="pug">
-<div id="member">
+<div id="introduction">
   <div class="switch">
     <div class="link"><router-link to='/Introduction/Important'>重要記事</router-link></div>
     <div class="link"><router-link to='/Introduction/Vision'>願景及策略</router-link></div>
@@ -20,25 +20,9 @@ export default {
 </script>
 <style lang="sass">
 #introduction
-  width: 100vw
-  height: 100%
-  text-align: center
-  animation: fadein 2s
-  .content
-    margin: 20px
-    padding: 20px 50px
-    border: 1px solid #ccc
-    border-radius: 5px
-@keyframes fadein
-  from
-    opacity: 0
-  to
-    opacity: 1
-
-#member
   display: flex
   flex-direction: column
-  margin: 10px
+  margin: 10px 30px
   .switch
     display: flex
     flex-direction: row
@@ -75,24 +59,5 @@ export default {
         &:hover::before, &:focus::before
           transform-origin: left top
           transform: scale(1, 1)
-  .location-contain
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    .locations
-      height: 100%
-      .place
-        display: flex
-        flex-direction: column
-        width: 250px
-        height: 100%
-        background: white
-        border: 1px solid #ddd
-        padding: 20px 20px
-        .pic
-          align-self: center
-        .text
-
-
 
 </style>

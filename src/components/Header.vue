@@ -1,7 +1,7 @@
 <template lang="pug">
 #header
   .header
-    .logo
+    router-link.logo(to='/')
       img(src='https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/26219227_960313950811554_1142201070496921854_n.jpg?oh=a45c52e96e13dcf7237fec97b98d9784&oe=5AF8800E')
     .goindex
       ul
@@ -12,7 +12,7 @@
         li
           a(href='') 網站地圖
   .nav
-    el-menu(theme='line', :default-active='activeIndex', mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b', router=true)
+    el-menu(theme='line', :default-active='activeIndex',mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b', router=true)
       el-menu-item(index='/News') 最新消息
       el-menu-item(index='/Introduction/Important') 本系介紹
       el-menu-item(index='/Staff/Fulltime') 本系成員
