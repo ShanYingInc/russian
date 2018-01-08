@@ -54,7 +54,7 @@ body {
 }
 
 h1 {
-  text-align: center;
+  ;
 }
 
 .location-contain {
@@ -87,7 +87,7 @@ h1 {
 
 .place h2 {
   margin: 0;
-  text-align: center;
+  text-align:center;
 }
 
 .place img {

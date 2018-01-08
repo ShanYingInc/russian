@@ -2,7 +2,7 @@
 #header
   .header
     .logo
-      img(src='http://www.tku.edu.tw/images/logo_x2.jpg')
+      img(src='https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/26219227_960313950811554_1142201070496921854_n.jpg?oh=a45c52e96e13dcf7237fec97b98d9784&oe=5AF8800E')
     .goindex
       ul
         li.test(span='')
@@ -56,7 +56,7 @@ export default {};
 }
 
 img {
-  width: 700px;
+  width: 500px;
   height: 100%;
 }
 

@@ -26,7 +26,7 @@
 #introduction
   width: 100vw
   height: 100%
-  text-align: center
+  text-align:left
   animation: fadein 2s
   .content
     margin: 20px
