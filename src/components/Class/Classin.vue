@@ -1,48 +1,45 @@
-<template>
-<div id="fulltime">
-  <div class="location-contain">
-    <div class="locations" v-for="(location, index) in locations" :key="index">
-      <div class="place">
-        <div class="pic">
-          <!--<img :src="location.img" height="150"/>-->
-        </div>
-        <div class="text">
-          <h2>{{ location.name }}</h2>
-          <p>{{ location.title }}</p>
-          <p>{{ location.field }}</p>
-          <p>{{ location.email }}</p>
-          <p>{{ location.tax }}</p>
-        </div>
-      </div>
-    </div>
+<template lang="pug">
+<div id="member">
+  <div class="switch">
+    <div class="link"><router-link to='/Introduction/Important'>學期課表</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>課程架構</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>必選修科目</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>替代科目</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>相關修業規定</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>學分學程</router-link></div>
+    <div class="link"><router-link to='/Introduction/Vision'>輔系雙學位</router-link></div>
   </div>
+  <router-view></router-view>
 </div>
 </template>
-
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      locations: [
-        {
-          name: '梁家菱',
-          img: '',
-          title: '助教',
-          field: '*實習課授課每週4-6小時...'
-        },
-        {
-          name: '謝寧馨',
-          img: '',
-          title: '組員',
-          field: '*OA、OD公文收發及處理...',
-        }
-      ]
-    }
+  computed: {
+    ...mapState({
+      intro: 'introduction'
+    })
   }
 }
 </script>
-
 <style lang="sass">
+#introduction
+  width: 100vw
+  height: 100%
+  text-align: center
+  animation: fadein 2s
+  .content
+    margin: 20px
+    padding: 20px 50px
+    border: 1px solid #ccc
+    border-radius: 5px
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
 #member
   display: flex
   flex-direction: column

@@ -1,5 +1,23 @@
 export const api = {
   root: 'http://192.168.88.204:3001',
+  getallintroduction () {
+    const link = this.root + '/introduction'
+    const method = {
+      method: 'GET'
+    }
+    const request = new Request(link, method)
+    return request
+  },
+  getintroduction (title) {
+    const link = this.root + '/introduction/' + title
+    const method = {
+      method: 'GET'
+    }
+    const request = new Request(link, method)
+    return request
+    // no output
+  },
+
   getAllStaff () {
     const link = this.root + '/staff'
     const method = {

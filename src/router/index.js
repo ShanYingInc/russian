@@ -8,6 +8,9 @@ import Fulltime from '../components/Staff/Fulltime.vue'
 import Parttime from '../components/Staff/Parttime.vue'
 import Director from '../components/Staff/Director.vue'
 import Administrative from '../components/Staff/Administrative.vue'
+import Vision from '../components/Introduction/Vision.vue'
+import Important from '../components/Introduction/Important.vue'
+
 
 Vue.use(Router)
 
@@ -26,7 +29,17 @@ export default new Router({
     },
     {
       path: '/Introduction',
-      component: Introduction
+      component: Introduction,
+      children:[
+        {
+        path: 'Important',
+        component: Important,
+      },
+      {
+        path: 'Vision',
+        component: Vision,
+      },
+    ]
     },
     {
       path: '/Staff',

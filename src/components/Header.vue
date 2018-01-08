@@ -12,14 +12,11 @@
         li
           a(href='') 網站地圖
   .nav
-    el-menu(theme='line', :default-active='activeIndex', mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b')
-      el-menu-item(index='1')
-        router-link(to='/News') 最新消息
-      el-menu-item(index='2')
-        router-link(to='/Introduction') 本系介紹
-      el-menu-item(index='3')
-        router-link(to='/Staff/Fulltime') 本系成員
-      el-submenu(index='4')
+    el-menu(theme='line', :default-active='activeIndex', mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b', router=true)
+      el-menu-item(index='/News') 最新消息
+      el-menu-item(index='/Introduction/Important') 本系介紹
+      el-menu-item(index='/Staff/Fulltime') 本系成員
+      el-submenu(index = '4')
         template(slot='title') 課程資訊
         el-menu-item(index='4-1') 學期課表
         el-menu-item(index='4-2') 課程架構
@@ -28,19 +25,18 @@
         el-menu-item(index='4-5') 相關修業規定
         el-menu-item(index='4-6') 學分學程
         el-menu-item(index='4-7') 輔系雙學位
-      el-submenu(index='5')
+      el-submenu(index = '5')
         template(slot='title') 招生資訊
         el-menu-item(index='5-1') 申請入學
         el-menu-item(index='5-2') 相關問題和解答
-      el-submenu(index='6')
+      el-submenu()
         template(slot='title') 學術成果
         el-menu-item(index='6-1') 期刊討論
         el-menu-item(index='6-2') 相關問題和解答
         el-menu-item(index='6-3') 專書
         el-menu-item(index='6-4') 專案計畫
         el-menu-item(index='6-5') 最新研究
-      el-menu-item(index='7')
-        a(href='https://www.ele.me', target='_blank') 獲獎紀錄
+      el-menu-item(index='/News') 獲獎紀錄
       el-submenu(index='8')
         template(slot='title') 實習計畫
         el-menu-item(index='8-1') 暑期海外實習
