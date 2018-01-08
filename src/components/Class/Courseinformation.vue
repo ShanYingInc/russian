@@ -1,7 +1,6 @@
-<template lang="pug">
-<div id="introduction">
-  #Courseinformation
-  .content
+<template>
+  <div id="courseinformation">
+    <div class="content">
       <h3>課程資訊</h3>
       <span>課程查詢系統</span>
       <span><a href="http://esquery.tku.edu.tw/acad/">下載</a></span>
@@ -31,19 +30,20 @@
       <br>
       <br>
       <br>
-      </font></span></p></div></div> 
+      </font></span></p>
       </div>
+      </div> 
 </template>
 
 
 <style lang="sass">
-#introduction
+#courseinformation
   width: 100vw
   height: 100%
   text-align:left
   animation: fadein 2s
   .content
-    margin: 20px
+    margin: 20px 
     padding: 20px 50px
     border: 1px solid #ccc
     border-radius: 5px

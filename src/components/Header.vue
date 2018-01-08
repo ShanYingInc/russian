@@ -17,8 +17,8 @@
       el-menu-item(index='/Introduction/Important') 本系介紹
       el-menu-item(index='/Staff/Fulltime') 本系成員
       el-menu-item(index='/Class/Courseinformation') 學期課表 
-      el-menu-item(index = '/Enrollment/Admission') 招生資訊
-      el-submenu()
+      el-menu-item(index='/Enrollment/Admission') 招生資訊
+      el-submenu(index='6')
         template(slot='title') 學術成果
         el-menu-item(index='6-1') 期刊討論
         el-menu-item(index='6-2') 相關問題和解答
@@ -60,7 +60,7 @@ img {
   height: 100%;
 }
 
-ul li {
+.goindex ul li {
   display: inline;
 }
 

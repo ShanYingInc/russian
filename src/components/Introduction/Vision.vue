@@ -1,7 +1,6 @@
-<template lang="pug">
-<div id="introduction">
-  #introduction
-  .content
+<template>
+  <div id="vision">
+    <div class="content">
     <span>本系簡介 /  願景及策略</span>
     <p class="MsoNormal"><span style="font-family: 新細明體, serif;">為配合本校（淡江大學）教育宗旨：「培育心靈卓越人才、宏揚私人興學的教育理念、創造精緻卓越的學術王國」及本院（外國語文學院）發展目標：「全球化時代全人教育的入門及深度國際化的起跑點為願景，培育能掌握多元互異民族性的真髓，體認『多元統一』（</span><span lang="EN-US">Unity in diversity</span><span style="font-family: 新細明體, serif;">）的全球公民」，本系設立宗旨與教育目標為：培養具人文素養之專業俄語人才，著重學生具有正確價值觀、獨立分析之能力，鼓勵學生在專業領域訓練之外，注重多元發展，並洞悉社會動向，提升國際交流之溝通能力。本系課程語言訓練與實務並重，除培養學生具備聽、說、讀、寫、譯等</span><span lang="EN-US">5</span><span style="font-family: 新細明體, serif;">項基礎語言技能之外，並傳授俄羅斯人文、歷史與國情相關知識，以因應國家多元發展之需求。</span><span lang="EN-US">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
     <br>
@@ -71,7 +70,7 @@
 
 
 <style lang="sass">
-#introduction
+#vision
   width: 100vw
   height: 100%
   text-align:left

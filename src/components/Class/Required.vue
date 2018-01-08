@@ -1,7 +1,6 @@
-<template lang="pug">
-<div id="introduction">
-  #introduction
-  .content
+<template>
+  <div id="required">
+    <div class="content">
     <h3>替代科目</h3>
     <p>(一)大三俄語</p>
     <p>1. 97學年度以前入新生，「大三俄語」，擬以「商用俄語(一)」上、下學期各一學分(97學年度以前入學新生為必修3學分，98年度以後入學新生為必修2學分)替代。　</p>
@@ -18,12 +17,13 @@
     <h3>(六) 96、97入學新生，必修科目「俄語句法」(2/2)自99學年度起停開，擬以選修科目「短篇名著選讀」(2/2)替代。</h3>
     <h3>(七) 96、97入學新生，必修科目「俄語詞法」(2/2)自99學年度起停開，擬以選修科目「小說與電影賞析」(2/2)替代。</h3>
     <p>以上未盡事宜，以學生實際修課情形，以個案方式替代報告處理。</p>
+    </div>
 </div>	
 </template>
 
 
 <style lang="sass">
-#introduction
+#required
   width: 100vw
   height: 100%
   text-align:left

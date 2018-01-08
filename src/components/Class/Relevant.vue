@@ -1,7 +1,6 @@
-<template lang="pug">
-<div id="introduction">
-  #introduction
-  .content
+<template>
+  <div id="relevant">
+    <div class="content">
     <h3>入學新生必修科目表</h3>
     <p>104學年度入學新生起畢業學分為140學分，包含校、系必修學分105學分；系選修(至少)21學分。</p>
     <p>103學年度入學新生起畢業學分為140學分，包含校、系必修學分105學分；系選修(至少)21學分。</p>
@@ -26,12 +25,13 @@
     <p>淡江大學教務處　網址：http://www.acad.tku.edu.tw/main.php</p>
     <p>外語翻譯學分學程、外國文學學分學程申請規定和作業流程，已登於外語學院中</p>
     <p>文網頁選單，網址： http://www.tf.tku.edu.tw/admiss/recruit.php?class=101</p>
-</div>	
+  </div>	
+  </div>
 </template>
 
 
 <style lang="sass">
-#introduction
+#relevant
   width: 100vw
   height: 100%
   text-align:left

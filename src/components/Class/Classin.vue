@@ -19,13 +19,13 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      intro: 'introduction'
+      intro: 'member'
     })
   }
 }
 </script>
 <style lang="sass">
-#introduction
+#member
   width: 100vw
   height: 100%
   text-align: left

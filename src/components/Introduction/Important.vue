@@ -13,14 +13,13 @@
 #important
   width: 100vw
   height: 100%
-  text-align: left
+  text-align:left
   animation: fadein 2s
   .content
     margin: 20px
     padding: 20px 50px
     border: 1px solid #ccc
     border-radius: 5px
-
 @keyframes fadein
   from
     opacity: 0
