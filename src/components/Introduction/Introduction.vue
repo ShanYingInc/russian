@@ -4,7 +4,7 @@
     <div class="link"><router-link to='/Introduction/Important'>重要記事</router-link></div>
     <div class="link"><router-link to='/Introduction/Vision'>願景及策略</router-link></div>
   </div>
-  <router-view></router-view>
+  <router-view class="introduction-content"></router-view>
 </div>
 </template>
 
@@ -21,22 +21,6 @@ export default {
 </script>
 
 <style lang="sass">
-#introduction
-  width: 100vw
-  height: 100%
-  text-align: left
-  animation: fadein 2s
-  .content
-    margin: 20px
-    padding: 20px 50px
-    border: 1px solid #ccc
-    border-radius: 5px
-@keyframes fadein
-  from
-    opacity: 0
-  to
-    opacity: 1
-
 #introduction
   display: flex
   flex-direction: column
@@ -77,21 +61,10 @@ export default {
         &:hover::before, &:focus::before
           transform-origin: left top
           transform: scale(1, 1)
-  .location-contain
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    .locations
-      height: 100%
-      .place
-        display: flex
-        flex-direction: column
-        width: 250px
-        height: 100%
-        background: white
-        border: 1px solid #ddd
-        padding: 20px 20px
-        .pic
-          align-self: center
-        .text
+  .introduction-content
+    width: 70%
+    border: 1px solid #ccc
+    border-radius: 5px
+    padding: 20px 20px
+    margin: 0 auto
 </style>

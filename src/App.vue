@@ -30,7 +30,7 @@ export default {
 <style lang="sass">
 
 body
-  width: 100vw
+  max-width: 100vw
   min-height: 100vh
   font-family: 'Microsoft YaHei'
   margin: 0
