@@ -1,13 +1,14 @@
 <template lang="pug">
 <div id="member">
   <div class="switch">
-    <div class="link"><router-link to='/Introduction/Important'>學期課表</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>課程架構</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>必選修科目</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>替代科目</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>相關修業規定</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>學分學程</router-link></div>
-    <div class="link"><router-link to='/Introduction/Vision'>輔系雙學位</router-link></div>
+    <div class="link"><router-link to='/Class/Courseinformation'>學期課表</router-link></div>
+    <div class="link"><router-link to='/Class/Semester'>學期課表</router-link></div>
+    <div class="link"><router-link to='/Class/Course'>課程架構</router-link></div>
+    <div class="link"><router-link to='/Class/Required'>必選修科目</router-link></div>
+    <div class="link"><router-link to='/Class/Alternative'>替代科目</router-link></div>
+    <div class="link"><router-link to='/Class/Relevant'>相關修業規定</router-link></div>
+    <div class="link"><router-link to='/Class/Credit'>學分學程</router-link></div>
+    <div class="link"><router-link to='/Class/Auxiliary'>輔系雙學位</router-link></div>
   </div>
   <router-view></router-view>
 </div>

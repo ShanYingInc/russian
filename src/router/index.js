@@ -10,6 +10,9 @@ import Director from '../components/Staff/Director.vue'
 import Administrative from '../components/Staff/Administrative.vue'
 import Vision from '../components/Introduction/Vision.vue'
 import Important from '../components/Introduction/Important.vue'
+import Classin from '../components/Class/Classin.vue'
+import Auxiliary from '../components/Class/Auxiliary.vue'
+import Alternative from '../components/Class/Alternative.vue'
 
 
 Vue.use(Router)
@@ -38,6 +41,20 @@ export default new Router({
       {
         path: 'Vision',
         component: Vision,
+      },
+    ]
+    },
+    {
+      path: '/Classin',
+      component: Classin,
+      children:[
+        {
+        path: 'Alternative',
+        component: Alternative,
+      },
+      {
+        path: 'Auxiliary',
+        component: Auxiliary,
       },
     ]
     },
