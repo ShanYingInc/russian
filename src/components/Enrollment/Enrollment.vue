@@ -1,14 +1,8 @@
 <template lang="pug">
 <div id="member">
   <div class="switch">
-    <div class="link"><router-link to='/Class/Courseinformation'>學期資訊</router-link></div>
-    <div class="link"><router-link to='/Class/Semester'>學期課表</router-link></div>
-    <div class="link"><router-link to='/Class/Course'>課程架構</router-link></div>
-    <div class="link"><router-link to='/Class/Alternative'>必選修科目</router-link></div>
-    <div class="link"><router-link to='/Class/Required'>替代科目</router-link></div>
-    <div class="link"><router-link to='/Class/Relevant'>相關修業規定</router-link></div>
-    <div class="link"><router-link to='/Class/Credit'>學分學程</router-link></div>
-    <div class="link"><router-link to='/Class/Auxiliary'>輔系雙學位</router-link></div>
+    <div class="link"><router-link to='/Enrollment/Admission'>申請入學</router-link></div>
+    <div class="link"><router-link to='//Enrollment/Answer'>相關問題和解答</router-link></div>
   </div>
   <router-view></router-view>
 </div>

@@ -10,7 +10,18 @@ import Director from '../components/Staff/Director.vue'
 import Administrative from '../components/Staff/Administrative.vue'
 import Vision from '../components/Introduction/Vision.vue'
 import Important from '../components/Introduction/Important.vue'
-
+import Class from '../components/Class/Classin.vue'
+import Auxiliary from '../components/Class/Auxiliary.vue'
+import Alternative from '../components/Class/Alternative.vue'
+import Courseinformation from '../components/Class/Courseinformation.vue'
+import Course from '../components/Class/Course.vue'
+import Required from '../components/Class/Required.vue'
+import Relevant from '../components/Class/Relevant.vue'
+import Credit from '../components/Class/Credit.vue'
+import Enrollment from '../components/Enrollment/Enrollment.vue'
+import Answer from '../components/Enrollment/Answer.vue'
+import Admission from '../components/Enrollment/Admission.vue'
+import Winning from '../components/Winning/Winning.vue'
 
 Vue.use(Router)
 
@@ -21,6 +32,10 @@ export default new Router({
     {
       path: '/',
       component: IndexPage
+    },
+    {
+      path: '/Winning',
+      component: Winning
     },
     {
       path: '/News',
@@ -38,6 +53,40 @@ export default new Router({
       {
         path: 'Vision',
         component: Vision,
+      },
+    ]
+    },
+    {
+      path: '/Class',
+      component: Class,
+      children:[
+        {
+        path: 'Alternative',
+        component: Alternative,
+      },
+      {
+        path: 'Auxiliary',
+        component: Auxiliary,
+      },
+      {
+        path: 'Courseinformation',
+        component: Courseinformation,
+      },
+      {
+        path: 'Course',
+        component: Course,
+      },
+      {
+        path: 'Required',
+        component: Required,
+      },
+      {
+        path: 'Relevant',
+        component: Relevant,
+      },
+      {
+        path: 'Credit',
+        component: Credit,
       },
     ]
     },
@@ -71,7 +120,18 @@ export default new Router({
       path: '/Course',
     },
     {
-      path: '/Enrollment'
+      path: '/Enrollment',
+      component: Enrollment,
+      children:[
+        {
+        path: 'Admission',
+        component: Admission,
+      },
+      {
+        path: 'Answer',
+        component: Answer,
+      },
+    ]
     },
     {
       path: '/Achievement'
