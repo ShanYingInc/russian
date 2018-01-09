@@ -6,11 +6,13 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import bcarousel from 'bootstrap-vue/es/components/carousel/carousel'
+import bcarouselslide from 'bootstrap-vue/es/components/carousel/carousel-slide'
 
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(ElementUI);
-
+Vue.component('b-carousel', bcarousel);
+Vue.component('b-carousel-slide', bcarouselslide);
 
 /* eslint-disable no-new */
 new Vue({
