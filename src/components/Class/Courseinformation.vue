@@ -4,7 +4,7 @@
       <h3>課程資訊</h3>
       <span>課程查詢系統</span>
       <span><a href="http://esquery.tku.edu.tw/acad/">下載</a></span>
-      <span>課程分類表1</span>
+      <span>課程分類表</span>
       <a href="/download.php?filename=453_8412900c.xls&amp;dir=archive&amp;title=File">下載</a></span></span></span><span style="font-size: medium"><br>
       </span><br>
       <span style="font-size: medium">本系教育目標暨學生核心能力指標&nbsp; </span><span style="color: #ff6600"><a href="/download.php?filename=313_9f1e6a23.pdf&amp;dir=archive&amp;title=%E4%BF%84%E6%96%87%E7%B3%BB%E6%95%99%E8%82%B2%E7%9B%AE%E6%A8%99%E6%9A%A8%E5%AD%B8%E7%94%9F%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B%E6%8C%87%E6%A8%99"><span style="font-size: medium">下載</span></a><br>
