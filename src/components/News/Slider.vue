@@ -31,7 +31,7 @@ export default {
   height: 100%
 }
 a:link {
-    color: red;
+    color: white;
     text-decoration: none;
 }
 

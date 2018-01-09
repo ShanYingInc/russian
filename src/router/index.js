@@ -22,7 +22,7 @@ import Enrollment from '../components/Enrollment/Enrollment.vue'
 import Answer from '../components/Enrollment/Answer.vue'
 import Admission from '../components/Enrollment/Admission.vue'
 import Winning from '../components/Winning/Winning.vue'
-import Tutor from '../components/staff/Tutor.vue'
+import Tutor from '../components/Staff/Tutor.vue'
 import StudentInformation from '../components/News/SubMenu/StudentInformation.vue'
 
 
