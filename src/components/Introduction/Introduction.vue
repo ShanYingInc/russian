@@ -4,7 +4,7 @@
     <div class="link"><router-link to='/Introduction/Important'>重要記事</router-link></div>
     <div class="link"><router-link to='/Introduction/Vision'>願景及策略</router-link></div>
   </div>
-  <router-view class="introduction-content"></router-view>
+  <router-view></router-view>
 </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
     .link
       display: inline-block
       a
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
         text-decoration: none
         color: #333
         padding: 10px 20px

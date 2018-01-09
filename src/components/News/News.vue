@@ -1,7 +1,7 @@
 <template lang="pug">
 #news
   Slider
-  router-view
+  router-view.content
 </template>
 <script>
 import Slider from './Slider'
@@ -16,5 +16,9 @@ export default {
 <style lang="sass">
 #news
   display: flex
-  flex-direction: column
+  flex-direction: row
+  align-items: center
+  height: 100%
+  .content
+    margin: 20px auto
 </style>

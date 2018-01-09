@@ -1,15 +1,46 @@
 <template>
-<div id="member">
-  <div class="switch">
-    <div class="link"><router-link to='/Staff/Fulltime'>專任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Parttime'>兼任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Director'>歷屆系主任</router-link></div>
-    <div class="link"><router-link to='/Staff/Administrative'>行政人員</router-link></div>
-    <div class="link"><router-link to='/Staff/Tutor'>各班導師</router-link></div>
+<div id="fulltime">
+  <div class="location-contain">
+    <div class="locations" v-for="(location, index) in locations" :key="index">
+      <div class="place">
+        <div class="pic">
+          <!--<img :src="location.img" height="150"/>-->
+        </div>
+        <div class="text">
+          <h2>{{ location.name }}</h2>
+          <p>{{ location.title }}</p>
+          <p>{{ location.field }}</p>
+          <p>{{ location.email }}</p>
+          <p>{{ location.tax }}</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <router-view></router-view>
 </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      locations: [
+        {
+          name: '測試',
+          img: '',
+          title: '助教',
+          field: '*實習課授課每週4-6小時...'
+        },
+        {
+          name: '測試',
+          img: '',
+          title: '組員',
+          field: '*OA、OD公文收發及處理...',
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="sass">
 #member

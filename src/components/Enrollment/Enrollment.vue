@@ -1,8 +1,8 @@
-<template lang="pug">
-<div id="member">
+<template>
+<div id="enrollment">
   <div class="switch">
     <div class="link"><router-link to='/Enrollment/Admission'>申請入學</router-link></div>
-    <div class="link"><router-link to='//Enrollment/Answer'>相關問題和解答</router-link></div>
+    <div class="link"><router-link to='/Enrollment/Answer'>相關問題和解答</router-link></div>
   </div>
   <router-view></router-view>
 </div>
@@ -13,13 +13,13 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      intro: 'introduction'
+      intro: 'enrollment'
     })
   }
 }
 </script>
 <style lang="sass">
-#member
+#enrollment
   display: flex
   flex-direction: column
   margin: 10px
@@ -31,6 +31,7 @@ export default {
     .link
       display: inline-block
       a
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
         text-decoration: none
         color: #333
         padding: 10px 20px
@@ -59,24 +60,10 @@ export default {
         &:hover::before, &:focus::before
           transform-origin: left top
           transform: scale(1, 1)
-  .location-contain
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    .locations
-      height: 100%
-      .place
-        display: flex
-        flex-direction: column
-        width: 250px
-        height: 100%
-        background: white
-        border: 1px solid #ddd
-        padding: 20px 20px
-        .pic
-          align-self: center
-        .text
-
-
-
+  .enrollment-content
+    width: 70%
+    border: 1px solid #ccc
+    border-radius: 5px
+    padding: 20px 20px
+    margin: 0 auto
 </style>

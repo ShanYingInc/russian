@@ -1,5 +1,5 @@
-<template lang="pug">
-<div id="member">
+<template>
+<div id="classin">
   <div class="switch">
     <div class="link"><router-link to='/Class/Courseinformation'>學期資訊</router-link></div>
     <div class="link"><router-link to='/Class/Semester'>學期課表</router-link></div>
@@ -19,29 +19,13 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      intro: 'member'
+      intro: 'classin'
     })
   }
 }
 </script>
 <style lang="sass">
-#member
-  width: 100vw
-  height: 100%
-  text-align: left
-  animation: fadein 2s
-  .content
-    margin: 20px
-    padding: 20px 50px
-    border: 1px solid #ccc
-    border-radius: 5px
-@keyframes fadein
-  from
-    opacity: 0
-  to
-    opacity: 1
-
-#member
+#classin
   display: flex
   flex-direction: column
   margin: 10px
@@ -53,6 +37,7 @@ export default {
     .link
       display: inline-block
       a
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
         text-decoration: none
         color: #333
         padding: 10px 20px
@@ -81,24 +66,10 @@ export default {
         &:hover::before, &:focus::before
           transform-origin: left top
           transform: scale(1, 1)
-  .location-contain
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    .locations
-      height: 100%
-      .place
-        display: flex
-        flex-direction: column
-        width: 250px
-        height: 100%
-        background: white
-        border: 1px solid #ddd
-        padding: 20px 20px
-        .pic
-          align-self: center
-        .text
-
-
-
+  .classin-content
+    width: 70%
+    border: 1px solid #ccc
+    border-radius: 5px
+    padding: 20px 20px
+    margin: 0 auto
 </style>

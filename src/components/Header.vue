@@ -14,9 +14,27 @@
   .nav
     el-menu(theme='line', :default-active='activeIndex',mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b', router=true)
       el-menu-item(index='/News') 最新消息
-      el-menu-item(index='/Introduction/Important') 本系介紹
-      el-menu-item(index='/Staff/Fulltime') 本系成員
-      el-menu-item(index='/Class/Courseinformation') 學期課表 
+      el-submenu(index='/Introduction/Important')
+        template(slot='title') 本系介紹
+        el-menu-item(index='/Introduction/Important') 重要記事
+        el-menu-item(index='/Introduction/Vision') 願景及策略
+      el-submenu(index='/Staff/Fulltime')
+        template(slot='title') 本系成員
+        el-menu-item(index='/Staff/Fulltime') 專任師資
+        el-menu-item(index='/Staff/Parttime') 兼任師資
+        el-menu-item(index='/Staff/Director') 歷屆系主任
+        el-menu-item(index='/Staff/Administrative') 行政人員
+        el-menu-item(index='/Staff/Tutor') 各班導師
+      el-submenu(index='/Class/Courseinformation')
+        template(slot='title') 學期課表
+        el-menu-item(index='/Class/Courseinformation') 課程資訊
+        el-menu-item(index='/Class/Semester') 學期課表
+        el-menu-item(index='/Class/Course') 課程架構
+        el-menu-item(index='/Class/Alternative') 必選修科目
+        el-menu-item(index='/Class/Required') 替代科目
+        el-menu-item(index='/Class/Relevant') 相關修業規定
+        el-menu-item(index='/Class/Credit') 學分學程
+        el-menu-item(index='/Class/Auxiliary') 輔系雙學位
       el-menu-item(index='/Enrollment/Admission') 招生資訊
       el-submenu(index='6')
         template(slot='title') 學術成果
@@ -49,6 +67,7 @@ export default {};
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: white;
 }
 
 .header {
