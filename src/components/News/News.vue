@@ -21,4 +21,5 @@ export default {
   height: 100%
   .content
     margin: 20px auto
+    align-self: stretch
 </style>

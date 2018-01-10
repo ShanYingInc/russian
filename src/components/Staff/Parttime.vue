@@ -75,7 +75,7 @@ export default {
           field: '俄國史',
         },
                 {
-          name: '郭昕宜',
+          name: '衛大力',
           img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.55_254ff04e.jpg.w95_h117.jpg',
           title: '講師',
           field: '俄語華語教學',

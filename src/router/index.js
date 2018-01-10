@@ -24,6 +24,28 @@ import Admission from '../components/Enrollment/Admission.vue'
 import Winning from '../components/Winning/Winning.vue'
 import Tutor from '../components/Staff/Tutor.vue'
 import StudentInformation from '../components/News/SubMenu/StudentInformation.vue'
+import Test from '../components/News/SubMenu/Test/Test.vue'
+import Testnews from '../components/News/SubMenu/Test/Testnews.vue'
+import Testannouncement from '../components/News/SubMenu/Test/Testannouncement.vue'
+import Testintroduction from '../components/News/SubMenu/Test/Testintroduction.vue'
+import Testtime from '../components/News/SubMenu/Test/Testtime.vue'
+import Testdownload from '../components/News/SubMenu/Test/Testdownload.vue'
+import Student from '../components/News/SubMenu/Student/Studentinformation.vue'
+import Departmenttolearn from '../components/News/SubMenu/Student/Departmenttolearn.vue'
+import Professional from '../components/News/SubMenu/Student/Professional.vue'
+import Sar from '../components/News/SubMenu/Student/Sar.vue'
+import Scholarship from '../components/News/SubMenu/Student/Scholarship.vue'
+import Sophomore from '../components/News/SubMenu/Student/Sophomore.vue'
+import Statisticsemployment from '../components/News/SubMenu/Student/Statisticsemployment.vue'
+import Friends from '../components/News/SubMenu/Friends/Friends.vue'
+import Activities from '../components/News/SubMenu/Friends/Activities.vue'
+import Celebrity from '../components/News/SubMenu/Friends/Celebrity.vue'
+import Highlights from '../components/News/SubMenu/Friends/Highlights.vue'
+import Latestnews from '../components/News/SubMenu/Friends/Latestnews.vue'
+import World from '../components/News/SubMenu/Friends/World.vue'
+import Friendsintroduction from '../components/News/SubMenu/Friends/Friendsintroduction.vue'
+
+
 
 
 Vue.use(Router)
@@ -47,7 +69,90 @@ export default new Router({
         {
           path: 'StudentInformation',
           component: StudentInformation
-        }
+        },
+        {
+          path: 'Test',
+          component: Test,
+          children: [
+            {
+              path: 'Testnews',
+              component: Testnews
+            },
+            {
+              path: 'Testannouncement',
+              component: Testannouncement
+            },{
+              path: 'Testdownload',
+              component: Testdownload
+            },{
+              path: 'Testintroduction',
+              component: Testintroduction
+            },{
+              path: 'Testtime',
+              component: Testtime
+            },
+          ]
+        },
+        {
+          path: 'Student',
+          component: Student,
+          children: [
+            {
+              path: 'Departmenttolearn',
+              component: Departmenttolearn
+            },
+            {
+              path: 'Professional',
+              component: Professional
+            },
+            {
+              path: 'Sar',
+              component: Sar
+            },
+            {
+              path: 'Scholarship',
+              component: Scholarship
+            },
+            {
+              path: 'Sophomore',
+              component: Sophomore
+            },
+            {
+              path: 'Statisticsemployment',
+              component: Statisticsemployment
+            }
+          ]
+        },
+        {
+          path: 'Friends',
+          component: Friends,
+          children: [
+            {
+              path: 'Activities',
+              component: Activities
+            },
+            {
+              path: 'Celebrity',
+              component: Celebrity
+            },
+            {
+              path: 'Highlights',
+              component: Highlights
+            },
+            {
+              path: 'Latestnews',
+              component: Latestnews
+            },
+            {
+              path: 'World',
+              component: World
+            },
+            {
+              path: 'Friendsintroduction',
+              component: Friendsintroduction
+            },
+          ]
+        },
       ]
     },
     {
