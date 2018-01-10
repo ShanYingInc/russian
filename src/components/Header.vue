@@ -6,11 +6,17 @@
     .goindex
       ul
         li.test(span='')
-          router-link(to='/') 回首頁|
+          router-link(to='/') 回首頁 |
         li
-          a(href='') 淡江大學|
+          a(href='')  淡江大學 |
         li
-          a(href='') 網站地圖
+          a(href='')  網站地圖 |
+        li
+          router-link(to='/')  中文版 |
+        li
+          router-link(to='/')  English |
+        li
+          router-link(to='/')  Русский
   .nav
     el-menu(theme='line', :default-active='activeIndex',mode='horizontal', @select='handleSelect', background-color='#545c64', text-color='#fff', active-text-color='#ffd04b', router=true)
       el-menu-item(index='/News') 最新消息
@@ -35,7 +41,10 @@
         el-menu-item(index='/Class/Relevant') 相關修業規定
         el-menu-item(index='/Class/Credit') 學分學程
         el-menu-item(index='/Class/Auxiliary') 輔系雙學位
-      el-menu-item(index='/Enrollment/Admission') 招生資訊
+      el-submenu(index='/Enrollment/Admission')
+        template(slot='title') 招生資訊
+        el-menu-item(index='/Enrollment/Admission') 申請入學
+        el-menu-item(index='/Enrollment/Answer') 相關問題和解答
       el-submenu(index='6')
         template(slot='title') 學術成果
         el-menu-item(index='6-1') 期刊討論
@@ -53,10 +62,10 @@
         el-menu-item(index='9-1') 100學年度
         el-menu-item(index='9-2') 101學年度
         el-menu-item(index='9-3') 102學年度
-      //
-        <el-menu-item index="9"><a href="https://www.ele.me" target="_blank">中文</a></el-menu-item>
-        <el-menu-item index="10"><a href="https://www.ele.me" target="_blank">English</a></el-menu-item>
-        <el-menu-item index="11"><a href="https://www.ele.me" target="_blank">Русский</a></el-menu-item>
+      a(href='http://www.junioryear.tku.edu.tw/main.php')
+        el-menu-item 大三出國留學
+      el-menu-item(index='/') 系友專區
+      el-menu-item(index='') 俄檢專區
 
 </template>
 <script>
