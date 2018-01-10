@@ -1,5 +1,5 @@
 <template>
-  <div id="activities">
+  <div id="eventsintroduction">
     <div class="content">
       <h3>本系簡介</h3> 
       <p>本系成立於民國82年，至今已邁入第25個年頭，為淡江大學外國語文學院最年輕的科系，也是國內繼政治大學及中國文化大學之後成立的第三個以俄語專業為主的科系。歷年來主持系務者有：戴萬欽教授、楊棨教授、劉克甫教授 (М.В. Крюков )、彼薩列夫教授(А.А.Писарев)、馬良文教授 (В.В.Малявин)、張慶國副教授、蘇淑燕副教授，現任系主任為劉皇杏副教授。每年招收新生一班，計62名，截至105學年度第2學期為止，本系共有254名在學學生。</p>
@@ -10,7 +10,7 @@
 </template>
 
 <style lang="sass">
-#activities
+#eventsintroduction
   width: 70%
   text-align:left
   animation: fadein 2s

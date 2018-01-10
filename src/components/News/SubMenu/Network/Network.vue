@@ -1,11 +1,10 @@
 <template>
-<div id="events">
+<div id="network">
   <div class="switch">
-    <div class="link"><router-link to='/News/Events/Eventsintroduction'>學術活動</router-link></div>
-    <div class="link"><router-link to='/News/Events/Tea'>學術下午茶</router-link></div>
-    <div class="link"><router-link to='/News/Events/Lecture'>專題演講</router-link></div>
-    <div class="link"><router-link to='/News/Events/Read'>俄文系讀書會</router-link></div>
-    <div class="link"><router-link to='/News/Events/Workshop'>教學工作坊</router-link></div>
+    <div class="link"><router-link to='/News/Network/Sister'>姐妹校</router-link></div>
+    <div class="link"><router-link to='/News/Network/Friendlylinks'>國內友站連結</router-link></div>
+    <div class="link"><router-link to='/News/Network/Learning'>學習資源網</router-link></div>
+    <div class="link"><router-link to='/News/Network/Networkemployment'>就業服務</router-link></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>
@@ -18,7 +17,7 @@ export default {
 }
 </script>
 <style lang="sass">
-#events
+#network
   display: flex
   flex-direction: column
   .switch
