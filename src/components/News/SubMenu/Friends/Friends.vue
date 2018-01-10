@@ -7,7 +7,7 @@
     <div class="link"><router-link to='/News/Friends/Highlights'>活動集錦</router-link></div>
     <div class="link"><router-link to='/News/Friends/World'>俄語天地</router-link></div>
     <div class="link"><router-link to='/News/Friends/Celebrity'>系友名人榜</router-link></div>
-    <div class="link">Face Book / Blog</div>
+    <div class="link"><a href="">Face Book / Blog</a></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 <style lang="sass">
-#test
+#friends
   display: flex
   flex-direction: column
   .switch
