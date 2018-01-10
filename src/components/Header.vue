@@ -64,8 +64,8 @@
         el-menu-item(index='9-3') 102學年度
       a(href='http://www.junioryear.tku.edu.tw/main.php')
         el-menu-item 大三出國留學
-      el-menu-item(index='/') 系友專區
-      el-menu-item(index='') 俄檢專區
+      el-menu-item(index='/News/Friends/Friendsintroduction') 系友專區
+      el-menu-item(index='/Test/Testnews') 俄檢專區
 
 </template>
 <script>

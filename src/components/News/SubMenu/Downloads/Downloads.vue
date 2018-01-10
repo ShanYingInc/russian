@@ -1,11 +1,8 @@
 <template>
-<div id="events">
+<div id="downloads">
   <div class="switch">
-    <div class="link"><router-link to='/News/Events/Eventsintroduction'>學術活動</router-link></div>
-    <div class="link"><router-link to='/News/Events/Tea'>學術下午茶</router-link></div>
-    <div class="link"><router-link to='/News/Events/Lecture'>專題演講</router-link></div>
-    <div class="link"><router-link to='/News/Events/Read'>俄文系讀書會</router-link></div>
-    <div class="link"><router-link to='/News/Events/Workshop'>教學工作坊</router-link></div>
+    <div class="link"><router-link to='/News/Downloads/Downloadsstudent'>學生下載</router-link></div>
+    <div class="link"><router-link to='/News/Downloads/Order'>其他下載</router-link></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>
@@ -18,7 +15,7 @@ export default {
 }
 </script>
 <style lang="sass">
-#events
+#downloads
   display: flex
   flex-direction: column
   .switch

@@ -1,16 +1,13 @@
 <template>
 <div id="slider">
-  <el-menu default-active="1" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+  <el-menu default-active="1" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router=true>
     <el-menu-item-group>
-      <el-menu-item index="1"><a href="http://www.junioryear.tku.edu.tw/main.php">大三出國留學</a></el-menu-item>
-      <el-menu-item index="2"><router-link to="/News/Student/Departmenttolearn">學生資訊</router-link></el-menu-item>
-      <el-menu-item index="3"><router-link to="/News/Friends/Friendsintroduction">系友專區</router-link></el-menu-item>
-      <el-menu-item index="4"><router-link to="/News/GraduatesInformation">學術活動</router-link></el-menu-item>
-      <el-menu-item index="5">活動花絮</el-menu-item>
+      <el-menu-item index="/News/Student/Departmenttolearn">學生資訊</el-menu-item>
+      <el-menu-item index="/News/Events/Eventsintroduction">學術活動</el-menu-item>
+      <el-menu-item index="/News/StudentInformation">活動花絮</el-menu-item>
       <el-menu-item index="6">戲劇公演</el-menu-item>
-      <el-menu-item index="7">網路資源</el-menu-item>
-      <el-menu-item index="8"><router-link to="/News/Test/Testnews">俄檢專區</router-link></el-menu-item>
-      <el-menu-item index="9">下載專區</el-menu-item>
+      <el-menu-item index="/News/Network/Sister">網路資源</el-menu-item>
+      <el-menu-item index="/News/Downloads/Downloadsstudent">下載專區</el-menu-item>
     </el-menu-item-group>
   </el-menu>
 </div>

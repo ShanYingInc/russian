@@ -44,8 +44,20 @@ import Highlights from '../components/News/SubMenu/Friends/Highlights.vue'
 import Latestnews from '../components/News/SubMenu/Friends/Latestnews.vue'
 import World from '../components/News/SubMenu/Friends/World.vue'
 import Friendsintroduction from '../components/News/SubMenu/Friends/Friendsintroduction.vue'
-
-
+import Events from '../components/News/SubMenu/Events/Events.vue'
+import Lecture from '../components/News/SubMenu/Events/Lecture.vue'
+import Read from '../components/News/SubMenu/Events/Read.vue'
+import Tea from '../components/News/SubMenu/Events/Tea.vue'
+import Workshop from '../components/News/SubMenu/Events/Workshop.vue'
+import Eventsintroduction from '../components/News/SubMenu/Events/Eventsintroduction.vue'
+import Network from '../components/News/SubMenu/Network/Network.vue'
+import Friendlylinks from '../components/News/SubMenu/Network/Friendlylinks.vue'
+import Learning from '../components/News/SubMenu/Network/Learning.vue'
+import Sister from '../components/News/SubMenu/Network/Sister.vue'
+import Networkemployment from '../components/News/SubMenu/Network/Networkemployment.vue'
+import Downloads from '../components/News/SubMenu/Downloads/Downloads.vue'
+import Order from '../components/News/SubMenu/Downloads/Order.vue'
+import Downloadsstudent from '../components/News/SubMenu/Downloads/Student.vue'
 
 
 Vue.use(Router)
@@ -63,35 +75,35 @@ export default new Router({
       component: Winning
     },
     {
+      path: 'Test',
+      component: Test,
+      children: [
+        {
+          path: 'Testnews',
+          component: Testnews
+        },
+        {
+          path: 'Testannouncement',
+          component: Testannouncement
+        },{
+          path: 'Testdownload',
+          component: Testdownload
+        },{
+          path: 'Testintroduction',
+          component: Testintroduction
+        },{
+          path: 'Testtime',
+          component: Testtime
+        },
+      ]
+    },
+    {
       path: '/News',
       component: News,
       children: [
         {
           path: 'StudentInformation',
           component: StudentInformation
-        },
-        {
-          path: 'Test',
-          component: Test,
-          children: [
-            {
-              path: 'Testnews',
-              component: Testnews
-            },
-            {
-              path: 'Testannouncement',
-              component: Testannouncement
-            },{
-              path: 'Testdownload',
-              component: Testdownload
-            },{
-              path: 'Testintroduction',
-              component: Testintroduction
-            },{
-              path: 'Testtime',
-              component: Testtime
-            },
-          ]
         },
         {
           path: 'Student',
@@ -150,11 +162,73 @@ export default new Router({
             {
               path: 'Friendsintroduction',
               component: Friendsintroduction
+            }
+          ]
+        },
+        {
+          path: 'Network',
+          component: Network,
+          children: [
+            {
+              path: 'Friendlylinks',
+              component: Friendlylinks
+            },
+            {
+              path: 'Learning',
+              component: Learning
+            },
+            {
+              path: 'Sister',
+              component: Sister
+            },
+            {
+              path: 'Networkemployment',
+              component: Networkemployment
+            }
+          ]
+        },
+        {
+          path: 'Downloads',
+          component: Downloads,
+          children: [
+            {
+              path: 'Order',
+              component: Order
+            },
+            {
+              path: 'Downloadsstudent',
+              component: Downloadsstudent
+            }
+          ]
+        },
+            {
+              path: 'Events',
+              component: Events,
+              children: [
+                {
+                  path: 'Lecture',
+                  component: Lecture
+                },
+                {
+                  path: 'Read',
+                  component: Read
+                },
+                {
+                  path: 'Tea',
+                  component: Tea
+                },
+                {
+                  path: 'Workshop',
+                  component: Workshop
+                },
+                {
+                  path: 'Eventsintroduction',
+                  component: Eventsintroduction
+                }
+              ]
             },
           ]
         },
-      ]
-    },
     {
       path: '/Introduction',
       component: Introduction,
