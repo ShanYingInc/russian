@@ -2,7 +2,7 @@
 <div id="classin">
   <div class="switch">
     <div class="link"><router-link to='/Class/Courseinformation'>學期資訊</router-link></div>
-    <div class="link"><router-link to='/Class/Semester'>學期課表</router-link></div>
+    <!--<div class="link"><router-link to='/Class/Semester'>學期課表</router-link></div>!-->
     <div class="link"><router-link to='/Class/Course'>課程架構</router-link></div>
     <div class="link"><router-link to='/Class/Alternative'>必選修科目</router-link></div>
     <div class="link"><router-link to='/Class/Required'>替代科目</router-link></div>
