@@ -1,5 +1,5 @@
 <template>
-<div id="table">
+<div id="admission">
     <el-table
     :data="tableData"
     border
@@ -12,14 +12,15 @@
     <el-table-column
       prop="name"
       label="標題"
-      width="180">
+      width="500">
     </el-table-column>
     <el-table-column
       prop="address"
-      label="檔案下載">
+      label="檔案下載"
+      width="180">
     </el-table-column>
   </el-table>
-</div>	
+</div>
 </template>
 
 <script>
@@ -47,3 +48,7 @@
     }
   }
 </script>
+<style lang="sass">
+#admission
+  margin: 20px auto
+</style>

@@ -1,5 +1,5 @@
 <template>
-<div id="table">
+<div id="Winning">
     <el-table
     :data="tableData"
     border
@@ -12,18 +12,19 @@
     <el-table-column
       prop="name"
       label="年度"
-      width="180">
+      width="50">
     </el-table-column>
     <el-table-column
       prop="address"
-      label="獎項名稱">
+      label="獎項名稱"
+      width="180">
     </el-table-column>
     <el-table-column
       prop="title"
       label="得獎人">
     </el-table-column>
   </el-table>
-</div>	
+</div>
 </template>
 
 <script>
@@ -87,5 +88,6 @@
   }
 </script>
 <style lang="sass">
-
+#Winning
+  margin: 20px auto
 </style>

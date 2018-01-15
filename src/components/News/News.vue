@@ -1,6 +1,6 @@
 <template lang="pug">
 #news
-  Slider
+  //- Slider
   router-view.content
 </template>
 <script>
