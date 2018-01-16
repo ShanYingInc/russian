@@ -1,17 +1,25 @@
-<template>
-<div id="slider">
-  <el-menu default-active="1" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router=true>
-    <el-menu-item-group>
-      <el-menu-item index="/News/Student/Departmenttolearn">學生資訊</el-menu-item>
-      <el-menu-item index="/News/Events/Eventsintroduction">學術活動</el-menu-item>
-      <el-menu-item index="/News/StudentInformation">活動花絮</el-menu-item>
-      <el-menu-item index="6">戲劇公演</el-menu-item>
-      <el-menu-item index="/News/Network/Sister">網路資源</el-menu-item>
-      <el-menu-item index="/News/Downloads/Downloadsstudent">下載專區</el-menu-item>
-    </el-menu-item-group>
-  </el-menu>
-</div>
-  
+<template lang="pug">
+#slider
+  b-nav(vertical=true)
+    b-nav-item(to="/News/Student/Departmenttolearn") 學生資訊
+    b-nav-item(to="/News/Events/Eventsintroduction") 學術活動
+    b-nav-item(to="/StudentInformation") 活動花絮
+    b-nav-item() 戲劇公演
+    b-nav-item(to="/News/Network/Sister") 網路資源
+    b-nav-item(to="/News/Downloads/Downloadsstudent") 下載專區
+//- <div id="slider">
+//-   <el-menu default-active="1" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router=true>
+//-     <el-menu-item-group>
+//-       <el-menu-item index="/News/Student/Departmenttolearn">學生資訊</el-menu-item>
+//-       <el-menu-item index="/News/Events/Eventsintroduction">學術活動</el-menu-item>
+//-       <el-menu-item index="/News/StudentInformation">活動花絮</el-menu-item>
+//-       <el-menu-item index="6">戲劇公演</el-menu-item>
+//-       <el-menu-item index="/News/Network/Sister">網路資源</el-menu-item>
+//-       <el-menu-item index="/News/Downloads/Downloadsstudent">下載專區</el-menu-item>
+//-     </el-menu-item-group>
+//-   </el-menu>
+//- </div>
+
 </template>
 
 <script>

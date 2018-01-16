@@ -2,18 +2,18 @@
 #app
   HeaderComponent
   router-view.app-content
-  Footer
+  FooterComponent
 </template>
 
 <script>
 import { api } from './api'
 import {mapActions} from 'vuex'
-import Footer from "@/components/Footer"
+import FooterComponent from "@/components/Footer"
 import HeaderComponent from "@/components/Header"
 
 export default {
   components:{
-    Footer,
+    FooterComponent,
     HeaderComponent
   },
   methods: {

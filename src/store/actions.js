@@ -21,18 +21,18 @@ export const actions = {
       // })
     // })
 
-    fetch(api.getallintroduction()).then(response => {
-      response.json().then(data => {
-        console.log(data)
-         commit(types.UPDATE_INTRODUCTION_DATA, data)
-      })
-    })
+    // fetch(api.getallintroduction()).then(response => {
+    //   response.json().then(data => {
+    //     console.log(data)
+    //      commit(types.UPDATE_INTRODUCTION_DATA, data)
+    //   })
+    // })
 
-    fetch(api.getAllSidebar()).then(response => {
-      response.json().then(data => {
-        //console.log(data)
-        // commit(types.UPDATE_SLIDEBAR_DATA, data)
-      })
-    })
+    // fetch(api.getAllSidebar()).then(response => {
+    //   response.json().then(data => {
+    //     //console.log(data)
+    //     // commit(types.UPDATE_SLIDEBAR_DATA, data)
+    //   })
+    // })
   }
 }

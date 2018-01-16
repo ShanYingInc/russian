@@ -1,26 +1,6 @@
-<template>
-<div id="admission">
-    <el-table
-    :data="tableData"
-    border
-    style="width: 100%">
-    <el-table-column
-      prop="date"
-      label="分類"
-      width="180">
-    </el-table-column>
-    <el-table-column
-      prop="name"
-      label="標題"
-      width="500">
-    </el-table-column>
-    <el-table-column
-      prop="address"
-      label="檔案下載"
-      width="180">
-    </el-table-column>
-  </el-table>
-</div>
+<template lang='pug'>
+#admission
+  b-table(striped='', hover=true, :items='tableData', :fields='fields')
 </template>
 
 <script>
@@ -43,7 +23,8 @@
           date: '大學部 - 相關問題和解答',
           name: '「個人申請」和「指考分發」多少分會上淡江文系？',
           address: ''
-        }]
+        }],
+        fields: ['分類', '標題', '檔案下載']
       }
     }
   }
