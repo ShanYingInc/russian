@@ -109,7 +109,7 @@ export default new Router({
       component: StudentInformation
     },
     {
-      path: "Student",
+      path: "/Student",
       component: Student,
       children: [
         {
@@ -169,7 +169,7 @@ export default new Router({
       ]
     },
     {
-      path: "Network",
+      path: "/Network",
       component: Network,
       children: [
         {
@@ -191,7 +191,7 @@ export default new Router({
       ]
     },
     {
-      path: "Downloads",
+      path: "/Downloads",
       component: Downloads,
       children: [
         {
@@ -205,7 +205,7 @@ export default new Router({
       ]
     },
     {
-      path: "Events",
+      path: "/Events",
       component: Events,
       children: [
         {

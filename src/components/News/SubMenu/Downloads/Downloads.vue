@@ -1,8 +1,8 @@
 <template>
 <div id="downloads">
   <div class="switch">
-    <div class="link"><router-link to='/News/Downloads/Downloadsstudent'>學生下載</router-link></div>
-    <div class="link"><router-link to='/News/Downloads/Order'>其他下載</router-link></div>
+    <div class="link"><router-link to='/Downloads/Downloadsstudent'>學生下載</router-link></div>
+    <div class="link"><router-link to='/Downloads/Order'>其他下載</router-link></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>

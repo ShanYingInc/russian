@@ -2,10 +2,10 @@
   <div id="studentInformation">
     <!-- directive -->
     <div class="images" v-viewer>
-      <img src="https://p2.bahamut.com.tw/S/2KU/53/0001480453.JPG">
-      <img src="https://p2.bahamut.com.tw/S/2KU/17/fea2935ecc86354cfdcc6b983c7zj6h4.JPG">
-      <img src="https://p2.bahamut.com.tw/M/2KU/46/80e1640a8d8e5b853d0bbbf5547zmd64.JPG">
-      <img src="https://p2.bahamut.com.tw/M/2KU/51/a5cae96960380ecae3246a05a1azmdb4.JPG ">
+      <img src="https://lh6.googleusercontent.com/BOQnsuWa47394voCGX-606fWIGVLAz2zjzX1FgScudqkeFctfRPCX5R2kg-DBxb8MxXbG0WNXQ2TIXU=w1920-h949-rw">
+      <img src="https://lh5.googleusercontent.com/z-3E1sIMzE_FpuHOrqcWpyQ875T88nSymxTV5e_bT_927NmQxr9AaDajdokfxySy9a6K3kG6A9FQUA0=w1920-h949-rw">
+      <img src="https://lh6.googleusercontent.com/5YfDokBcAyZjzs1k43F1M01JnAU1bIT0e-tqJDbuubWXCvCPixvTL1vB2vVklbhxf1cLMo5pbKaf3B0=w1920-h949-rw">
+      <img src="https://lh4.googleusercontent.com/G93Wz4XW56fIZiZ6jKg0sKNtiZPIMjyPBcTTo36Hl28WYNhLdhwQ8DYfwPBp3Oa0ctlptYudzC3qgTs=w1920-h949-rw">
     </div>
     <viewer :images="images">
       <img v-for="src in images" :src="src" :key="src">

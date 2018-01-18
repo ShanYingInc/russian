@@ -1,12 +1,12 @@
 <template>
 <div id="studentinformation">
   <div class="switch">
-    <div class="link"><router-link to='/News/Student/Departmenttolearn'>系學會</router-link></div>
-    <div class="link"><router-link to='/News/Student/Scholarship'>獎學金</router-link></div>
-    <div class="link"><router-link to='/News/Student/Sophomore'>大三出國甄選</router-link></div>
-    <div class="link"><router-link to='/News/Student/Sar'>俄語特區</router-link></div>
-    <div class="link"><router-link to='/News/Student/Professional'>專業證照</router-link></div>
-    <div class="link"><router-link to='/News/Student/Statisticsemployment'>統計就業服務</router-link></div>
+    <div class="link"><router-link to='/Student/Departmenttolearn'>系學會</router-link></div>
+    <div class="link"><router-link to='/Student/Scholarship'>獎學金</router-link></div>
+    <div class="link"><router-link to='/Student/Sophomore'>大三出國甄選</router-link></div>
+    <div class="link"><router-link to='/Student/Sar'>俄語特區</router-link></div>
+    <div class="link"><router-link to='/Student/Professional'>專業證照</router-link></div>
+    <div class="link"><router-link to='/Student/Statisticsemployment'>統計就業服務</router-link></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>

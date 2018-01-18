@@ -42,7 +42,7 @@ body
   flex-direction: column
   position: relative
   padding-bottom: 212px
-  background: url(assets//background.jpg) center no-repeat
+  background: url(assets//background.png) center no-repeat
   background-size: cover
   .app-content
     flex-grow: 999

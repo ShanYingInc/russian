@@ -2,7 +2,7 @@
 #header
   .header
     router-link.logo(to='/')
-      img(src='https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/26219227_960313950811554_1142201070496921854_n.jpg?oh=a45c52e96e13dcf7237fec97b98d9784&oe=5AF8800E')
+      img(src='../assets/logo.png' ,height = '150' )
     .goindex
       ul
         li.test(span='')
@@ -22,7 +22,7 @@
       b-nav-item(to="/News") 最新消息
       b-nav-item-dropdown#nav-2(text='本系介紹')
         b-dropdown-item(to="/Introduction/Important") 重要記事
-        b-dropdown-item(t0="/Introduction/Vision") 願景及策略
+        b-dropdown-item(to="/Introduction/Vision") 願景及策略
       b-nav-item-dropdown#nav-3(text='本系成員')
         b-dropdown-item(to="/Staff/Fulltime") 專任師資
         b-dropdown-item(to="/Staff/Parttime") 兼任師資

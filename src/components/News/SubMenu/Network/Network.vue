@@ -1,10 +1,10 @@
 <template>
 <div id="network">
   <div class="switch">
-    <div class="link"><router-link to='/News/Network/Sister'>姐妹校</router-link></div>
-    <div class="link"><router-link to='/News/Network/Friendlylinks'>國內友站連結</router-link></div>
-    <div class="link"><router-link to='/News/Network/Learning'>學習資源網</router-link></div>
-    <div class="link"><router-link to='/News/Network/Networkemployment'>就業服務</router-link></div>
+    <div class="link"><router-link to='/Network/Sister'>姐妹校</router-link></div>
+    <div class="link"><router-link to='/Network/Friendlylinks'>國內友站連結</router-link></div>
+    <div class="link"><router-link to='/Network/Learning'>學習資源網</router-link></div>
+    <div class="link"><router-link to='/Network/Networkemployment'>就業服務</router-link></div>
   </div>
   <router-view class="test-content"></router-view>
 </div>

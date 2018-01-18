@@ -34,7 +34,7 @@ export default {
     padding: 20px 50px
     // border: 1px solid #ccc
     border-radius: 5px
-    background: rgba(255, 255, 255, 0.4)
+    background: rgba(255, 255, 255, 0.8)
     box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
 @keyframes fadein
   from
