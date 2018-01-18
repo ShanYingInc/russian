@@ -16,12 +16,12 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 #slider
   width: 148px
   height: 100%
   background: #666
-  align-self: center
+  align-self: flex-start
   ul
     li
       a

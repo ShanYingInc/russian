@@ -76,8 +76,9 @@ export default {
 }
 
 </script>
-<style>
-
+<style lang="sass">
+.card-wrap
+  flex: 0 20%
 </style>
 
 // Vue.config.devtools = true;

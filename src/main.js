@@ -9,9 +9,8 @@ import BootstrapVue from 'bootstrap-vue'
 import './assets/bootstrap-edit.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.config.productionTip = false;
-// Vue.use(ElementUI);
-Vue.use(BootstrapVue);
+Vue.config.productionTip = false
+Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
 new Vue({

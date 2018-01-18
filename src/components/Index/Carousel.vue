@@ -1,9 +1,15 @@
 <template lang="pug">
 #carousel
-  b-carousel#carousel(style='text-shadow: 1px 1px 2px #333;', controls='', indicators='', background='#ababab', :interval='4000', img-height='350', v-model='slide', @sliding-start='onSlideStart', @sliding-end='onSlideEnd')
+  b-carousel#banner(style='text-shadow: 1px 1px 2px #333;', controls='', indicators='', background='rgba(0,0,0,0.3)', :interval='4000', v-model='slide', @sliding-start='onSlideStart', @sliding-end='onSlideEnd')
     b-carousel-slide
-      img.d-block(slot='img', height='350', src="../../assets/IMG_1513.jpg")
+      img.d-flex(slot='img', height='350', src="../../assets/IMG_1513.jpg")
       h1 俄羅斯風情1
+    b-carousel-slide
+      img.d-flex(slot='img', height='350', src="../../assets/IMG_1513.jpg")
+      h1 俄羅斯風情2
+    b-carousel-slide
+      img.d-flex(slot='img', height='350', src="../../assets/IMG_1513.jpg")
+      h1 俄羅斯風情3
 </template>
 <script>
 export default {
@@ -30,5 +36,8 @@ export default {
 </script>
 <style lang="sass" scoped>
 #carousel
-  img
+  flex-grow: 999
+  #banner
+    img
+      margin: 0 auto
 </style>

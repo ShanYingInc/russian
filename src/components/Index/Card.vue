@@ -49,7 +49,7 @@ h1 + p, p + p {
 }
 
 .container {
-  padding: 40px 80px;
+  /* padding: 40px 80px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

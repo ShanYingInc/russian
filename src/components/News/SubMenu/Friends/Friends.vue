@@ -1,22 +1,27 @@
-<template>
-<div id="friends">
-  <div class="switch">
-    <div class="link"><router-link to='/News/Friends/Friendsintroduction'>系友會簡介</router-link></div>
-    <div class="link"><router-link to='/News/Friends/Activities'>系友會活動</router-link></div>
-    <div class="link"><router-link to='/News/Friends/Latestnews'>最新動態</router-link></div>
-    <div class="link"><router-link to='/News/Friends/Highlights'>活動集錦</router-link></div>
-    <div class="link"><router-link to='/News/Friends/World'>俄語天地</router-link></div>
-    <div class="link"><router-link to='/News/Friends/Celebrity'>系友名人榜</router-link></div>
-    <div class="link"><a href="">Face Book / Blog</a></div>
-  </div>
-  <router-view class="test-content"></router-view>
-</div>
+<template lang='pug'>
+#friends
+  //- .switch
+  //-   .link
+  //-     router-link(to='/News/Friends/Friendsintroduction') 系友會簡介
+  //-   .link
+  //-     router-link(to='/News/Friends/Activities') 系友會活動
+  //-   .link
+  //-     router-link(to='/News/Friends/Latestnews') 最新動態
+  //-   .link
+  //-     router-link(to='/News/Friends/Highlights') 活動集錦
+  //-   .link
+  //-     router-link(to='/News/Friends/World') 俄語天地
+  //-   .link
+  //-     router-link(to='/News/Friends/Celebrity') 系友名人榜
+  //-   .link
+  //-     a(href='') Face Book / Blog
+  router-view.test-content
 </template>
 <script>
 import {mapState} from 'vuex'
 
 export default {
-  
+
 }
 </script>
 <style lang="sass">
@@ -61,5 +66,5 @@ export default {
           transform-origin: left top
           transform: scale(1, 1)
   .test-content
-    margin-top: 50px
+    margin-top: 20px
 </style>

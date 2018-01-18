@@ -17,16 +17,16 @@ const link = {
   user: root + 'user'
 }
 
-class method {
+class Method {
   static get (link) {
     return {
-      method: 'get',
+      Method: 'get',
       url: link
     }
   }
   static post (link, data) {
     return {
-      method: 'post',
+      Method: 'post',
       url: link,
       data: data
     }
@@ -36,13 +36,13 @@ class method {
 export const api = {
   navigation: {
     get () {
-      return axios(method.get(link.navigation)).then(response => {
+      return axios(Method.get(link.navigation)).then(response => {
         return response.data
       })
     },
     search ({ navigationId }) {
       const requestLink = link.navigation + '/' + navigationId
-      return axios(method.get(requestLink)).then(response => {
+      return axios(Method.get(requestLink)).then(response => {
         return response.data
       })
     },
@@ -50,17 +50,13 @@ export const api = {
       const data = {
         name: name
       }
-      return axios(method.post(link.navigation, data)).then(response => {
+      return axios(Method.post(link.navigation, data)).then(response => {
         return response
       })
     },
     edit () {
       const method = {
-        method: 'post',
-        url: link.navigation,
-        data: {
-          name: name
-        }
+
       }
       return axios(method).then(response => {
         return response
@@ -68,11 +64,7 @@ export const api = {
     },
     delete () {
       const method = {
-        method: 'post',
-        url: link.navigation,
-        data: {
-          name: name
-        }
+
       }
       return axios(method).then(response => {
         return response
@@ -81,35 +73,35 @@ export const api = {
   },
   slider: {
     get () {
-      return axios(method.get(link.slider)).then(response => {
+      return axios(Method.get(link.slider)).then(response => {
         return response.data
       })
     }
   },
   banner: {
     get () {
-      return axios(method.get(link.banner)).then(response => {
+      return axios(Method.get(link.banner)).then(response => {
         return response.data
       })
     }
   },
   member: {
     get () {
-      return axios(method.get(link.member)).then(response => {
+      return axios(Method.get(link.member)).then(response => {
         return response.data
       })
     }
   },
   content: {
     get () {
-      return axios(method.get(link.content)).then(response => {
+      return axios(Method.get(link.content)).then(response => {
         return response.data
       })
     }
   },
   admission: {
     get () {
-      return axios(method.get(link.admission)).then(response => {
+      return axios(Method.get(link.admission)).then(response => {
         return response.data
       })
     }

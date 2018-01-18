@@ -1,6 +1,10 @@
 import { types } from './mutations_types'
 
 export const state = {
+  loginStatus: {
+    session: 'test_session',
+    user: 'admin'
+  },
   staff: [],
   slidebar: ['none'],
   introduction: []

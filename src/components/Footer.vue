@@ -2,7 +2,7 @@
 #footer
   .left
     ul
-      p(style='font-size: 20px;') 淡江大學俄國語文學系
+      h4 淡江大學俄國語文學系
       li
         p 25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室
       li
@@ -22,8 +22,9 @@ export default {};
 
 <style lang="sass">
 #footer
+  padding: 10px 0 0 0
   width: 100vw
-  font-family: "Microsoft YaHei";
+  font-family: "新細明體";
   background-color: #34495e;
   display: flex
   flex-direction: row
@@ -31,18 +32,19 @@ export default {};
   position: absolute
   bottom: 0
   .left
-    text-align: left;
-    a
+    text-align: left
+    h4
       font-family: "Microsoft YaHei";
-      font-size: 12px;
-      color: #ffffff;
+      color: white
     p
+      margin: 0
       font-family: "Microsoft YaHei";
       font-size: 13px;
       color: #ffffff;
   .right
     padding: 10px
+    align-self: flex-end
     i
-      font-size: 12em
+      font-size: 6em
       color: white
 </style>
