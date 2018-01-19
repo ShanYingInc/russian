@@ -1,27 +1,32 @@
 <template>
 <div id="studentinformation">
-  <div class="switch">
+  <!-- <div class="switch">
     <div class="link"><router-link to='/Student/Departmenttolearn'>系學會</router-link></div>
     <div class="link"><router-link to='/Student/Scholarship'>獎學金</router-link></div>
     <div class="link"><router-link to='/Student/Sophomore'>大三出國甄選</router-link></div>
     <div class="link"><router-link to='/Student/Sar'>俄語特區</router-link></div>
     <div class="link"><router-link to='/Student/Professional'>專業證照</router-link></div>
     <div class="link"><router-link to='/Student/Statisticsemployment'>統計就業服務</router-link></div>
-  </div>
+  </div> -->
+  <slider></slider>
   <router-view class="test-content"></router-view>
 </div>
 </template>
 <script>
 import {mapState} from 'vuex'
+import Slider from '../Slider'
 
 export default {
-  
+  components: {
+    Slider
+  }
 }
 </script>
 <style lang="sass">
 #studentinformation
+  padding: 20px 0 0 0
   display: flex
-  flex-direction: column
+  flex-direction: row
   .switch
     display: flex
     flex-direction: row

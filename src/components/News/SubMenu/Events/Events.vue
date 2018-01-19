@@ -1,26 +1,30 @@
 <template>
 <div id="events">
-  <div class="switch">
+  <!-- <div class="switch">
     <div class="link"><router-link to='/Events/Eventsintroduction'>學術活動</router-link></div>
     <div class="link"><router-link to='/Events/Tea'>學術下午茶</router-link></div>
     <div class="link"><router-link to='/Events/Lecture'>專題演講</router-link></div>
     <div class="link"><router-link to='/Events/Read'>俄文系讀書會</router-link></div>
     <div class="link"><router-link to='/Events/Workshop'>教學工作坊</router-link></div>
-  </div>
+  </div> -->
+  <slider></slider>
   <router-view class="test-content"></router-view>
 </div>
 </template>
 <script>
+import Slider from '../Slider'
 import {mapState} from 'vuex'
 
 export default {
-  
+  components: {
+    Slider
+  }
 }
 </script>
 <style lang="sass">
 #events
   display: flex
-  flex-direction: column
+  flex-direction: row
   .switch
     display: flex
     flex-direction: row

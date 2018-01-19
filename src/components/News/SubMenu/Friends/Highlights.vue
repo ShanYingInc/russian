@@ -2,11 +2,11 @@
 #highlights
   Slider
   .pictures
-    .event
+    .event(v-for="i in 10") 標題
 </template>
 <script>
 import { api } from '../../../../api'
-import Slider from './Slider'
+import Slider from '../Slider'
 
 export default {
   components: {
@@ -36,8 +36,13 @@ export default {
   // margin: 20px auto
   display: flex
   .pictures
+    flex-grow: 999
     display: flex
     flex-direction: column
-    margin: 0 0 0 10px
+    margin: 50px 0 0 10px
     align-items: stretch
+    .event
+      background: rgba(255, 255, 255, 0.8)
+      padding: 10px
+      margin: 10px
 </style>
