@@ -40,9 +40,9 @@
         b-dropdown-item(to="/Enrollment/Answer") 相關問題和解答
         b-dropdown-item(to="/Winning") 獲獎紀錄
       b-nav-item-dropdown#nav-6(text='教卓計畫')
-        b-dropdown-item() 100學年度
-        b-dropdown-item() 101學年度
-        b-dropdown-item() 102學年度
+        b-dropdown-item(to="/Teaching/Teaching100") 100學年度
+        b-dropdown-item(to="/Teaching/Teaching101") 101學年度
+        b-dropdown-item(to="/Teaching/Teaching102") 102學年度
       b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
       b-nav-item(to="/Friends/Friendsintroduction") 系友專區
 

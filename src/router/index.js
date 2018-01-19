@@ -58,7 +58,11 @@ import Networkemployment from "../components/News/SubMenu/Network/Networkemploym
 import Downloads from "../components/News/SubMenu/Downloads/Downloads.vue";
 import Order from "../components/News/SubMenu/Downloads/Order.vue";
 import Downloadsstudent from "../components/News/SubMenu/Downloads/Student.vue";
-import Performance from '../components/Index/Performance.vue'
+import Performance from '../components/Index/Performance.vue';
+import Teaching100 from '../components/Teaching/Teaching100.vue';
+import Teaching101 from '../components/Teaching/Teaching101.vue';
+import Teaching102 from '../components/Teaching/Teaching102.vue';
+import Teaching from '../components/Teaching/Teaching.vue';
 
 Vue.use(Router);
 
@@ -242,6 +246,24 @@ export default new Router({
           path: "Vision",
           component: Vision
         }
+      ]
+    },
+    {
+      path: "/Teaching",
+      component: Teaching,
+      children: [
+        {
+          path: "Teaching100",
+          component: Teaching100
+        },
+        {
+          path: "Teaching101",
+          component: Teaching101
+        },
+        {
+          path: "Teaching102",
+          component: Teaching102
+        },
       ]
     },
     {

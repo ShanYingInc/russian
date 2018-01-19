@@ -1,31 +1,46 @@
-<template lang='pug'>
-#answer
-  b-table(striped='', hover=true, :items='tableData', :fields='fields')
+<template>
+  <div id="answer">
+     <div class="content">
+      <div v-html="content"></div>
+    </div>
+  </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        tableData: [{
-          date: '大學部 - 申請入學',
-          name: '106學年度「大學個人申請入學」_第二階段指定項目甄試面試試場及序號查詢',
-          address: '106_面試梯次分配表'
-        }, {
-          date: '大學部 - 申請入學',
-          name: '106學年度大學「個人申請」入學_審查資料上傳作業相關說明',
-          address: ''
-        }, {
-          date: '大學部 - 申請入學',
-          name: '106學年度大學「個人申請」入學第二階段報考相關事項',
-          address: ''
-        }, {
-          date: '大學部 - 相關問題和解答',
-          name: '「個人申請」和「指考分發」多少分會上淡江文系？',
-          address: ''
-        }],
-        fields: ['分類', '標題', '檔案下載']
-      }
+import { api } from '../../api'
+
+export default {
+  data () {
+    return {
+      content: '<p>讀取中</p>'
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      api.content.get().then(data => {
+        this.content = data.answer[0]
+      })
+    })
   }
+}
 </script>
+
+<style lang="sass">
+#answer
+  width: 70%
+  height: 100%
+  text-align:left
+  animation: fadein 2s
+  margin: 20px auto
+  .content
+    padding: 20px 50px
+    // border: 1px solid #ccc
+    border-radius: 5px
+    background: rgba(255, 255, 255, 0.8)
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+</style>
