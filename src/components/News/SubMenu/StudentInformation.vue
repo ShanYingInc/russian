@@ -2,10 +2,10 @@
   <div id="studentInformation">
     <!-- directive -->
     <div class="images" v-viewer>
-      <img src="https://lh6.googleusercontent.com/BOQnsuWa47394voCGX-606fWIGVLAz2zjzX1FgScudqkeFctfRPCX5R2kg-DBxb8MxXbG0WNXQ2TIXU=w1920-h949-rw">
-      <img src="https://lh5.googleusercontent.com/z-3E1sIMzE_FpuHOrqcWpyQ875T88nSymxTV5e_bT_927NmQxr9AaDajdokfxySy9a6K3kG6A9FQUA0=w1920-h949-rw">
-      <img src="https://lh6.googleusercontent.com/5YfDokBcAyZjzs1k43F1M01JnAU1bIT0e-tqJDbuubWXCvCPixvTL1vB2vVklbhxf1cLMo5pbKaf3B0=w1920-h949-rw">
-      <img src="https://lh4.googleusercontent.com/G93Wz4XW56fIZiZ6jKg0sKNtiZPIMjyPBcTTo36Hl28WYNhLdhwQ8DYfwPBp3Oa0ctlptYudzC3qgTs=w1920-h949-rw">
+      <img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t31.0-8/26758529_966834316826184_8330542778646408330_o.jpg?oh=1f6f32439c2fdbaa152eeabf0eeaeee8&oe=5AE0F85D">
+      <img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t31.0-8/26961944_966834440159505_535695174338697310_o.jpg?oh=7d57702c5d58f96ad9900f90577c02e9&oe=5AE8CF4C">
+      <img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t31.0-8/27023660_966834376826178_7524795969737867969_o.jpg?oh=172b4bfde534037c1b9c686ab7e79a3c&oe=5AF12B22">
+      <img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t31.0-8/26951819_966834350159514_4235087126303419684_o.jpg?oh=f44ea2e858d646c6c14d62e490d550c4&oe=5AEF3C2F">
     </div>
     <viewer :images="images">
       <img v-for="src in images" :src="src" :key="src">
@@ -18,7 +18,7 @@
   Vue.use(Viewer)
   export default {
     data() {
-      images: ['1.jpg', '2.jpg','3.jpg']
+      images: ['1.jpg', '2.jpg','3.jpg','4.jpg']
     },
     toolbar: {
 

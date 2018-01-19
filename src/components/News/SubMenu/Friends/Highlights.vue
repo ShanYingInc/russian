@@ -2,7 +2,7 @@
 #highlights
   Slider
   .pictures
-    .event(v-for="i in 10") 標題
+    .event(v-for="i in 10") 標題 內容
 </template>
 
 <script>

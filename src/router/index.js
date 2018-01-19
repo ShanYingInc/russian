@@ -105,7 +105,7 @@ export default new Router({
       component: News
     },
     {
-      path: "StudentInformation",
+      path: "/StudentInformation",
       component: StudentInformation
     },
     {
