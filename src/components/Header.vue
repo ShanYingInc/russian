@@ -10,8 +10,6 @@
         li
           a(href='')  淡江大學 |
         li
-          a(href='')  網站地圖 |
-        li
           router-link(to='/')  中文版 |
         li
           router-link(to='/')  English |
@@ -46,7 +44,7 @@
         b-dropdown-item() 101學年度
         b-dropdown-item() 102學年度
       b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
-      b-nav-item(to="/News/Friends/Friendsintroduction") 系友專區
+      b-nav-item(to="/Friends/Friendsintroduction") 系友專區
 
 </template>
 <script>
@@ -88,7 +86,7 @@ export default {};
 .goindex ul li a
   font-size: 15px
   font-family: "Microsoft YaHei"
-  color: #000000
+  color: #4169E1;
 
 
 </style>

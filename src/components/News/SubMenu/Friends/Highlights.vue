@@ -4,14 +4,12 @@
   .pictures
     .event(v-for="i in 10") 標題
 </template>
+
 <script>
 import { api } from '../../../../api'
 import Slider from '../Slider'
 
 export default {
-  components: {
-    Slider
-  },
   data () {
     return {
       content: '<p>讀取中</p>'
@@ -19,15 +17,14 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      // api.content.get().then(data => {
-      //   this.content = data.highlights[0]
-      // })
+      api.content.get().then(data => {
+        this.content = data.highlights[0]
+      })
     })
   }
 }
-
-
 </script>
+
 <style lang="sass">
 #highlights
   // width: 70%

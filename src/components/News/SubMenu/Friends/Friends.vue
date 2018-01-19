@@ -1,20 +1,20 @@
 <template lang='pug'>
 #friends
-  //- .switch
-  //-   .link
-  //-     router-link(to='/News/Friends/Friendsintroduction') 系友會簡介
-  //-   .link
-  //-     router-link(to='/News/Friends/Activities') 系友會活動
-  //-   .link
-  //-     router-link(to='/News/Friends/Latestnews') 最新動態
-  //-   .link
-  //-     router-link(to='/News/Friends/Highlights') 活動集錦
-  //-   .link
-  //-     router-link(to='/News/Friends/World') 俄語天地
-  //-   .link
-  //-     router-link(to='/News/Friends/Celebrity') 系友名人榜
-  //-   .link
-  //-     a(href='') Face Book / Blog
+  .switch
+    .link
+      router-link(to='/Friends/Friendsintroduction') 系友會簡介
+    .link
+      router-link(to='/Friends/Activities') 系友會活動
+    .link
+      router-link(to='/Friends/Latestnews') 最新動態
+    .link
+      router-link(to='/Friends/Highlights') 活動集錦
+    .link
+      router-link(to='/Friends/World') 俄語天地
+    .link
+      router-link(to='/Friends/Celebrity') 系友名人榜
+    .link
+      a(href='') Face Book / Blog
   router-view.test-content
 </template>
 <script>
