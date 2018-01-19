@@ -17,10 +17,10 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      // api.content.get().then(data => {
-      //   console.log(data)
-      //   this.content = data.departmenttolearn[0]
-      // })
+       api.content.get().then(data => {
+         console.log(data)
+         this.content = data.departmenttolearn[0]
+       })
     })
   }
 }
