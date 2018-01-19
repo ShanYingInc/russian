@@ -1,7 +1,7 @@
 <template>
 <div id="fulltime">
   <div class="location-contain">
-    <div class="locations" v-for="(location, index) in locations" :key="index">
+    <div class="locations" v-for="(location, index) in member" :key="index">
       <div class="place">
         <div class="pic">
           <!--<img :src="location.img" height="150"/>-->
@@ -20,24 +20,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data () {
     return {
-      locations: [
-        {
-          name: '測試',
-          img: '',
-          title: '助教',
-          field: '*實習課授課每週4-6小時...'
-        },
-        {
-          name: '測試',
-          img: '',
-          title: '組員',
-          field: '*OA、OD公文收發及處理...',
-        }
-      ]
     }
+  },
+  computed: {
+    ...mapState({
+      member: state => state.staff.filter(member => {
+        return member.type === 'Tutor'
+      })
+    })
   }
 }
 </script>

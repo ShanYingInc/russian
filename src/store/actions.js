@@ -28,11 +28,9 @@ export const actions = {
     //   })
     // })
 
-    // fetch(api.getAllSidebar()).then(response => {
-    //   response.json().then(data => {
-    //     //console.log(data)
-    //     // commit(types.UPDATE_SLIDEBAR_DATA, data)
-    //   })
-    // })
+    api.member.get().then(response => {
+      console.log(response)
+      commit(types.UPDATE_STAFF_DATA, response.data)
+    })
   }
 }

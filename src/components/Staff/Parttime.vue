@@ -1,17 +1,17 @@
 <template>
 <div id="fulltime">
   <div class="location-contain">
-    <div class="locations" v-for="(location, index) in locations" :key="index">
+    <div class="locations" v-for="(location, index) in member" :key="index">
       <div class="place">
         <div class="pic">
-          <img :src="location.img" height="150"/>
+          <img :src="location.image" height="150"/>
         </div>
         <div class="text">
           <h2>{{ location.name }}</h2>
-          <p>{{ location.title }}</p>
-          <p>{{ location.field }}</p>
+          <p>{{ location.position }}</p>
+          <p>{{ location.teaching_lessons }}</p>
           <p>{{ location.email }}</p>
-          <p>{{ location.tax }}</p>
+          <p>{{ location.telephone }}</p>
         </div>
       </div>
     </div>
@@ -20,68 +20,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data () {
     return {
       locations: [
-        {
-          name: '彼薩列夫',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.24_37ef0dce.jpg.w95_h117.jpg',
-          title: '教授',
-          field: '新聞俄語、觀光俄語口譯、俄...',
-          email: 'ralex@mail.tku.edu.tw',
-          tax: '(02)2621-5656轉2798'
-        },
-        {
-          name: '陳兆麟',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/32_10106d49.jpg',
-          title: '教授',
-          field: '俄語語音學',
-        },
-        {
-          name: '薩承科',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.57_a55f1b24.jpg.w95_h117.jpg',
-          title: '副教授',
-          field: '俄語習作(一)',
-        },
-        {
-          name: '陳巧雯',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.41_d553a84e.jpg.w95_h114.jpg',
-          title: '助理教授',
-          field: '商用俄語(一)',
-        },
-        {
-          name: '龔信賢',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.46_173150ec.jpg.w92_h120.jpg',
-          title: '助理教授',
-          field: '俄國文學經典入門(文學經典...',
-        },
-        {
-          name: '律可娃柳博芙',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.13_52e90ba0.jpg.w95_h117.jpg',
-          title: '講師',
-          field: ' 俄語實習（一）',
-        },
-        {
-          name: '愛羅莎',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.56_962845fa.jpg.w95_h117.jpg',
-          title: '講師',
-          field: '俄文(一)、俄文(二)',
-        },
-        {
-          name: '楊立偉',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.10_da71a19b.jpg.w95_h117.jpg',
-          title: '講師',
-          field: '俄國史',
-        },
-                {
-          name: '衛大力',
-          img: 'http://www.tfux.tku.edu.tw/files/users/pic/cache.55_254ff04e.jpg.w95_h117.jpg',
-          title: '講師',
-          field: '俄語華語教學',
-        },
       ]
     }
+  },
+  computed: {
+    ...mapState({
+      member: state => state.staff.filter(member => {
+        return member.type === 'Parttime'
+      })
+    })
   }
 }
 </script>
