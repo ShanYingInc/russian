@@ -1,9 +1,11 @@
 <template>
-  <div class="card-wrap"
+  <a class="card-wrap"
       @mousemove="handleMouseMove"
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
-      ref="card">
+      ref="card"
+      href="https://www.google.com/"
+      >
       <div class="card"
         :style="cardStyle">
         <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
@@ -12,7 +14,7 @@
           <slot name="content"></slot>
         </div>
       </div>
-    </div>
+    </a>
 </template>
 <script>
 
