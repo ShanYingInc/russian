@@ -1,9 +1,9 @@
 <template lang="pug">
 #app
-  #background
-    HeaderComponent
-    router-view.app-content
-    FooterComponent
+  .background
+  HeaderComponent
+  router-view.app-content
+  FooterComponent
 </template>
 
 <script>
@@ -43,8 +43,21 @@ body
   flex-direction: column
   position: relative
   padding-bottom: 212px
-  background: url(assets/background.png ) center no-repeat
-  background-size: cover
+  .background
+    width: 100%
+    height: 100%
+    flex: none
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 0
+    background: url(assets/background.png) center no-repeat
+    filter: opacity(50%)
+    background-size: cover
   .app-content
-    flex-grow: 999  
+    flex-grow: 999
+  #header
+    z-index: 999
+  .app-content, #footer
+    z-index: 99
 </style>

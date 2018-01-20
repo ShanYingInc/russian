@@ -87,6 +87,4 @@ export default {};
   font-size: 15px
   font-family: "Microsoft YaHei"
   color: #4169E1;
-
-
 </style>

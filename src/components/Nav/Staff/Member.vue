@@ -1,15 +1,53 @@
-<template>
-<div id="member">
-  <div class="switch">
-    <div class="link"><router-link to='/Staff/Fulltime'>專任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Parttime'>兼任師資</router-link></div>
-    <div class="link"><router-link to='/Staff/Director'>歷屆系主任</router-link></div>
-    <div class="link"><router-link to='/Staff/Administrative'>行政人員</router-link></div>
-    <div class="link"><router-link to='/Staff/Tutor'>各班導師</router-link></div>
-  </div>
-  <router-view></router-view>
-</div>
+<template lang="pug">
+#member
+  .switch
+    .type
+      .text(@click="switchType('Fulltime')") 專任師資
+    .type
+      .text(@click="switchType('Parttime')") 兼任師資
+    .type
+      .text(@click="switchType('Director')") 歷屆系主任
+    .type
+      .text(@click="switchType('Administrative')") 行政人員
+    .type
+      .text(@click="switchType('Tutor')") 各班導師
+  .member-container
+    .member-item(v-for='(member, index) in filterList', :key='index')
+      .pic
+        img(:src="'http://192.168.88.204:3030' + member.image.path" height="150")
+      .text
+        h2 {{ member.name }}
+        p {{ member.position }}
+        p {{ member.teaching_lessons }}
+        p {{ member.email }}
+        p {{ member.telephone }}
 </template>
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  data () {
+    return {
+      type: 'Fulltime'
+    }
+  },
+  computed: {
+    ...mapState({
+      members: state => state.staff
+    }),
+    filterList () {
+      return this.members.filter(member => {
+        return member.type === this.type
+      })
+    }
+  },
+  methods: {
+    switchType (type) {
+      this.type = type
+    }
+  }
+}
+</script>
 
 <style lang="sass">
 #member
@@ -21,10 +59,9 @@
     flex-direction: row
     justify-content: center
     margin: 30px 0
-    .link
+    .type
       display: inline-block
-      a
-        text-decoration: none
+      .text
         color: #333
         padding: 10px 20px
         background: #ccc
@@ -52,24 +89,19 @@
         &:hover::before, &:focus::before
           transform-origin: left top
           transform: scale(1, 1)
-  .location-contain
+  .member-container
     display: flex
     justify-content: space-around
     flex-wrap: wrap
-    .locations
+    .member-item
+      display: flex
+      flex-direction: column
+      width: 250px
       height: 100%
-      .place
-        display: flex
-        flex-direction: column
-        width: 250px
-        height: 100%
-        background: white
-        border: 1px solid #ddd
-        padding: 20px 20px
-        .pic
-          align-self: center
-        .text
-
-
-
+      background: white
+      border: 1px solid #ddd
+      padding: 20px 20px
+      .pic
+        align-self: center
+      .text
 </style>

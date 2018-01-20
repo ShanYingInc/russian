@@ -6,9 +6,9 @@
       li
         p 25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室
       li
-        p TEL:(02)26215656轉2711  FAX:(02)26209907
+        p TEL：(02)26215656轉2711  FAX：(02)26209907
       li
-        p tfux@www2.tku.edu.tw
+        p Email：tfux@www2.tku.edu.tw
       li
         p Copyright©2018 版權為淡江大學俄文系所有
   .right
@@ -21,6 +21,10 @@ export default {};
 </script>
 
 <style lang="sass">
+@font-face 
+	font-family: "DFXing"
+	src: url("../assets/DFXingKaiStd-W5.otf") format("opentype")
+
 #footer
   padding: 10px 0 0 0
   width: 100vw
@@ -34,12 +38,12 @@ export default {};
   .left
     text-align: left
     h4
-      font-family: "DFKai-sb";
+      font-family: "DFXing";
       color: white
     p
       margin: 0
-      font-family: "DFKai-sb";
-      font-size: 15px;
+      font-family: "DFXing";
+      font-size: 16px;
       color: #ffffff;
   .right
     padding: 10px
