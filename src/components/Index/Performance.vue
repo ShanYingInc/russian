@@ -5,7 +5,7 @@
 </template>
 <script>
 import Card from './Card'
-import Slider from '../News/SubMenu/Slider'
+import Slider from '../SubMenu/Slider'
 
 export default {
   components: {

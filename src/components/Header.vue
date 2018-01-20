@@ -2,7 +2,7 @@
 #header
   .header
     router-link.logo(to='/')
-      img(src='../assets/logo.png' ,height = '150' )
+      img(src='../assets/logo.png' ,height = '80' )
     .goindex
       ul
         li.test(span='')

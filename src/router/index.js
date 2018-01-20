@@ -1,68 +1,85 @@
 import Vue from "vue";
 import Router from "vue-router";
 import IndexPage from "../components/Index/Index.vue";
-import News from "../components/News/News.vue";
-import Introduction from "../components/Introduction/Introduction.vue";
-import Staff from "../components/Staff/Member.vue";
-import Fulltime from "../components/Staff/Fulltime.vue";
-import Parttime from "../components/Staff/Parttime.vue";
-import Director from "../components/Staff/Director.vue";
-import Administrative from "../components/Staff/Administrative.vue";
-import Vision from "../components/Introduction/Vision.vue";
-import Important from "../components/Introduction/Important.vue";
-import Class from "../components/Class/Classin.vue";
-import Auxiliary from "../components/Class/Auxiliary.vue";
-import Alternative from "../components/Class/Alternative.vue";
-import Courseinformation from "../components/Class/Courseinformation.vue";
-import Course from "../components/Class/Course.vue";
-import Required from "../components/Class/Required.vue";
-import Relevant from "../components/Class/Relevant.vue";
-import Credit from "../components/Class/Credit.vue";
-import Enrollment from "../components/Enrollment/Enrollment.vue";
-import Answer from "../components/Enrollment/Answer.vue";
-import Admission from "../components/Enrollment/Admission.vue";
-import Winning from "../components/Winning/Winning.vue";
-import Tutor from "../components/Staff/Tutor.vue";
-import StudentInformation from "../components/News/SubMenu/StudentInformation.vue";
-import Test from "../components/News/SubMenu/Test/Test.vue";
-import Testnews from "../components/News/SubMenu/Test/Testnews.vue";
-import Testannouncement from "../components/News/SubMenu/Test/Testannouncement.vue";
-import Testintroduction from "../components/News/SubMenu/Test/Testintroduction.vue";
-import Testtime from "../components/News/SubMenu/Test/Testtime.vue";
-import Testdownload from "../components/News/SubMenu/Test/Testdownload.vue";
-import Student from "../components/News/SubMenu/Student/Studentinformation.vue";
-import Departmenttolearn from "../components/News/SubMenu/Student/Departmenttolearn.vue";
-import Professional from "../components/News/SubMenu/Student/Professional.vue";
-import Sar from "../components/News/SubMenu/Student/Sar.vue";
-import Scholarship from "../components/News/SubMenu/Student/Scholarship.vue";
-import Sophomore from "../components/News/SubMenu/Student/Sophomore.vue";
-import Statisticsemployment from "../components/News/SubMenu/Student/Statisticsemployment.vue";
-import Friends from "../components/News/SubMenu/Friends/Friends.vue";
-import Activities from "../components/News/SubMenu/Friends/Activities.vue";
-import Celebrity from "../components/News/SubMenu/Friends/Celebrity.vue";
-import Highlights from "../components/News/SubMenu/Friends/Highlights.vue";
-import Latestnews from "../components/News/SubMenu/Friends/Latestnews.vue";
-import World from "../components/News/SubMenu/Friends/World.vue";
-import Friendsintroduction from "../components/News/SubMenu/Friends/Friendsintroduction.vue";
-import Events from "../components/News/SubMenu/Events/Events.vue";
-import Lecture from "../components/News/SubMenu/Events/Lecture.vue";
-import Read from "../components/News/SubMenu/Events/Read.vue";
-import Tea from "../components/News/SubMenu/Events/Tea.vue";
-import Workshop from "../components/News/SubMenu/Events/Workshop.vue";
-import Eventsintroduction from "../components/News/SubMenu/Events/Eventsintroduction.vue";
-import Network from "../components/News/SubMenu/Network/Network.vue";
-import Friendlylinks from "../components/News/SubMenu/Network/Friendlylinks.vue";
-import Learning from "../components/News/SubMenu/Network/Learning.vue";
-import Sister from "../components/News/SubMenu/Network/Sister.vue";
-import Networkemployment from "../components/News/SubMenu/Network/Networkemployment.vue";
-import Downloads from "../components/News/SubMenu/Downloads/Downloads.vue";
-import Order from "../components/News/SubMenu/Downloads/Order.vue";
-import Downloadsstudent from "../components/News/SubMenu/Downloads/Student.vue";
+
 import Performance from '../components/Index/Performance.vue';
-import Teaching100 from '../components/Teaching/Teaching100.vue';
-import Teaching101 from '../components/Teaching/Teaching101.vue';
-import Teaching102 from '../components/Teaching/Teaching102.vue';
-import Teaching from '../components/Teaching/Teaching.vue';
+
+import News from "../components/Nav/News/News.vue";
+
+import Staff from "../components/Nav/Staff/Member.vue";
+import Fulltime from "../components/Nav/Staff/Fulltime.vue";
+import Parttime from "../components/Nav/Staff/Parttime.vue";
+import Director from "../components/Nav/Staff/Director.vue";
+import Tutor from "../components/Nav/Staff/Tutor.vue";
+import Administrative from "../components/Nav/Staff/Administrative.vue";
+
+import Introduction from "../components/Nav/Introduction/Introduction.vue";
+import Vision from "../components/Nav/Introduction/Vision.vue";
+import Important from "../components/Nav/Introduction/Important.vue";
+
+import Class from "../components/Nav/Class/Classin.vue";
+import Auxiliary from "../components/Nav/Class/Auxiliary.vue";
+import Alternative from "../components/Nav/Class/Alternative.vue";
+import Courseinformation from "../components/Nav/Class/Courseinformation.vue";
+import Course from "../components/Nav/Class/Course.vue";
+import Required from "../components/Nav/Class/Required.vue";
+import Relevant from "../components/Nav/Class/Relevant.vue";
+import Credit from "../components/Nav/Class/Credit.vue";
+
+import Enrollment from "../components/Nav/Enrollment/Enrollment.vue";
+import Answer from "../components/Nav/Enrollment/Answer.vue";
+import Admission from "../components/Nav/Enrollment/Admission.vue";
+
+import Winning from "../components/Nav/Winning/Winning.vue";
+
+import Teaching100 from '../components/Nav/Teaching/Teaching100.vue';
+import Teaching101 from '../components/Nav/Teaching/Teaching101.vue';
+import Teaching102 from '../components/Nav/Teaching/Teaching102.vue';
+import Teaching from '../components/Nav/Teaching/Teaching.vue';
+
+import StudentInformation from "../components/SubMenu/StudentInformation.vue";
+
+import Test from "../components/SubMenu/Test/Test.vue";
+import Testnews from "../components/SubMenu/Test/Testnews.vue";
+import Testannouncement from "../components/SubMenu/Test/Testannouncement.vue";
+import Testintroduction from "../components/SubMenu/Test/Testintroduction.vue";
+import Testtime from "../components/SubMenu/Test/Testtime.vue";
+import Testdownload from "../components/SubMenu/Test/Testdownload.vue";
+
+import Student from "../components/SubMenu/Student/Studentinformation.vue";
+import Departmenttolearn from "../components/SubMenu/Student/Departmenttolearn.vue";
+import Professional from "../components/SubMenu/Student/Professional.vue";
+import Sar from "../components/SubMenu/Student/Sar.vue";
+import Scholarship from "../components/SubMenu/Student/Scholarship.vue";
+import Sophomore from "../components/SubMenu/Student/Sophomore.vue";
+import Statisticsemployment from "../components/SubMenu/Student/Statisticsemployment.vue";
+
+import Friends from "../components/SubMenu/Friends/Friends.vue";
+import Activities from "../components/SubMenu/Friends/Activities.vue";
+import Celebrity from "../components/SubMenu/Friends/Celebrity.vue";
+import Highlights from "../components/SubMenu/Friends/Highlights.vue";
+import Latestnews from "../components/SubMenu/Friends/Latestnews.vue";
+import World from "../components/SubMenu/Friends/World.vue";
+import Friendsintroduction from "../components/SubMenu/Friends/Friendsintroduction.vue";
+
+import Events from "../components/SubMenu/Events/Events.vue";
+import Lecture from "../components/SubMenu/Events/Lecture.vue";
+import Read from "../components/SubMenu/Events/Read.vue";
+import Tea from "../components/SubMenu/Events/Tea.vue";
+import Workshop from "../components/SubMenu/Events/Workshop.vue";
+import Eventsintroduction from "../components/SubMenu/Events/Eventsintroduction.vue";
+
+import Network from "../components/SubMenu/Network/Network.vue";
+import Friendlylinks from "../components/SubMenu/Network/Friendlylinks.vue";
+import Learning from "../components/SubMenu/Network/Learning.vue";
+import Sister from "../components/SubMenu/Network/Sister.vue";
+import Networkemployment from "../components/SubMenu/Network/Networkemployment.vue";
+
+import Downloads from "../components/SubMenu/Downloads/Downloads.vue";
+import Order from "../components/SubMenu/Downloads/Order.vue";
+import Downloadsstudent from "../components/SubMenu/Downloads/Student.vue";
+
+
 
 Vue.use(Router);
 
@@ -79,7 +96,7 @@ export default new Router({
       component: Winning
     },
     {
-      path: "Test",
+      path: "/Test",
       component: Test,
       children: [
         {
