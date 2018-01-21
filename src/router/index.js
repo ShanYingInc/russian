@@ -318,30 +318,9 @@ export default new Router({
       ]
     },
     {
-      path: "/Staff",
+      path: "/Staff/:type",
       component: Staff,
-      children: [
-        {
-          path: "Fulltime",
-          component: Fulltime
-        },
-        {
-          path: "Parttime",
-          component: Parttime
-        },
-        {
-          path: "Director",
-          component: Director
-        },
-        {
-          path: "Administrative",
-          component: Administrative
-        },
-        {
-          path: "Tutor",
-          component: Tutor
-        }
-      ]
+      props: true
     },
     {
       path: "/Course"

@@ -6,8 +6,10 @@ export const state = {
     user: 'admin'
   },
   staff: [],
+  staffType: 'Fulltime',
   slidebar: ['none'],
-  introduction: []
+  introduction: [],
+  news: []
 }
 
 export const mutations = {
@@ -19,5 +21,11 @@ export const mutations = {
   },
   [types.UPDATE_INTRODUCTION_DATA] (state, data) {
     state.introduction = data
+  },
+  [types.UPDATE_STAFF_TYPE] (state, type) {
+    state.staffType = type
+  },
+  [types.UPDATE_NEWS_DATA] (state, data) {
+    state.news = data
   }
 }

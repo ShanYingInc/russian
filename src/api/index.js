@@ -105,5 +105,12 @@ export const api = {
         return response.data
       })
     }
+  },
+  news: {
+    get () {
+      return axios(Method.get(link.news)).then(response => {
+        return response
+      })
+    }
   }
 }

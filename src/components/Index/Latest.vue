@@ -2,14 +2,21 @@
 #latest
   .title 最新消息
   .list
-    .news(v-for="i in 6")
-      .date 2018-01-15
-      .type 行政事項
-      .content 考試求公平及公正，請詳閱並遵守考場規則。
+    .news(v-for="(event, index) in news", :key="index", v-if="index < 6")
+      .date {{ new Date(event.created_on).toLocaleDateString() }}
+      .title {{ event.title }}
+      .type {{ event.type }}
+      .content {{ event.content }}
 </template>
 <script>
-export default {
+import { mapState } from 'vuex'
 
+export default {
+  computed: {
+    ...mapState({
+      news: state => state.news.data
+    })
+  }
 }
 </script>
 <style lang="sass">
@@ -30,6 +37,8 @@ export default {
       margin: 10px
       display: flex
       flex-direction: column
-      .date, .type, .content
+      .date, .title, .content
         margin: 10px
+      .title
+        text-align: left
 </style>

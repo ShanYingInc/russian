@@ -32,5 +32,10 @@ export const actions = {
       console.log(response)
       commit(types.UPDATE_STAFF_DATA, response.data)
     })
+
+    api.news.get().then(response => {
+      console.log(response)
+      commit(types.UPDATE_NEWS_DATA, response.data)
+    })
   }
 }

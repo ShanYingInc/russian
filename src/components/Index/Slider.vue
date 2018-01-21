@@ -21,7 +21,7 @@ export default {
   width: 148px
   height: 100%
   background: #666
-  align-self: center
+  align-self: flex-end
   flex: none
   ul
     li

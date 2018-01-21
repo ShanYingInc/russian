@@ -48,7 +48,15 @@
 
 </template>
 <script>
-export default {};
+// import { mapMutations } from 'vuex'
+
+// export default {
+//   methods: {
+//     ...mapMutations({
+//       staffType: 'UPDATE_STAFF_TYPE'
+//     })
+//   }
+// }
 </script>
 <style lang="sass" scoped>
 #header
