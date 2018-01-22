@@ -4,7 +4,7 @@
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
       ref="card"
-      href="https://www.youtube.com/watch?v=T5BP8A17kT0"
+      :href="link"
       >
       <div class="card"
         :style="cardStyle">
@@ -28,7 +28,7 @@ export default {
             mouseLeaveDelay: null
         }
     },
-    props: ['dataImage'],
+    props: ['dataImage', 'link'],
     mounted() {
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;

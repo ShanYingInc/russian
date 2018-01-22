@@ -29,13 +29,23 @@ export const actions = {
     // })
 
     api.member.get().then(response => {
-      console.log(response)
       commit(types.UPDATE_STAFF_DATA, response.data)
     })
 
     api.news.get().then(response => {
-      console.log(response)
-      commit(types.UPDATE_NEWS_DATA, response.data)
+      commit(types.UPDATE_NEWS_DATA, response)
+    })
+
+    api.video.get().then(response => {
+      commit(types.UPDATE_VIDEO_DATA, response.data)
+    })
+
+    api.navigation.get().then(response => {
+      commit(types.UPDATE_NAVIGATION_DATA, response.data)
+    })
+
+    api.content.get().then(data => {
+      commit(types.UPDATE_CONTENT_DATA, data)
     })
   }
 }

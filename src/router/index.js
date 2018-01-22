@@ -79,7 +79,7 @@ import Downloads from "../components/SubMenu/Downloads/Downloads.vue";
 import Order from "../components/SubMenu/Downloads/Order.vue";
 import Downloadsstudent from "../components/SubMenu/Downloads/Student.vue";
 
-
+import Maintext from '../components/Maintext.vue'
 
 Vue.use(Router);
 
@@ -354,6 +354,17 @@ export default new Router({
     {
       path: '/Performance',
       component: Performance
+    },
+    {
+      path: '/content',
+      component: Maintext,
+      props (route) {
+        return route.query || {}
+      }
+    },
+    {
+      path: '/*',
+      redirect: '/'
     }
   ]
 });

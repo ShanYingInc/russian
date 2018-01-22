@@ -4,7 +4,7 @@
   Card
 </template>
 <script>
-import Card from './Card'
+import Card from './Card_1'
 import Slider from '../SubMenu/Slider'
 
 export default {

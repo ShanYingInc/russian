@@ -14,7 +14,7 @@
   .member-container
     .member-item(v-for='(member, index) in filterList', :key='index')
       .pic
-        img(:src="'http://192.168.88.204:3030' + member.image.path" height="150")
+        img(:src="'http://59.127.194.172:3030' + member.image.path" height="150")
       .text
         h2 {{ member.name }}
         p {{ member.position }}

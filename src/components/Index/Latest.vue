@@ -14,7 +14,7 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      news: state => state.news.data
+      news: state => state.news
     })
   }
 }

@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     ...mapState({
-      videos: state => state.video.slice(-4)
+      videos: state => state.video
     })
   }
 }

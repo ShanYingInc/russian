@@ -12,16 +12,20 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      news: state => state.news.data
+      news: state => state.news
     })
   }
 }
 </script>
 <style lang="sass">
 #news
+  width: 70%
+  margin: 0 auto
   display: flex
   flex-direction: column
+  // justify-content: flex-end
   .event
+    width: 100%
     background: rgba(255,255,255,0.9)
     padding: 20px
     margin: 20px
