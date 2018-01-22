@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.friendlylinks[0]
+        this.content = data.國內友站連結[0]
       })
     })
   }

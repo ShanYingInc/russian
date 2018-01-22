@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.scholarship[0]
+        this.content = data.獎學金[0]
       })
     })
   }

@@ -19,7 +19,7 @@ export default {
     this.$nextTick(() => {
        api.content.get().then(data => {
          console.log(data)
-         this.content = data.departmenttolearn[0]
+         this.content = data.系學會[0]
        })
     })
   }

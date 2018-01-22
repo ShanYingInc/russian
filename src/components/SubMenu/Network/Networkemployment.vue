@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.networkemployment[0]
+        this.content = data.就業服務[0]
       })
     })
   }

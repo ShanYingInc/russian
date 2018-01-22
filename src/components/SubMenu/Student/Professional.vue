@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.professional[0]
+        this.content = data.專業證照[0]
       })
     })
   }

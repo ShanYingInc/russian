@@ -7,8 +7,8 @@
       router-link(to='/Friends/Activities') 系友會活動
     .link
       router-link(to='/Friends/Latestnews') 最新動態
-    .link
-      router-link(to='/Friends/Highlights') 活動集錦
+    //- .link
+    //-   router-link(to='/Friends/Highlights') 活動集錦
     .link
       router-link(to='/Friends/World') 俄語天地
     .link

@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.sophomore[0]
+        this.content = data.大三出國甄選[0]
       })
     })
   }

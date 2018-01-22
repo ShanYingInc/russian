@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.sar[0]
+        this.content = data.俄語特區[0]
       })
     })
   }

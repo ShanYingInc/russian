@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.order[0]
+        this.content = data.其他下載[0]
       })
     })
   }
