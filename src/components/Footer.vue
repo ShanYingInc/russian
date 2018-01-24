@@ -38,11 +38,11 @@ export default {};
   .left
     text-align: left
     h4
-      font-family: "DFXing";
+      font-family: "Microsoft YaHei";
       color: white
     p
       margin: 0
-      font-family: "DFXing";
+      font-family: "Microsoft YaHei";
       font-size: 16px;
       color: #ffffff;
   .right
