@@ -5,7 +5,7 @@
       router-link(:to='`/content?parent=`+parent+`&contentKey=`+key.name') {{ key.name }}
   .content-container
     .content(v-html="contentText")
-    
+
 
 </template>
 
@@ -20,9 +20,10 @@ export default {
         contents: state => state.content
     }),
     switchList () {
-        return this.navigations.filter(nav => {
-            return nav.name == this.parent
-        })[0]
+      console.log(this.parent)
+      return this.navigations.filter(nav => {
+          return nav.name == this.parent
+      })[0]
     },
     contentText () {
         return this.contents[this.contentKey][0]

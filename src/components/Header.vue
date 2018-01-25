@@ -43,10 +43,10 @@
         b-dropdown-item(to="/Teaching/Teaching100") 100學年度
         b-dropdown-item(to="/Teaching/Teaching101") 101學年度
         b-dropdown-item(to="/Teaching/Teaching102") 102學年度
-      b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
       b-nav-item(to="/Friends/Friendsintroduction") 系友專區
       b-nav-item-dropdown(v-for="(nav, index) in navigations", :key="index", :text='nav.name', :id="`nav_` + nav.navigation_id")
         b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.name") {{ subNav.name }}
+      b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
 
 </template>
 <script>
@@ -82,6 +82,8 @@ export default {
     background: #666
     .dropdown-menu > li > a
       color: white
+    .dropdown-item.active
+      background: white
     ul
       li
         a
