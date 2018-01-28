@@ -1,12 +1,17 @@
 <template>
 <div id="enrollment">
   <div class="switch">
-    <div class="link"><router-link to='/Enrollment/Admission'>申請入學</router-link></div>
-    <div class="link"><router-link to='/Enrollment/Answer'>相關問題和解答</router-link></div>
+    <div class="link"><router-link to='/Staff/Fulltime'>專任師資</router-link></div>
+    <div class="link"><router-link to='/Staff/Parttime'>兼任師資</router-link></div>
+    <div class="link"><router-link to='/Staff/Director'>歷屆系主任</router-link></div>
+    <div class="link"><router-link to='/Staff/Administrative'>行政人員</router-link></div>
+    <div class="link"><router-link to='/Staff/Tutor'>各班導師</router-link></div>
+    <div class="link"><router-link to='/Enrollment/Answer'>招生資訊</router-link></div>
   </div>
   <router-view></router-view>
 </div>
 </template>
+
 <script>
 import { mapState } from 'vuex'
 
@@ -18,6 +23,7 @@ export default {
   }
 }
 </script>
+
 <style lang="sass">
 #enrollment
   display: flex

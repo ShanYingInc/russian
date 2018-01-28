@@ -16,17 +16,21 @@ export default {
   props: ['parent', 'contentKey'],
   computed: {
     ...mapState({
-        navigations: state => state.navigation,
-        contents: state => state.content
+      navigations: state => state.navigation,
+      contents: state => state.content
     }),
     switchList () {
-      console.log(this.parent)
-      return this.navigations.filter(nav => {
+      if (this.navigations.length !== 0) {
+        return this.navigations.filter(nav => {
           return nav.name == this.parent
-      })[0]
+        })[0]
+      }
+      return {subItems: []}
     },
     contentText () {
+      if (this.contents[this.contentKey])
         return this.contents[this.contentKey][0]
+      return ''
     }
   }
 }

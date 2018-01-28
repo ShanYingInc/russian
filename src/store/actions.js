@@ -41,6 +41,7 @@ export const actions = {
     })
 
     api.navigation.get().then(response => {
+      // console.log(response.data)
       commit(types.UPDATE_NAVIGATION_DATA, response.data)
     })
 
