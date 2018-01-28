@@ -53,7 +53,7 @@ export default {
       // margin: 0 auto
     img
       margin: 0 auto
-      
+      overflow: hidden
     h3
       font-family: DFXing
       font-size: 40px

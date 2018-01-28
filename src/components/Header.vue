@@ -18,7 +18,7 @@
   .nav
     b-nav
       b-nav-item(to="/newsList") 最新消息
-      b-nav-item-dropdown#nav-2(text='本系介紹')
+      b-nav-item-dropdown#nav-2(text='系所簡介')
         b-dropdown-item(to="/Introduction/Important") 重要記事
         b-dropdown-item(to="/Introduction/Vision") 願景及策略
       b-nav-item-dropdown#nav-3(text='師資陣容')
@@ -46,7 +46,7 @@
       //-   b-dropdown-item(to="/Teaching/Teaching102") 102學年度
       //- b-nav-item(to="/Friends/Friendsintroduction") 系友專區
       b-nav-item-dropdown(v-for="(nav, index) in navigations", :key="index", :text='nav.name', :id="`nav_` + nav.navigation_id")
-        b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.name") {{ subNav.name }}
+        b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.content_key") {{ subNav.name }}
       b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
 
 </template>

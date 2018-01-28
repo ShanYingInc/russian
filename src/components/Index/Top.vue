@@ -1,15 +1,15 @@
 <template lang="pug">
 #top
-  Slider
+  //- Slider
   Carousel
 </template>
 <script>
-import Slider from './Slider'
+// import Slider from './Slider'
 import Carousel from './Carousel'
 
 export default {
   components: {
-    Slider,
+    // Slider,
     Carousel
   }
 }

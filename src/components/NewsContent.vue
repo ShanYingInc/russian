@@ -1,6 +1,8 @@
 <template lang="pug">
 #News.content-container
-  .content {{ content }}
+  //- type {{ event.type }}
+  //- date {{ new Date(event.created_on).toLocaleDateString() }}
+  .content(v-html="content")
 </template>
 <script>
 import { mapState } from 'vuex'

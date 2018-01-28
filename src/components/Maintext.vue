@@ -2,7 +2,7 @@
 #maintext
   .switch
     .link(v-for="key in switchList.subItems")
-      router-link(:to='`/content?parent=`+parent+`&contentKey=`+key.name') {{ key.name }}
+      router-link(:to='`/content?parent=`+parent+`&contentKey=`+key.content_key') {{ key.name }}
   .content-container
     .content(v-html="contentText")
 

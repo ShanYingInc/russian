@@ -4,9 +4,9 @@
   .list
     .news(v-for="(event, index) in news", :key="index", v-if="index < 6")
       router-link.title(:to="`/news/` + event.news_id") {{ event.title }}
-      .date {{ new Date(event.created_on).toLocaleDateString() }}
       .type {{ event.type }}
-      .content {{ event.content }}
+      .date {{ new Date(event.created_on).toLocaleDateString() }}
+      //- .content(v-html='event.content')
 </template>
 <script>
 import { mapState } from 'vuex'
@@ -37,7 +37,7 @@ export default {
       margin: 10px
       display: flex
       flex-direction: column
-      .date, .title, .content
+      .date, .title, .content, .type
         margin: 10px
       .title
         text-align: left

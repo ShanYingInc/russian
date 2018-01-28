@@ -1,17 +1,17 @@
 <template lang="pug">
 #index
-  Top
+  Carousel
   Latest
   Card
 </template>
 <script>
-import Top from './Top'
+import Carousel from './Carousel'
 import Card from './Card'
 import Latest from './Latest'
 
 export default {
   components: {
-    Top,
+    Carousel,
     Latest,
     Card
   }
