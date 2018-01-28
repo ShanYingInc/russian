@@ -11,6 +11,8 @@
       router-link(to="/Staff/Administrative") 行政人員
     .type
       router-link(to="/Staff/Tutor") 各班導師
+    .type
+      router-link(to="/Enrollment/Answer") 招生訊息
   .member-container
     .member-item(v-for='(member, index) in filterList', :key='index')
       .pic
