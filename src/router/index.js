@@ -83,6 +83,9 @@ import Maintext from '../components/Maintext.vue'
 import NewsContent from '../components/NewsContent.vue'
 import NewsList from '../components/NewsList.vue'
 
+import EventHighlignt from '../components/EventHighlignt'
+import Album from '../components/Album'
+
 Vue.use(Router);
 
 export default new Router({
@@ -367,6 +370,15 @@ export default new Router({
     {
       path: '/news/:newsId',
       component: NewsContent,
+      props: true
+    },
+    {
+      path: '/eventHighlignt',
+      component: EventHighlignt
+    },
+    {
+      path: '/album/:albumId',
+      component: Album,
       props: true
     },
     {

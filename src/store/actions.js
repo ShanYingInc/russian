@@ -48,5 +48,9 @@ export const actions = {
     api.content.get().then(data => {
       commit(types.UPDATE_CONTENT_DATA, data)
     })
+
+    api.album.get().then(data => {
+      commit(types.UPDATE_ALBUM_DATA, data.data)
+    })
   }
 }

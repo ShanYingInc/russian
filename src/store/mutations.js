@@ -12,7 +12,8 @@ export const state = {
   news: [],
   video: [],
   navigation: [],
-  content: {}
+  content: {},
+  album: []
 }
 
 export const mutations = {
@@ -39,5 +40,8 @@ export const mutations = {
   },
   [types.UPDATE_CONTENT_DATA] (state, data) {
     state.content = data
+  },
+  [types.UPDATE_ALBUM_DATA] (state, data) {
+    state.album = data
   }
 }

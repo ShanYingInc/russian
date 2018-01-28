@@ -76,15 +76,15 @@ export default {
                 transform-origin: left top
                 transform: scale(1, 1)
 .content-container
-    width: 70%
-    height: 100%
-    text-align:left
-    animation: fadein 2s
-    margin: 20px auto
-    .content
-        padding: 20px 50px
-        // border: 1px solid #ccc
-        border-radius: 5px
-        background: rgba(255, 255, 255, 0.8)
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
+  width: 70%
+  height: 100%
+  text-align:left
+  animation: fadein 2s
+  margin: 20px auto
+  .content
+    padding: 20px 50px
+    // border: 1px solid #ccc
+    border-radius: 5px
+    background: rgba(255, 255, 255, 0.8)
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
 </style>

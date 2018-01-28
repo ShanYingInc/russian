@@ -47,7 +47,7 @@
       //- b-nav-item(to="/Friends/Friendsintroduction") 系友專區
       b-nav-item-dropdown(v-for="(nav, index) in navigations", :key="index", :text='nav.name', :id="`nav_` + nav.navigation_id")
         b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.content_key") {{ subNav.name }}
-      b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 大三出國留學
+      b-nav-item(to="/eventHighlignt") 活動花絮
 
 </template>
 <script>
