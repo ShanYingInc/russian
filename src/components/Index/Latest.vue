@@ -3,8 +3,8 @@
   .title 最新消息
   .list
     .news(v-for="(event, index) in news", :key="index", v-if="index < 6")
+      router-link.title(:to="`/news/` + event.news_id") {{ event.title }}
       .date {{ new Date(event.created_on).toLocaleDateString() }}
-      .title {{ event.title }}
       .type {{ event.type }}
       .content {{ event.content }}
 </template>

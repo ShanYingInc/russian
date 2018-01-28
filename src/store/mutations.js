@@ -9,7 +9,7 @@ export const state = {
   staffType: 'Fulltime',
   slidebar: ['none'],
   introduction: [],
-  news: {data: []},
+  news: [],
   video: [],
   navigation: [],
   content: {}

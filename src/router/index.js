@@ -4,7 +4,7 @@ import IndexPage from "../components/Index/Index.vue";
 
 import Performance from '../components/Index/Performance.vue';
 
-import News from "../components/Nav/News/News.vue";
+// import News from "../components/Nav/News/News.vue";
 
 import Staff from "../components/Nav/Staff/Member.vue";
 import Fulltime from "../components/Nav/Staff/Fulltime.vue";
@@ -80,6 +80,8 @@ import Order from "../components/SubMenu/Downloads/Order.vue";
 import Downloadsstudent from "../components/SubMenu/Downloads/Student.vue";
 
 import Maintext from '../components/Maintext.vue'
+import NewsContent from '../components/NewsContent.vue'
+import NewsList from '../components/NewsList.vue'
 
 Vue.use(Router);
 
@@ -120,10 +122,6 @@ export default new Router({
           component: Testtime
         }
       ]
-    },
-    {
-      path: "/News",
-      component: News
     },
     {
       path: "/StudentInformation",
@@ -361,6 +359,15 @@ export default new Router({
       props (route) {
         return route.query || {}
       }
+    },
+    {
+      path: '/newsList',
+      component: NewsList
+    },
+    {
+      path: '/news/:newsId',
+      component: NewsContent,
+      props: true
     },
     {
       path: '/*',

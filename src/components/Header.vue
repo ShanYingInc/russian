@@ -17,7 +17,7 @@
           router-link(to='/')  Русский
   .nav
     b-nav
-      b-nav-item(to="/News") 最新消息
+      b-nav-item(to="/newsList") 最新消息
       b-nav-item-dropdown#nav-2(text='本系介紹')
         b-dropdown-item(to="/Introduction/Important") 重要記事
         b-dropdown-item(to="/Introduction/Vision") 願景及策略
