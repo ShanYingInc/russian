@@ -17,13 +17,8 @@
           router-link(to='/')  Русский
   .nav
     b-nav
-<<<<<<< HEAD
       b-nav-item(to="/newsList") 最新消息
       b-nav-item-dropdown#nav-2(text='本系介紹')
-=======
-      b-nav-item(to="/News") 最新消息
-      b-nav-item-dropdown#nav-2(text='系所簡介')
->>>>>>> e2082ce76752fb8878278bfae30be1df3656e224
         b-dropdown-item(to="/Introduction/Important") 重要記事
         b-dropdown-item(to="/Introduction/Vision") 願景及策略
       b-nav-item-dropdown#nav-3(text='師資陣容')
