@@ -18,7 +18,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        this.content = data.vision[0]
+        this.content = data.願景及策略[0]
       })
     })
   }

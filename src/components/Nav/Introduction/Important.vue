@@ -17,8 +17,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       api.content.get().then(data => {
-        console.log(data)
-        this.content = data.important[0]
+        this.content = data.重要記事[0]
       })
     })
   }
