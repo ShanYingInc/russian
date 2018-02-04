@@ -53,7 +53,7 @@ class Api {
         this.lang = 'en'
         break
       case 'ru':
-        this.port = 3030
+        this.port = 3032
         this.lang = 'ru'
         break
       default:
