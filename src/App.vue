@@ -52,7 +52,8 @@ body
     top: 0
     z-index: 0
     background: url(assets/background.png) center no-repeat
-    filter: opacity(10%)
+    filter: opacity(30%)
+    filter: blur(5px)
     background-size: cover
   .app-content
     flex-grow: 999

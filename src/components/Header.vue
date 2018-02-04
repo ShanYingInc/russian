@@ -107,7 +107,7 @@ export default {
   right: 22vh
   top: -1vh
 
-.goindex ul li a
+.goindex ul li a ,span
   font-size: 15px
   font-family: "Microsoft YaHei"
   color: #4169E1;
