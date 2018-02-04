@@ -93,7 +93,8 @@ module.exports = {
     new webpack.ProvidePlugin({
        $: "jquery",
        jQuery: "jquery",
-       jquery: "jquery"
+       jquery: "jquery",
+       _: 'lodash'
     })
   ]
 }

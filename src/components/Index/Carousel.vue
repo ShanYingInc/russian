@@ -6,20 +6,18 @@
       //- h3 俄羅斯風情
 </template>
 <script>
-import { api } from '../../api'
+import { mapState } from 'vuex'
 
 export default {
   data () {
     return {
       slide: 0,
-      sliding: null,
-      images: []
+      sliding: null
     }
   },
-  beforeMount(){
-    const self = this
-    api.banner.get().then(data =>{
-      self.images = data
+  computed: {
+    ...mapState({
+      images: state => state.banner
     })
   },
   methods: {
@@ -32,16 +30,11 @@ export default {
     backgroundStyle (url) {
       return 'url(' + url + ') center center;'
     }
-  },
-  mounted () {
-    this.$nextTick(() => {
-
-    })
   }
 }
 </script>
 <style lang="sass" scoped>
-@font-face 
+@font-face
 	font-family: "DFXing"
 	src: url("../../assets/DFXingKaiStd-W5.otf") format("opentype")
 
@@ -57,5 +50,5 @@ export default {
     h3
       font-family: DFXing
       font-size: 40px
-      
+
 </style>

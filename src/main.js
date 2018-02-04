@@ -5,12 +5,14 @@ import App from './App'
 import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
+import ApiPlugin from './api/ApiPlugin'
 
 import './assets/bootstrap-edit.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(ApiPlugin)
 
 /* eslint-disable no-new */
 new Vue({

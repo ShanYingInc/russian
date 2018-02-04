@@ -2,7 +2,6 @@
 #eventHighlight
   .album(v-for="(album, index) in albums", key="index")
     router-link(:to="`/album/` + album.album_id") #[h3.title {{ album.title }}]
-    .content {{ album.content }}
 </template>
 <script>
 import { mapState } from 'vuex'

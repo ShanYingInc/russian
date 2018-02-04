@@ -1,11 +1,10 @@
 <template lang="pug">
 #album
   h2.title {{ album.title }}
-  p.content {{ album.content }}
-  img(v-for="(image, index) in album.images", key="index", :src="createPath(image.path)", height="300px")
+  .content(v-html="album.content")
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   props: {
@@ -23,9 +22,7 @@ export default {
     }
   },
   methods: {
-    createPath (albumPath) {
-      return 'http://192.168.88.204:3030' + albumPath
-    }
+    ...mapActions(['ApiRootLink'])
   }
 }
 </script>

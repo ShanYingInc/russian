@@ -10,11 +10,11 @@
         li
           a(href='')  淡江大學 |
         li
-          router-link(to='/')  中文版 |
+          span(@click="switchLanguage(`tw`)")  中文版 |
         li
-          router-link(to='/')  English |
+          span(@click="switchLanguage(`en`)")  English |
         li
-          router-link(to='/')  Русский
+          span(@click="switchLanguage(`ru`)")  Русский
   .nav
     b-nav
       b-nav-item(to="/newsList") 最新消息
@@ -51,26 +51,26 @@
       b-nav-item-dropdown#nav-4(text='教卓計畫')
         b-dropdown-item(to="/Teaching/Teaching100") 100學年度
         b-dropdown-item(to="/Teaching/Teaching101") 101學年度
-        b-dropdown-item(to="/Teaching/Teaching102") 102學年度 
+        b-dropdown-item(to="/Teaching/Teaching102") 102學年度
       b-nav-item-dropdown#nav-4(text='活動花絮')
         b-dropdown-item(to="/eventHighlignt") 活動花絮
         b-dropdown-item(to="/Performance") 戲劇公演
 
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
     ...mapState({
       navigations: 'navigation'
     })
+  },
+  methods: {
+    ...mapActions({
+      switchLanguage: 'switchLanguage'
+    })
   }
-  // methods: {
-  //   ...mapMutations({
-  //     staffType: 'UPDATE_STAFF_TYPE'
-  //   })
-  // }
 }
 </script>
 <style lang="sass" scoped>
