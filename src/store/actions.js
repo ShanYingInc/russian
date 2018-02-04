@@ -33,6 +33,10 @@ export const actions = {
     api.banner.get().then(async response => {
       commit(types.UPDATE_BANNER_DATA, await response.data)
     })
+
+    api.teachingExcellence.get().then(async response => {
+      commit(types.UPDATE_TEACHING_EXCELLENCE_DATA, await response.data.data)
+    })
   },
   async switchLanguage ({ commit, state, dispatch }, language) {
     api.switchLanguage(await language)

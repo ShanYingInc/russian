@@ -110,7 +110,7 @@ class Api {
     return new SingleFileUpload(this.instance)
   }
 
-  get teachingexcellence () {
+  get teachingExcellence () {
     return new TeachingExcellence(this.instance)
   }
 }

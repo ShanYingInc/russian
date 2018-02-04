@@ -49,22 +49,21 @@
         b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.content_key") {{ subNav.name }}
       b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 國際交流
       b-nav-item-dropdown#nav-4(text='教卓計畫')
-        b-dropdown-item(to="/Teaching/Teaching100") 100學年度
-        b-dropdown-item(to="/Teaching/Teaching101") 101學年度
-        b-dropdown-item(to="/Teaching/Teaching102") 102學年度
+        b-dropdown-item(v-for="year in teachingExcellenceYears", :key="year", :to="`/TeachingExcellenceList/` + year") {{ year }}學年度
       b-nav-item-dropdown#nav-4(text='活動花絮')
         b-dropdown-item(to="/eventHighlignt") 活動花絮
         b-dropdown-item(to="/Performance") 戲劇公演
 
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
   computed: {
     ...mapState({
       navigations: 'navigation'
-    })
+    }),
+    ...mapGetters(['teachingExcellenceYears'])
   },
   methods: {
     ...mapActions({

@@ -86,6 +86,9 @@ import NewsList from '../components/NewsList.vue'
 import EventHighlignt from '../components/EventHighlignt'
 import Album from '../components/Album'
 
+import TeachingExcellenceList from '../components/TeachingExcellenceList'
+import TeachingExcellenceItem from '../components/TeachingExcellenceItem'
+
 Vue.use(Router);
 
 export default new Router({
@@ -124,6 +127,16 @@ export default new Router({
     {
       path: '/album/:albumId',
       component: Album,
+      props: true
+    },
+    {
+      path: '/TeachingExcellenceList/:TeachingExcellenceYear',
+      component: TeachingExcellenceList,
+      props: true
+    },
+    {
+      path: '/TeachingExcellenceItem/:TeachingExcellenceId',
+      component: TeachingExcellenceItem,
       props: true
     },
     {
