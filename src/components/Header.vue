@@ -47,7 +47,6 @@
       //- b-nav-item(to="/Friends/Friendsintroduction") 系友專區
       b-nav-item-dropdown(v-for="(nav, index) in navigations", :key="index", :text='nav.name', :id="`nav_` + nav.navigation_id")
         b-dropdown-item(v-for="(subNav, subIndex) in nav.subItems", :key="subIndex", :to="`/content?parent=`+nav.name+`&contentKey=`+subNav.content_key") {{ subNav.name }}
-      b-nav-item(href="http://www.junioryear.tku.edu.tw/main.php") 國際交流
       b-nav-item-dropdown#nav-4(text='教卓計畫')
         b-dropdown-item(v-for="year in teachingExcellenceYears", :key="year", :to="`/TeachingExcellenceList/` + year") {{ year }}學年度
       b-nav-item-dropdown#nav-4(text='活動花絮')

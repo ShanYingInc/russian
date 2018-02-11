@@ -21,7 +21,7 @@ class Api {
   }
 
   get rootLink () {
-    return 'http://192.168.88.204' + ':' + this.currentPort + '/'
+    return 'http://59.127.194.172' + ':' + this.currentPort + '/'
   }
 
   get apiLink () {
