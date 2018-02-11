@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import { api } from '../../../api'
-
 export default {
   data () {
     return {
@@ -16,10 +14,9 @@ export default {
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      api.content.get().then(data => {
-        this.content = data.願景及策略[0]
-      })
+    this.$nextTick(async () => {
+      const response = await this.$api.content.get()
+      this.content = await response.data['願景及策略'][0]
     })
   }
 }

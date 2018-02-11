@@ -1,16 +1,14 @@
 <template lang="pug">
 #performance
-  Slider
+  //- Slider
   Card
 </template>
 <script>
 import Card from './Card_1'
-import Slider from '../SubMenu/Slider'
 
 export default {
   components: {
-    Card,
-    Slider
+    Card
   }
 }
 </script>

@@ -13,9 +13,9 @@ import Staff from "../components/Nav/Staff/Member.vue";
 // import Tutor from "../components/Nav/Staff/Tutor.vue";
 // import Administrative from "../components/Nav/Staff/Administrative.vue";
 
-// import Introduction from "../components/Nav/Introduction/Introduction.vue";
-// import Vision from "../components/Nav/Introduction/Vision.vue";
-// import Important from "../components/Nav/Introduction/Important.vue";
+import Introduction from "../components/Nav/Introduction/Introduction.vue";
+import Vision from "../components/Nav/Introduction/Vision.vue";
+import Important from "../components/Nav/Introduction/Important.vue";
 
 // import Class from "../components/Nav/Class/Classin.vue";
 // import Auxiliary from "../components/Nav/Class/Auxiliary.vue";
@@ -100,6 +100,20 @@ export default new Router({
       component: IndexPage
     },
     {
+      path: '/Introduction',
+      component: Introduction,
+      children: [
+        {
+          path: 'Important',
+          component: Important
+        },
+        {
+          path: 'Vision',
+          component: Vision
+        }
+      ]
+    },
+    {
       path: "/Staff/:type",
       component: Staff,
       props: true
@@ -138,6 +152,10 @@ export default new Router({
       path: '/TeachingExcellenceItem/:TeachingExcellenceId',
       component: TeachingExcellenceItem,
       props: true
+    },
+    {
+      path: '/Performance',
+      component: Performance
     },
     {
       path: '/*',

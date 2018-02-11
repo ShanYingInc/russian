@@ -27,7 +27,7 @@
         b-dropdown-item(to="/Staff/Director") 歷屆系主任
         b-dropdown-item(to="/Staff/Administrative") 行政人員
         b-dropdown-item(to="/Staff/Tutor") 各班導師
-        b-dropdown-item(to="/Enrollment/Answer") 招生訊息
+        //- b-dropdown-item(to="/Enrollment/Answer") 招生訊息
       //- b-nav-item-dropdown#nav-4(text='學期課表')
       //-   b-dropdown-item(to="/Class/Courseinformation") 課程資訊
       //-   b-dropdown-item(to="/Class/Course") 課程架構

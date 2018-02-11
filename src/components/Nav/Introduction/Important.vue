@@ -6,8 +6,6 @@
   </div>
 </template>
 <script>
-import { api } from '../../../api'
-
 export default {
   data () {
     return {
@@ -15,10 +13,9 @@ export default {
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      api.content.get().then(data => {
-        this.content = data.重要記事[0]
-      })
+    this.$nextTick(async () => {
+      const response = await this.$api.content.get()
+      this.content = await response.data['重要記事'][0]
     })
   }
 }
