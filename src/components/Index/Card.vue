@@ -128,8 +128,8 @@ h1 + p, p + p {
 .card-bg {
   opacity: 0.5;
   position: absolute;
-  top: -20px;
-  left: -20px;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   padding: 20px;

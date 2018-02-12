@@ -8,7 +8,7 @@
         li.test(span='')
           router-link(to='/') 回首頁 |
         li
-          a(href='')  淡江大學 |
+          a(href='http://www.tku.edu.tw/')  淡江大學 |
         li
           span(@click="switchLanguage(`tw`)")  中文版 |
         li

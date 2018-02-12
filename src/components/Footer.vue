@@ -11,7 +11,7 @@
         p Email：tfux@www2.tku.edu.tw
       li
         p Copyright©2018 版權為淡江大學俄文系所有
-  a.middle(href="fb_link")
+  a.middle(href="https://www.facebook.com/tkurussian/")
     i.fab.fa-facebook-square
   .right
 
@@ -50,7 +50,7 @@ export default {};
     padding: 10px
     align-self: center
     position: absolute
-    left: 50%
+    left: 30%
     transform: translate(-50%, 0)
     i
       font-size: 6em
