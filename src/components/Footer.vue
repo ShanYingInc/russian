@@ -50,7 +50,7 @@ export default {};
     padding: 10px
     align-self: center
     position: absolute
-    left: 30%
+    left: 50%
     transform: translate(-50%, 0)
     i
       font-size: 6em
