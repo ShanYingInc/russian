@@ -181,7 +181,7 @@ h1 + p, p + p {
 
 .card-info h1 {
   font-family: "Playfair Display";
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
