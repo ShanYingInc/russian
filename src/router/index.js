@@ -13,9 +13,9 @@ import Staff from "../components/Nav/Staff/Member.vue";
 // import Tutor from "../components/Nav/Staff/Tutor.vue";
 // import Administrative from "../components/Nav/Staff/Administrative.vue";
 
-// import Introduction from "../components/Nav/Introduction/Introduction.vue";
-// import Vision from "../components/Nav/Introduction/Vision.vue";
-// import Important from "../components/Nav/Introduction/Important.vue";
+import Introduction from "../components/Nav/Introduction/Introduction.vue";
+import Vision from "../components/Nav/Introduction/Vision.vue";
+import Important from "../components/Nav/Introduction/Important.vue";
 
 // import Class from "../components/Nav/Class/Classin.vue";
 // import Auxiliary from "../components/Nav/Class/Auxiliary.vue";
@@ -86,6 +86,9 @@ import NewsList from '../components/NewsList.vue'
 import EventHighlignt from '../components/EventHighlignt'
 import Album from '../components/Album'
 
+import TeachingExcellenceList from '../components/TeachingExcellenceList'
+import TeachingExcellenceItem from '../components/TeachingExcellenceItem'
+
 Vue.use(Router);
 
 export default new Router({
@@ -95,6 +98,20 @@ export default new Router({
     {
       path: "/",
       component: IndexPage
+    },
+    {
+      path: '/Introduction',
+      component: Introduction,
+      children: [
+        {
+          path: 'Important',
+          component: Important
+        },
+        {
+          path: 'Vision',
+          component: Vision
+        }
+      ]
     },
     {
       path: "/Staff/:type",
@@ -125,6 +142,20 @@ export default new Router({
       path: '/album/:albumId',
       component: Album,
       props: true
+    },
+    {
+      path: '/TeachingExcellenceList/:TeachingExcellenceYear',
+      component: TeachingExcellenceList,
+      props: true
+    },
+    {
+      path: '/TeachingExcellenceItem/:TeachingExcellenceId',
+      component: TeachingExcellenceItem,
+      props: true
+    },
+    {
+      path: '/Performance',
+      component: Performance
     },
     {
       path: '/*',

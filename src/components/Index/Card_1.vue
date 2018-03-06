@@ -12,7 +12,7 @@
   //- card(data-image='http://www.tfux.tku.edu.tw/img.php?img=271_e41914eb.jpg&dir=archive')
   //-   h1(slot='header') 戲劇公演
   //-   p(slot='content') 101學年度第17屆畢業公演
-  card(:data-image="`http://59.127.194.172:3030` + video.image.path", v-for="(video, index) in videos", :key="index", :link="video.link")
+  card(:data-image="$api.rootLink + video.image.path", v-for="(video, index) in videos", :key="index", :link="video.link")
     h1(slot='header') {{ video.title }}
     p(slot='content') {{ video.content }}
 
@@ -27,9 +27,16 @@ export default {
   components: {
     card: Card
   },
-  computed: {
-    ...mapState({
-      videos: state => state.video
+  data () {
+    return {
+      videos: []
+    }
+  },
+  mounted () {
+    this.$nextTick(async () => {
+      const response = await this.$api.video.get()
+      this.videos = await response.data.data
+      console.log(await response.data)
     })
   }
 }

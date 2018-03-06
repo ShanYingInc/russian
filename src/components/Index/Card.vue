@@ -128,8 +128,8 @@ h1 + p, p + p {
 .card-bg {
   opacity: 0.5;
   position: absolute;
-  top: -20px;
-  left: -20px;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -181,7 +181,7 @@ h1 + p, p + p {
 
 .card-info h1 {
   font-family: "Playfair Display";
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }

@@ -10,7 +10,8 @@ export const state = {
   navigation: [],
   content: {},
   album: [],
-  banner: []
+  banner: [],
+  teachingExcellence: []
 }
 
 export const mutations = {
@@ -43,5 +44,8 @@ export const mutations = {
   },
   [types.UPDATE_BANNER_DATA] (state, data) {
     state.banner = data
+  },
+  [types.UPDATE_TEACHING_EXCELLENCE_DATA] (state, data) {
+    state.teachingExcellence = data
   }
 }
