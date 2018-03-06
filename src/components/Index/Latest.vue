@@ -48,7 +48,7 @@ export default {
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
 #latest
-  width: 70%
+  width: 1200px
   margin: 20px auto
   background: rgb(255, 255, 255)
   padding: 1%
