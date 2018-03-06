@@ -40,4 +40,6 @@ export default {
         margin: 10px
       .title
         text-align: left
+      a
+        font-size: 20px
 </style>
