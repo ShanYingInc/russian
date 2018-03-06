@@ -11,7 +11,7 @@ export const actions = {
     })
 
     api.news.get().then(async response => {
-      commit(types.UPDATE_NEWS_DATA, await response.data.data)
+      commit(types.UPDATE_NEWS_DATA, await response.data.data.reverse())
     })
 
     api.video.get().then(async response => {

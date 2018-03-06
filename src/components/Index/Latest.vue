@@ -6,7 +6,6 @@
       router-link.title(:to="`/news/` + event.news_id") {{ event.title }}
       .type {{ event.type }}
       .date {{ new Date(event.created_on).toLocaleDateString() }}
-      //- .content(v-html='event.content')
 </template>
 <script>
 import { mapState } from 'vuex'
