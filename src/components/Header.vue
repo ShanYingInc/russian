@@ -87,7 +87,7 @@ export default {
     font-family: "Microsoft YaHei"
     width: 100vw
     height: 100%
-    background: #666
+    background: #005792
     .dropdown-menu > li > a
       color: white
     .dropdown-item.active
@@ -111,5 +111,6 @@ export default {
 .goindex ul li a ,span
   font-size: 15px
   font-family: "Microsoft YaHei"
-  color: #4169E1;
+  color: #005792
+  font-weight: 600
 </style>
