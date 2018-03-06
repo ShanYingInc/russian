@@ -14,12 +14,9 @@
     .type
       a(href="#", @click="switchType(`others`)") 其他訊息
   router-link.event(v-for="event in filterList", :key="event.event_id", :to="`/news/` + event.news_id")
-    .left
-      .type {{ getNewsType(event.type) }}
-      .title {{ event.title }}
-    .right
-      span.date {{ new Date(event.created_on).toLocaleDateString() }}
-  //- .panigation
+    .type #[span {{ getNewsType(event.type) }}]
+    .title {{ event.title }}
+    .date {{ new Date(event.created_on).toLocaleDateString() }}
   //-   .page.first 第一頁
   //-   .page.previous 上一頁
   //-   .page(v-for="number in 5") {{ number }}
@@ -82,7 +79,8 @@ export default {
     .type
       display: inline-block
       a
-        text-decoretion: none
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+        text-decoration: none
         color: #333
         padding: 10px 20px
         background: #ccc
@@ -91,64 +89,81 @@ export default {
         font-weight: 900
         position: relative
         &:hover, &:focus, &:active
-          background: #eee
-          // color: #999
+            background: #eee
+            // color: #999
         &::before
-          content: ''
-          display: block
-          position: absolute
-          bottom: 0px
-          left: 0
-          height: 3px
-          width: 100%
-          background-color: #000
-          transform-origin: right top
-          transform: scale(0, 1)
-          transition: color 0.1s,transform 0.2s ease-out
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0px
+            left: 0
+            height: 3px
+            width: 100%
+            background-color: #000
+            transform-origin: right top
+            transform: scale(0, 1)
+            transition: color 0.1s,transform 0.2s ease-out
         &:active::before
-          background-color: #000
+            background-color: #000
         &:hover::before, &:focus::before
-          transform-origin: left top
-          transform: scale(1, 1)
+            transform-origin: left top
+            transform: scale(1, 1)
   .event
     width: 100%
+    height: 75px
     background: rgba(255,255,255,0.9)
-    padding: 20px
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.4)
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4)
     position: relative
     display: flex
-    justify-content: space-between
+    margin: 0 0 15px 0
+    transition: box-shadow .3s
     &:hover
-      background: rgba(200,200,200,0.9)
-    .left
+      // background: rgba(200,200,200,0.9)
+      box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.6)
+    .type
+      flex: 100px
+      background: green
       display: flex
-      flex-direction: row
-      .type
-        margin: 0 10px 0 0
-        padding: 10px
-        border-radius: 2px
-        background: green
-        color: white
-        text-align: center
-        font-weight: 900
-        text-decoretion: none
-      .title
-        text-align: left
-        color: rgba(0, 0, 0, 0.6)
-        align-self: center
-        font-weight: 900
-        text-decoretion: none
-    .right
-      align-self: center
-      color: rgba(0, 0, 0, 0.6)
-      text-decoretion: none
-    &:after
-      content: ''
-      width: 100%
-      border-bottom: solid 1px rgba(0, 0, 0, 0.4)
-      position: absolute
-      bottom: 0
-      left: 0
+      align-items: center
+      justify-content: center
+    .title
+      flex: 999
+      padding: 10px
+      color: black
+    .date
+      padding: 10px
+      flex: 100px
+      color: gray
+    // .left
+    //   display: flex
+    //   flex-direction: row
+    //   .type
+    //     margin: 0 10px 0 0
+    //     padding: 10px
+    //     border-radius: 2px
+    //     background: green
+    //     color: white
+    //     text-align: center
+    //     font-weight: 900
+    //     text-decoretion: none
+    //   .title
+    //     text-align: left
+    //     color: rgba(0, 0, 0, 0.6)
+    //     align-self: center
+    //     font-weight: 900
+    //     text-decoretion: none
+    //     font-size: 20px
+    // .right
+    //   align-self: center
+    //   color: rgba(0, 0, 0, 0.6)
+    //   text-decoretion: none
+    // &:not(:last-child):after
+    //   content: ''
+    //   width: 100%
+    //   border-bottom: solid 1px rgba(0, 0, 0, 0.4)
+    //   position: absolute
+    //   bottom: 0
+    //   left: 0
       // z-index: 1
   .panigation
     margin: 20px auto

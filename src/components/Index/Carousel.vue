@@ -2,7 +2,7 @@
 #carousel
   b-carousel#banner(style='text-shadow: 1px 1px 2px #333; height: 400px; overflow: hidden;', controls='', indicators='', background='rgba(0,0,0,0.3)', :interval='4000', v-model='slide', @sliding-start='onSlideStart', @sliding-end='onSlideEnd')
     b-carousel-slide(v-for = '(image) in images', :key='image.path')
-      img.d-flex(:src="'http://59.127.194.172:3030' + image.path" slot='img', height='400')
+      img.d-flex(:src="$api.rootLink + image.path" slot='img', height='400')
       //- h3 俄羅斯風情
 </template>
 <script>
@@ -28,7 +28,7 @@ export default {
       this.sliding = false
     },
     backgroundStyle (url) {
-      return 'url(' + url + ') center center;'
+      return `url(${url}) center center;`
     }
   }
 }

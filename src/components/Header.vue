@@ -83,7 +83,7 @@ export default {
     padding: 10px
   .nav
     font-family: "Microsoft YaHei"
-    width: 100vw
+    width: 100%
     height: 100%
     background: #005792
     .dropdown-menu > li > a

@@ -11,9 +11,11 @@
         p Email：tfux@www2.tku.edu.tw
       li
         p Copyright©2018 版權為淡江大學俄文系所有
-  a.middle(href="https://www.facebook.com/tkurussian/")
+  .middle
+  //- a.middle(href="https://www.facebook.com/tkurussian/")
+  //-   i.fab.fa-facebook-square
+  a.right(href="https://www.facebook.com/tkurussian/")
     i.fab.fa-facebook-square
-  .right
 
 </template>
 
@@ -28,9 +30,9 @@ export default {};
 
 #footer
   padding: 10px 0 0 0
-  width: 100vw
+  width: 100%
   font-family: "Microsoft YaHei";
-  background-color: #34495e;
+  background-color: rgb(0, 87, 146);
   display: flex
   flex-direction: row
   justify-content: space-between
@@ -41,8 +43,9 @@ export default {};
     h4
       font-family: "Microsoft YaHei";
       color: white
+      margin: 10px 0
     p
-      margin: 0
+      margin: 5px 0
       font-family: "Microsoft YaHei";
       font-size: 16px;
       color: #ffffff;
@@ -54,5 +57,11 @@ export default {};
     transform: translate(-50%, 0)
     i
       font-size: 6em
+      color: white
+  .right
+    align-self: center
+    padding: 0 30px 0 0
+    i
+      font-size: 9em
       color: white
 </style>
