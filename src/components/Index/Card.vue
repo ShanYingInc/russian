@@ -112,7 +112,7 @@ h1 + p, p + p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 240px;
           flex: 0 0 240px;
-  width: 240px;
+  width: 250px;
   height: 320px;
   background-color: #333;
   overflow: hidden;
@@ -142,7 +142,7 @@ h1 + p, p + p {
 }
 
 .card-info {
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   bottom: 0;
   color: #fff;
@@ -183,6 +183,6 @@ h1 + p, p + p {
   font-family: "Playfair Display";
   font-size: 18px;
   font-weight: 700;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0px 10px;
 }
 </style>
