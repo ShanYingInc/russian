@@ -1,31 +1,22 @@
 <template lang="pug">
 #card.container
-  //- card(data-image='http://www.tfux.tku.edu.tw/img.php?img=450_83214392.jpg&dir=archive', link="https://www.youtube.com/watch?v=JjMz5HkF_Ls")
-  //-   h1(slot='header') 戲劇公演
-  //-   p(slot='content') 104學年度第20屆畢業公演
-  //- card(data-image='http://www.tfux.tku.edu.tw/img.php?img=416_4e48c74a.jpg&dir=archive')
-  //-   h1(slot='header') 戲劇公演
-  //-   p(slot='content') 103學年度第19屆畢業公演
-  //- card(data-image='http://www.tfux.tku.edu.tw/img.php?img=349_345464a8.jpg&dir=archive')
-  //-   h1(slot='header') 戲劇公演
-  //-   p(slot='content') 102學年度第18屆畢業公演
-  //- card(data-image='http://www.tfux.tku.edu.tw/img.php?img=271_e41914eb.jpg&dir=archive')
-  //-   h1(slot='header') 戲劇公演
-  //-   p(slot='content') 101學年度第17屆畢業公演
-  card(:data-image="`http://59.127.194.172:3030` + video.image.path", v-for="(video, index) in videos", :key="index", :link="video.link")
-    h1(slot='header') {{ video.title }}
-    p(slot='content') {{ video.content }}
+  //- card(:data-image="`http://59.127.194.172:3030` + video.image.path", v-for="(video, index) in videos", :key="index", :link="video.link")
+  //-   h1(slot='header') {{ video.title }}
+  //-   p(slot='content') {{ video.content }}
+  CardNew(:video="video", v-for="(video, index) in videos", :key="index")
 
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Card from './Card_add'
+import CardNew from './CardNew'
 
 export default {
   name:'Card',
   components: {
-    card: Card
+    card: Card,
+    CardNew
   },
   computed: {
     ...mapState({
