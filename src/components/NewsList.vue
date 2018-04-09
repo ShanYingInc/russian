@@ -8,6 +8,8 @@
     .type
       a(href="#", @click="switchType(`speech`)") 活動演講
     .type
+      a(href="#", @click="switchType(`enrollment`)") 招生資訊
+    .type
       a(href="#", @click="switchType(`recruitment`)") 企業徵才
     .type
       a(href="#", @click="switchType(`scholarship`)") 獎助學金
@@ -27,6 +29,7 @@
 const newsTypes = {
   school: "校內公告",
   speech: "校內公告",
+  enrollment: "招生資訊",
   recruitment: "企業徵才",
   scholarship: "獎助學金",
   others: "其他訊息"
@@ -122,7 +125,7 @@ export default {
       box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.6)
     .type
       flex: 100px
-      background: green
+      background: #C00000
       display: flex
       align-items: center
       justify-content: center
@@ -130,6 +133,9 @@ export default {
       flex: 999
       padding: 10px
       color: black
+      font-size: 1.18em
+      font-family: 'Noto Sans TC', sans-serif
+      text-align: left
     .date
       padding: 10px
       flex: 100px

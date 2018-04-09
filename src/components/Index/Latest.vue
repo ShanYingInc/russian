@@ -13,6 +13,7 @@ const newsTypes = {
   speech: "校內公告",
   recruitment: "企業徵才",
   scholarship: "獎助學金",
+  enrollment: "招生資訊",
   others: "其他訊息"
 }
 
