@@ -23,13 +23,13 @@ export default {
 
 <style lang="sass">
 #important
-  width: 70%
+  width: 80%
   height: 100%
   text-align:left
-  animation: fadein 2s
+  animation: fadein 1s
   margin: 20px auto
   .content
-    padding: 20px 50px
+    padding: 40px 50px
     // border: 1px solid #ccc
     border-radius: 5px
     background: rgba(255, 255, 255, 0.8)
