@@ -8,9 +8,9 @@
 
 <script>
 import { api } from './api'
-import {mapActions} from 'vuex'
-import FooterComponent from "@/components/Footer"
-import HeaderComponent from "@/components/Header"
+import { mapActions } from 'vuex'
+import FooterComponent from "./components/Footer"
+import HeaderComponent from "./components/Header"
 
 export default {
   components:{
