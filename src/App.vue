@@ -33,7 +33,7 @@ export default {
 body
   max-width: 100vw
   min-height: 100vh
-  font-family: 'Microsoft YaHei'
+  font-family: 'Noto Sans TC', sans-serif
   margin: 0
 
 #app
