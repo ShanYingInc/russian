@@ -20,19 +20,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'FooterComponent'
+}
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @font-face
-	font-family: "DFXing"
+	font-family: 'Noto Sans TC', sans-serif
 	src: url("../../assets/DFXingKaiStd-W5.otf") format("opentype")
 
 #footer
   padding: 10px 0 0 0
   width: 100%
-  font-family: "Microsoft YaHei";
-  background-color: rgb(0, 87, 146);
+  font-family: 'Noto Sans TC', sans-serif
+  background-color: rgb(0, 87, 146)
   display: flex
   flex-direction: row
   justify-content: space-between
@@ -41,12 +43,12 @@ export default {};
   .left
     text-align: left
     h4
-      font-family: "Microsoft YaHei";
+      font-family: 'Noto Sans TC', sans-serif
       color: white
       margin: 10px 0
     p
       margin: 5px 0
-      font-family: "Microsoft YaHei";
+      font-family: 'Noto Sans TC', sans-serif
       font-size: 16px;
       color: #ffffff;
   .middle
