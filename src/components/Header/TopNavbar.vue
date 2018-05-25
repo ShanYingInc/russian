@@ -26,24 +26,26 @@ export default {
 </script>
 <style lang="sass" scoped>
 #top-navbar
-  padding: 10px
   margin: 0
   display: flex
   .item
     a ,button
-      font-family: "Microsoft YaHei"
+      font-family: 'Noto Sans TC', sans-serif
       color: #005792
-      font-weight: 600
       @include breakpoint(pc)
+        font-weight: 600
         font-size: 1em
       @include breakpoint(mobile)
-        font-size: 1.2em
+        font-size: 1em
+        font-weight: 500
   @include breakpoint(pc)
+    padding: 10px
     justify-content: flex-start
     .item:not(:last-child):after
       content: '|'
       color: #005792
   @include breakpoint(mobile)
+    padding: 0px
     justify-content: flex-start
     overflow: scroll
 </style>
