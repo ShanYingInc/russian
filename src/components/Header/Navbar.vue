@@ -97,7 +97,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 #navbar
-  font-family: "Microsoft YaHei"
+  font-family: 'Noto Sans TC', sans-serif
   color: white
   background-color: rgb(0, 87, 146)
 </style>
