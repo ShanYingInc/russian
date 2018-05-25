@@ -28,14 +28,22 @@ export default {
 #top-navbar
   padding: 10px
   margin: 0
+  display: flex
   .item
-    display: inline
     a ,button
-      font-size: 15px
       font-family: "Microsoft YaHei"
       color: #005792
       font-weight: 600
-  .item:not(:last-child):after
-    content: '|'
-    color: #005792
+      @include breakpoint(pc)
+        font-size: 1em
+      @include breakpoint(mobile)
+        font-size: 1.2em
+  @include breakpoint(pc)
+    justify-content: flex-start
+    .item:not(:last-child):after
+      content: '|'
+      color: #005792
+  @include breakpoint(mobile)
+    justify-content: flex-start
+    overflow: scroll
 </style>
