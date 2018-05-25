@@ -1,9 +1,8 @@
 <template lang="pug">
 #header
   TopNavbar
-  .header
-    router-link.logo(to='/')
-      img(src='../../assets/logo.png' ,height=80)
+  router-link(to='/')
+    img.logo
   NavBar
 </template>
 <script>
@@ -24,6 +23,13 @@ export default {
   display: flex
   flex-direction: column
   background: white
-  .header
-    padding: 0px 20px 20px 0px
+  a
+    padding: 0 20px 10px 10px
+    img.logo
+      width: calc(100vw - 20px)
+      height: auto
+      @include breakpoint(pc)
+        content: url("../../assets/logo_new.png")
+      @include breakpoint(mobile)
+        content: url("../../assets/logo_mobile.png")
 </style>
