@@ -29,13 +29,12 @@ export default {
 </script>
 
 <style lang="sass">
-
+// !!!! 全域 勿加scoped
 body
   max-width: 100vw
   min-height: 100vh
   font-family: 'Microsoft YaHei'
   margin: 0
-
 
 #app
   display: flex

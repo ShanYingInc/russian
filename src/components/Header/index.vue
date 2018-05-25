@@ -9,24 +9,12 @@
 <script>
 import NavBar from './Navbar'
 import TopNavbar from './TopNavbar'
-import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'HeaderComponent',
   components: {
     NavBar,
     TopNavbar
-  },
-  computed: {
-    ...mapState({
-      navigations: 'navigation'
-    }),
-    ...mapGetters(['teachingExcellenceYears'])
-  },
-  methods: {
-    ...mapActions({
-      switchLanguage: 'switchLanguage'
-    })
   }
 }
 </script>
