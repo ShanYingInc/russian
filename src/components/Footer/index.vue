@@ -36,21 +36,32 @@ export default {
   font-family: 'Noto Sans TC', sans-serif
   background-color: rgb(0, 87, 146)
   display: flex
-  flex-direction: row
   justify-content: space-between
-  position: absolute
-  bottom: 0
+  order: 99
+  z-index: 999
+  @include breakpoint(pc)
+    flex-direction: row
+  @include breakpoint(mobile)
+    flex-direction: column
   .left
     text-align: left
     h4
       font-family: 'Noto Sans TC', sans-serif
       color: white
       margin: 10px 0
+      @include breakpoint(pc)
+        font-size: 2em
+      @include breakpoint(mobile)
+        font-size: 1.5em
     p
       margin: 5px 0
       font-family: 'Noto Sans TC', sans-serif
-      font-size: 16px;
-      color: #ffffff;
+      font-size: 16px
+      color: #ffffff
+      @include breakpoint(pc)
+        font-size: 1em
+      @include breakpoint(mobile)
+        font-size: 0.8em
   .middle
     padding: 10px
     align-self: center
@@ -62,8 +73,14 @@ export default {
       color: white
   .right
     align-self: center
-    padding: 0 30px 0 0
-    i
-      font-size: 9em
-      color: white
+    @include breakpoint(pc)
+      padding: 0 30px 0 0
+      i
+        font-size: 9em
+        color: white
+    @include breakpoint(mobile)
+      padding: 0px 0 10px 0px
+      i
+        font-size: 4em
+        color: white
 </style>

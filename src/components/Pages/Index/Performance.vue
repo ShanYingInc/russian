@@ -1,5 +1,5 @@
 <template lang="pug">
-#Performance.container
+#Performance
   Card(:video="video", v-for="(video, index) in videos", :key="index")
 </template>
 
@@ -23,9 +23,12 @@ export default {
 
 <style lang="sass" scoped>
 #Performance
-  width: 80%
-  margin-bottom: 50px
   display: flex
   flex-wrap: wrap
   justify-content: center
+  margin: 0px auto
+  @include breakpoint(pc)
+    width: 80vw
+  @include breakpoint(mobile)
+    width: 100vw
 </style>

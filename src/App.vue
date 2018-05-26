@@ -2,7 +2,9 @@
 #app
   .background
   HeaderComponent
-  router-view.app-content
+  transition(name="fade", mode="in-out")
+    .content
+      router-view
   FooterComponent
 </template>
 
@@ -13,35 +15,26 @@ import FooterComponent from "./components/Footer"
 import HeaderComponent from "./components/Header"
 
 export default {
+  name: 'App',
   components:{
     FooterComponent,
     HeaderComponent
   },
   methods: {
-    ...mapActions({
-      initData: 'initData'
-    })
+    ...mapActions(['initData'])
   },
-  mounted () {
+  created () {
     this.initData()
   }
 }
 </script>
 
-<style lang="sass">
-// !!!! 全域 勿加scoped
-body
-  max-width: 100vw
-  min-height: 100vh
-  font-family: 'Noto Sans TC', sans-serif
-  margin: 0
-
+<style lang="sass" scoped>
 #app
   display: flex
   min-height: 100vh
   flex-direction: column
   position: relative
-  padding-bottom: 212px
   .background
     width: 100%
     height: 100%
@@ -51,12 +44,13 @@ body
     top: 0
     z-index: 0
     background: url(assets/background.png) center no-repeat
-    filter: opacity(10%)
     background-size: cover
-  .app-content
+    filter: opacity(10%)
+  .content
     flex-grow: 999
-  #header
-    z-index: 999
-  .app-content, #footer
-    z-index: 99
+    z-index: 20
+    @include breakpoint(pc)
+      margin: 0px auto 20px
+    @include breakpoint(mobile)
+      margin: 0px auto
 </style>

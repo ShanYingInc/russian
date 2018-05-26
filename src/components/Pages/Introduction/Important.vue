@@ -1,9 +1,5 @@
-<template>
-  <div id="important">
-    <div class="content">
-      <div v-html="content"></div>
-    </div>
-  </div>
+<template lang="pug">
+#important(v-html='content')
 </template>
 <script>
 export default {
@@ -23,20 +19,5 @@ export default {
 
 <style lang="sass">
 #important
-  width: 80%
-  height: 100%
-  text-align:left
-  animation: fadein 1s
-  margin: 20px auto
-  .content
-    padding: 40px 50px
-    // border: 1px solid #ccc
-    border-radius: 5px
-    background: rgba(255, 255, 255, 0.8)
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
-@keyframes fadein
-  from
-    opacity: 0
-  to
-    opacity: 1
+  @include main-content
 </style>

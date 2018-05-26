@@ -23,6 +23,7 @@ export default {
   display: flex
   flex-direction: column
   background: white
+  z-index: 999
   a
     padding: 0 20px 10px 10px
     img.logo

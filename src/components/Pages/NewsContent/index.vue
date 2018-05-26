@@ -1,7 +1,7 @@
 <template lang="pug">
-#News.content-container
-  //- type {{ event.type }}
-  //- date {{ new Date(event.created_on).toLocaleDateString() }}
+#News
+  //- TODO: 新增標題&返回上一級
+  .back
   .content(v-html="content")
 </template>
 <script>
@@ -28,15 +28,10 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-.content-container
-  width: 70%
-  height: 100%
-  text-align:left
-  animation: fadein 1s
-  margin: 20px auto
+#News
+  .back
+    width: 100vw
+    height: 20px
   .content
-    padding: 40px 50px
-    border-radius: 5px
-    background: rgba(255, 255, 255, 0.8)
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
+    @include main-content
 </style>

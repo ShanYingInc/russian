@@ -1,6 +1,6 @@
 <template lang="pug">
 #teachingExcellenceItem
-  div(v-if="item")
+  .item(v-if="item")
     h1 {{ item.title }}
     h3 {{ item.year }} 學年度
     .content(v-html="item.content")
@@ -29,12 +29,10 @@ export default {
 </script>
 <style lang="sass" scoped>
 #teachingExcellenceItem
-  width: 70%
-  height: 100%
-  animation: fadein 2s
-  margin: 20px auto
-  background: rgba(255, 255, 255, 0.8)
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, .5)
-  padding: 20px 50px
-  border-radius: 5px
+  @include breakpoint(pc)
+    margin: 20px auto 0px
+  @include breakpoint(mobile)
+    margin: 0px
+  .item
+    @include main-content
 </style>
