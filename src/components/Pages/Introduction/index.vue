@@ -3,7 +3,7 @@
   .switch
     router-link(to='/Introduction/Important') 重要記事
     router-link(to='/Introduction/Vision') 願景及策略
-  transition(name="fade", mode="in-out")
+  transition(name="fade")
     router-view
 </template>
 
