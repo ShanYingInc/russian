@@ -16,7 +16,7 @@
             data-toggle="collapse",
             data-target="#navbarNav.show",
             to="/newsList"
-          ) 最新消息
+          ) {{ $t('nav.news') }}
         li.nav-item.dropdown
           a#nav1.nav-link.active.dropdown-toggle(
             href='#',
@@ -24,7 +24,7 @@
             data-toggle='dropdown',
             aria-haspopup='true',
             aria-expanded='false'
-          ) 系所簡介
+          ) {{ $t('nav.about_us') }}
           .dropdown-menu(aria-labelledby='nav1')
             router-link.dropdown-item(
               data-toggle="collapse",
@@ -43,7 +43,7 @@
             data-toggle='dropdown',
             aria-haspopup='true',
             aria-expanded='false'
-          ) 師資陣容
+          ) {{ $t('nav.faculty_and_staff') }}
           .dropdown-menu(aria-labelledby='nav2')
             router-link.dropdown-item(
               data-toggle="collapse",
@@ -97,7 +97,7 @@
             data-toggle='dropdown',
             aria-haspopup='true',
             aria-expanded='false'
-          ) 教卓計畫
+          ) {{ $t('nav.project') }}
           .dropdown-menu(aria-labelledby='nav3')
             router-link.dropdown-item(
               data-toggle="collapse",
@@ -113,7 +113,7 @@
             data-toggle='dropdown',
             aria-haspopup='true',
             aria-expanded='false'
-          ) 活動花絮
+          ) {{ $t('nav.events') }}
           .dropdown-menu(aria-labelledby='nav4')
             router-link.dropdown-item(
               data-toggle="collapse",

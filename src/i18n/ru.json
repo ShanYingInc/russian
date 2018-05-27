@@ -1,3 +1,11 @@
 {
-  "test": "ruru"
+  "test": "test ru",
+  "nav": {
+    "news": "News",
+    "about_us": "About Us",
+    "faculty_and_staff": "Faculty & Staff",
+    "project": "Project",
+    "events": "Events",
+    "international_activity": "International Activity"
+  }
 }

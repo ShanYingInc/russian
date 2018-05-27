@@ -1,3 +1,11 @@
 {
-  "test": "測試"
+  "test": "測試",
+  "nav": {
+    "news": "最新消息",
+    "about_us": "系所簡介",
+    "faculty_and_staff": "師資陣容",
+    "project": "計畫成果",
+    "events": "活動花絮",
+    "international_activity": "國際交流"
+  }
 }
