@@ -1,6 +1,7 @@
 import { types } from './mutations_types'
 import Api from '../api'
 import router from '../router'
+import i18n from '../i18n'
 
 const api = new Api()
 
@@ -51,6 +52,7 @@ export const actions = {
   },
   async switchLanguage ({ commit, state, dispatch }, language) {
     api.switchLanguage(await language)
+    i18n.locale = language
     await dispatch('initData')
     await router.push('/')
   },
