@@ -13,7 +13,7 @@ export default {
   methods: {
     generateCssBackground (url) {
       return {
-        'background': `url(${url}) center no-repeat`,
+        'background': `linear-gradient(rgba(0, 0, 0, .4), rgba(255, 255, 255, 0)), url(${url}) center no-repeat`,
         'background-size': 'cover'
       }
     }
@@ -29,7 +29,6 @@ $mobile-height: 200px
 
 .card
   font-family: 'Noto Sans TC', sans-serif
-  text-stroke: 1px black
   background: white
   text-decoration: none
   @include breakpoint(pc)
@@ -56,19 +55,18 @@ $mobile-height: 200px
     @include breakpoint(pc)
       border-radius: 5px
     @include breakpoint(mobile)
-
     .title
-      font-weight: 900
+      font-weight: 700
+      line-height: 1.2em
+      font-size: 2em
+      text-align: left
+      color: rgba(255, 255, 255, 1)
+      letter-spacing: 3px
+    .content
+      font-weight: 500
       line-height: 1.2em
       font-size: 1.5em
       text-align: left
-      color: rgba(255, 255, 255, .9)
-      letter-spacing: 3px
-    .content
-      font-weight: 400
-      line-height: 1.2em
-      font-size: 1em
-      text-align: left
-      color: rgba(255, 255, 255, .9)
+      color: rgba(255, 255, 255, 1)
       letter-spacing: 1px
 </style>

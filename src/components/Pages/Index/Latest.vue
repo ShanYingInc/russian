@@ -85,6 +85,7 @@ export default {
       margin: 0 0 15px 0
       transition: box-shadow .2s
       border-radius: 4px
+      text-decoration: none
       @include breakpoint(pc)
         height: 75px
         &:hover
@@ -98,6 +99,7 @@ export default {
         justify-content: center
         font-family: 'Noto Sans TC', sans-serif
         border-radius: 4px 0px 0px 4px
+        color: white
         @include breakpoint(pc)
           flex: 100px
         @include breakpoint(mobile)
