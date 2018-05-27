@@ -1,27 +1,27 @@
 <template lang="pug">
-#member
+#staff
   .switch
     router-link(to="/Staff/Fulltime") 專任師資
     router-link(to="/Staff/Parttime") 兼任師資
     router-link(to="/Staff/Director") 歷屆系主任
     router-link(to="/Staff/Administrative") 行政人員
     router-link(to="/Staff/Tutor") 各班導師
-  transition-group.member-container(name="fade", mode="out-in", tag="div")
-    //- TODO: 改進為waterfall排版
-    .member-item(v-for='(member, index) in filterList', :key='member.name')
-      .pic
-        img(:src="$api.rootLink + member.image.path" height="150")
-      .text
-        h2 {{ member.name }}
-        p {{ member.position }}
-        div(v-html="member.teaching_lessons")
-        p {{ member.email }}
-        p {{ member.telephone }}
+  transition-group.staff-container(name="fade")
+    StaffItem(
+      v-for='(staff, index) in filterList',
+      :key='staff.member_id',
+      :staffData="staff"
+    )
 </template>
 <script>
+import StaffItem from './StaffItem'
 import { mapState, mapMutations } from 'vuex'
 
 export default {
+  name: 'Staff',
+  components: {
+    StaffItem
+  },
   props: {
     type: String
   },
@@ -48,15 +48,15 @@ export default {
 }
 </script>
 
-<style lang="sass">
-#member
+<style lang="sass" scoped>
+#staff
   display: flex
   flex-direction: column
-  margin: 10px
+  width: 100vw
   .switch
     padding: 10px 0px
     display: flex
-    width: 100vw
+    width: 100%
     @include breakpoint(pc)
       flex-wrap: wrap
       justify-content: center
@@ -74,21 +74,9 @@ export default {
       font-size: 1.2em
       white-space: nowrap
       @include switch-transition(#aaaaaa, #dcdcdc)
-  .member-container
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    .member-item
-      margin: 0 20px 20px 0
-      border: 2px black solid
-      display: flex
-      flex-direction: column
-      width: 250px
-      height: 400px
-      background: white
-      // border: 1px solid #ddd
-      padding: 20px 20px
-      .pic
-        align-self: center
-      .text
+  .staff-container
+    overflow: visible
+    column-count: auto
+    column-width: 300px
+    column-gap: 0px
 </style>
