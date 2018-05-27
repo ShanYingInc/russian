@@ -2,9 +2,8 @@
 #app
   .background
   HeaderComponent
-  transition(name="fade", mode="in-out")
-    .content
-      router-view
+  transition(name="fade")
+    router-view.content
   FooterComponent
 </template>
 
@@ -49,6 +48,7 @@ export default {
   .content
     flex-grow: 999
     z-index: 20
+    min-height: 80vh
     @include breakpoint(pc)
       margin: 0px auto 20px
     @include breakpoint(mobile)
