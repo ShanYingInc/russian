@@ -20,8 +20,13 @@
     button.btn.btn-link.btn-sm(@click="switchLanguage(`ru`)") Русский
 </template>
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'TopNavbar'
+  name: 'TopNavbar',
+  methods: {
+    ...mapActions(['switchLanguage'])
+  }
 }
 </script>
 <style lang="sass" scoped>

@@ -1,5 +1,6 @@
 import { types } from './mutations_types'
 import Api from '../api'
+import router from '../router'
 
 const api = new Api()
 
@@ -51,6 +52,7 @@ export const actions = {
   async switchLanguage ({ commit, state, dispatch }, language) {
     api.switchLanguage(await language)
     await dispatch('initData')
+    await router.push('/')
   },
   async ApiRootLink ({ commit, state, dispatch }) {
     return await this.api.rootLink
