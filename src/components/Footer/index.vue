@@ -2,18 +2,16 @@
 #footer
   .left
     ul
-      h4 淡江大學俄國語文學系
+      h4 {{ $t('footer.departmentName') }}
       li
-        p 25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室
+        p {{ $t('footer.location') }}
       li
-        p TEL：(02)26215656轉2711  FAX：(02)26209907
+        p {{ $t('footer.phone') }}
       li
-        p Email：tfux@www2.tku.edu.tw
+        p {{ $t('footer.email') }}
       li
-        p Copyright©2018 版權為淡江大學俄文系所有
+        p {{ $t('footer.copyright') }}
   .middle
-  //- a.middle(href="https://www.facebook.com/tkurussian/")
-  //-   i.fab.fa-facebook-square
   a.right(href="https://www.facebook.com/tkurussian/")
     i.fab.fa-facebook-square
 
@@ -45,6 +43,8 @@ export default {
     flex-direction: column
   .left
     text-align: left
+    ul::marker
+      color: white
     h4
       font-family: 'Noto Sans TC', sans-serif
       color: white

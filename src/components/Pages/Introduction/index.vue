@@ -36,13 +36,7 @@ export default {
       overflow: scroll
       flex-wrap: nowrap
     a
-      color: black
-      padding: 10px 15px
-      margin: 3px 5px
-      text-decoration: none
-      border-radius: 2px
-      font-weight: 600
-      font-size: 1.2em
-      white-space: nowrap
-      @include switch-transition(#aaaaaa, #dcdcdc)
+      $background-normal-color: #aaaaaa
+      $background-hover-color: #dcdcdc
+      @include switch-category-transition(#aaaaaa, #dcdcdc)
 </style>
