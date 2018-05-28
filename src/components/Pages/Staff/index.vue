@@ -65,15 +65,9 @@ export default {
       overflow: scroll
       flex-wrap: nowrap
     a
-      color: black
-      padding: 10px 15px
-      margin: 3px 5px
-      text-decoration: none
-      border-radius: 2px
-      font-weight: 600
-      font-size: 1.2em
-      white-space: nowrap
-      @include switch-transition(#aaaaaa, #dcdcdc)
+      $background-normal-color: #4c83c3
+      $background-hover-color: #80b2f6
+      @include switch-category-transition($background-normal-color, $background-hover-color)
   .staff-container
     overflow: visible
     column-count: auto
