@@ -1,3 +1,32 @@
 {
-  "test": "ruru"
+  "test": "test ru",
+  "nav": {
+    "news": "News",
+    "about_us": "About Us",
+    "faculty_and_staff": "Faculty & Staff",
+    "project": "Project",
+    "events": "Events",
+    "international_activity": "International Activity"
+  },
+  "newsCategory": {
+    "school": "校內公告",
+    "speech": "活動演講",
+    "enrollment": "招生資訊",
+    "recruitment": "企業徵才",
+    "scholarship": "獎助學金",
+    "others": "其他訊息"
+  },
+  "panigation": {
+    "first": "第一頁",
+    "previous": "上一頁",
+    "next": "下一頁",
+    "last": "最後一頁"
+  },
+  "footer": {
+    "departmentName": "淡江大學俄國語文學系",
+    "location": "25137 新北市淡水區英專路151號 淡江大學外語大樓FL209室",
+    "email": "Email：tfux@www2.tku.edu.tw",
+    "phone": "TEL：(02)26215656轉2711 FAX：(02)26209907",
+    "copyright": "Copyright©2018 版權為淡江大學俄文系所有"
+  }
 }
