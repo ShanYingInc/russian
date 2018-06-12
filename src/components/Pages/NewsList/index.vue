@@ -1,20 +1,68 @@
 <template lang="pug">
 #news
   .category
-    button.all(type="button", @click="switchCategory(`all`)") 全部新聞
-    button.school(type="button", @click="switchCategory(`school`)") 校內公告
-    button.speech(type="button", @click="switchCategory(`speech`)") 活動演講
-    button.enrollment(type="button", @click="switchCategory(`enrollment`)") 招生資訊
-    button.recruitment(type="button", @click="switchCategory(`recruitment`)") 企業徵才
-    button.scholarship(type="button", @click="switchCategory(`scholarship`)") 獎助學金
-    button.others(type="button", @click="switchCategory(`others`)") 其他訊息
+    button.all(
+      type="button",
+      @click="switchCategory(`all`)"
+    ) 全部新聞
+    button.school(
+      type="button",
+      @click="switchCategory(`school`)"
+    ) 校內公告
+    button.speech(
+      type="button",
+      @click="switchCategory(`speech`)"
+    ) 活動演講
+    button.enrollment(
+      type="button",
+      @click="switchCategory(`enrollment`)"
+    ) 招生資訊
+    button.recruitment(
+      type="button",
+      @click="switchCategory(`recruitment`)"
+    ) 企業徵才
+    button.scholarship(
+      type="button",
+      @click="switchCategory(`scholarship`)"
+    ) 獎助學金
+    button.others(
+      type="button",
+      @click="switchCategory(`others`)"
+    ) 其他訊息
   .list
-    NewsItem(v-for="newsItem in filterList", :key="newsItem.news_id", :newsItem="newsItem")
-  .panigation(role="group", aria-label="Basic example")
-    button.first(type="button", @click="switchPage(1)") 第一頁
-    button.previous(type="button", @click="switchPage(previousPageNumber)") 上一頁
-    button.next(type="button", @click="switchPage(nextPageNumber)") 下一頁
-    button.last(type="button", @click="switchPage(lastPageNumber)") 最後一頁
+    NewsItem(
+      v-for="newsItem in filterList",
+      :key="newsItem.news_id",
+      :newsItem="newsItem"
+    )
+  .panigation(
+    role="group",
+    aria-label="Basic example"
+  )
+    button.first(
+      type="button",
+      @click="switchPage(1)",
+      :disabled='pageNumber == 1'
+    )
+      i.fas.fa-fast-backward
+    button.previous(
+      type="button",
+      @click="switchPage(previousPageNumber)",
+      :disabled='pageNumber == 1'
+    )
+      i.fas.fa-backward
+    button.next(
+      type="button",
+      @click="switchPage(nextPageNumber)",
+      :disabled='pageNumber == lastPageNumber'
+    )
+      i.fas.fa-forward
+    button.last(
+      type="button",
+      @click="switchPage(lastPageNumber)",
+      :disabled='pageNumber == lastPageNumber'
+    )
+      i.fas.fa-fast-forward
 </template>
 <script>
 import NewsItem from './NewsItem'
@@ -144,9 +192,8 @@ export default {
       width: 80vw
       margin: 0px auto
     @include breakpoint(mobile)
-      flex-direction: column
-      width: 100%
-      margin: 0px 20px
+      width: 90%
+      margin: 0px auto 20px
     button
       width: 100%
       padding: 10px
@@ -154,5 +201,12 @@ export default {
       background: $main-color
       color: white
       border: none
+      &:disabled
+        background: $sub-light-color
+        cursor: not-allowed
+      &.first
+        border-radius: 4px 0 0 4px
+      &.last
+        border-radius: 0 4px 4px 0
 
 </style>
