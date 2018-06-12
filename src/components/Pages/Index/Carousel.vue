@@ -40,6 +40,12 @@ export default {
 </script>
 <style lang="sass" scoped>
 #carousel
+  background: rgba(0, 0, 0, .5)
   img
-    width: 100vw
+    margin: 0px auto
+    @include breakpoint(pc)
+      width: 80vw
+    @include breakpoint(mobile)
+      width: 100vw
+
 </style>

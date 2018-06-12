@@ -29,7 +29,10 @@ export default {
 </script>
 <style lang="sass" scoped>
 #album
-  margin: 20px auto 0px
+  @include breakpoint(pc)
+    padding: 20px 0px 0px
+  @include breakpoint(mobile)
+    padding: 0px
   .item
     @include main-content
 </style>
