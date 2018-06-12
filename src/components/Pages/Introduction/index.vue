@@ -36,7 +36,7 @@ export default {
       overflow: scroll
       flex-wrap: nowrap
     a
-      $background-normal-color: #aaaaaa
-      $background-hover-color: #dcdcdc
-      @include switch-category-transition(#aaaaaa, #dcdcdc)
+      $background-normal-color: #4c83c3
+      $background-hover-color: #80b2f6
+      @include switch-category-transition($background-normal-color, $background-hover-color)
 </style>

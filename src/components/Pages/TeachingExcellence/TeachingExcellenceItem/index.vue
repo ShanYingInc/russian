@@ -30,9 +30,9 @@ export default {
 <style lang="sass" scoped>
 #teachingExcellenceItem
   @include breakpoint(pc)
-    margin: 20px auto 0px
+    padding: 20px 0px 0px
   @include breakpoint(mobile)
-    margin: 0px
+    padding: 0px
   .item
     @include main-content
 </style>
