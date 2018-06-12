@@ -1,8 +1,11 @@
 <template lang="pug">
 #News
-  //- TODO: 新增標題&返回上一級
-  .back
-  .content(v-html="content")
+  .news-container
+    h3.title {{ newsItem.title }}
+    p.date {{ new Date(newsItem.created_on).toLocaleDateString() }}
+    hr
+    .content(v-html="newsItem.content")
+    .back
 </template>
 <script>
 import { mapState } from 'vuex'
@@ -15,23 +18,30 @@ export default {
     ...mapState({
       news: state => state.news
     }),
-    content () {
+    newsItem () {
       const self = this
       if (this.news.length !== 0) {
-        return this.news.filter(event => {
+        const newsItem = this.news.filter(event => {
           return event.news_id === Number(self.newsId)
-        })[0].content
+        })[0]
+        console.log(newsItem)
+        return newsItem
       }
-      return '讀取中'
+      return {content: '<h1>讀取中</h1>'}
     }
   }
 }
 </script>
 <style lang="sass" scoped>
 #News
-  .back
-    width: 100vw
-    height: 20px
-  .content
+  @include breakpoint(pc)
+    padding: 20px 0 0
+  @include breakpoint(mobile)
+    width: 100%
+  .news-container
     @include main-content
+    .back
+    .title
+    .content
+
 </style>
