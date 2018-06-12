@@ -9,10 +9,7 @@
     button.scholarship(type="button", @click="switchCategory(`scholarship`)") 獎助學金
     button.others(type="button", @click="switchCategory(`others`)") 其他訊息
   .list
-    router-link.event(v-for="event in filterList", :key="event.event_id", :to="`/news/` + event.news_id")
-      .type #[span {{ getNewsType(event.type) }}]
-      .title {{ event.title }}
-      .date {{ new Date(event.created_on).toLocaleDateString() }}
+    NewsItem(v-for="newsItem in filterList", :key="newsItem.news_id", :newsItem="newsItem")
   .panigation(role="group", aria-label="Basic example")
     button.first(type="button", @click="switchPage(1)") 第一頁
     button.previous(type="button", @click="switchPage(previousPageNumber)") 上一頁
@@ -20,19 +17,14 @@
     button.last(type="button", @click="switchPage(lastPageNumber)") 最後一頁
 </template>
 <script>
-const newsTypes = {
-  school: "校內公告",
-  speech: "活動演講",
-  enrollment: "招生資訊",
-  recruitment: "企業徵才",
-  scholarship: "獎助學金",
-  others: "其他訊息"
-}
-
+import NewsItem from './NewsItem'
 import { mapState } from 'vuex'
 
 export default {
   name: 'NewsList',
+  components: {
+    NewsItem
+  },
   data () {
     return {
       newsType: 'all',
@@ -110,72 +102,42 @@ export default {
       flex-wrap: nowrap
     button
       border: none
-      $background-normal-color: #aaaaaa
-      $background-hover-color: #dcdcdc
-      @include switch-category-transition(#aaaaaa, #dcdcdc)
+      &.all
+        $background-normal-color: #4c83c3
+        $background-hover-color: #80b2f6
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.school
+        $background-normal-color: #f44336
+        $background-hover-color: #ff7961
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.speech
+        $background-normal-color: #9c27b0
+        $background-hover-color: #d05ce3
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.enrollment
+        $background-normal-color: #2196f3
+        $background-hover-color: #6ec6ff
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.recruitment
+        $background-normal-color: #4caf50
+        $background-hover-color: #80e27e
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.scholarship
+        $background-normal-color: #fdd835
+        $background-hover-color: #ffeb3b
+        @include switch-category-transition($background-normal-color, $background-hover-color)
+      &.others
+        $background-normal-color: #ff9800
+        $background-hover-color: #ffc947
+        @include switch-category-transition($background-normal-color, $background-hover-color)
   .list
     display: flex
-    width: 100vw
     flex-direction: column
     margin: 0px auto
-    .event
-      background: rgba(255, 255, 255, 0.9)
-      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4)
-      position: relative
-      display: flex
-      margin: 0px auto 15px
-      transition: box-shadow .2s
-      border-radius: 4px
-      text-decoration: none
-      @include breakpoint(pc)
-        height: 75px
-        width: 80%
-        &:hover
-          box-shadow: 6px 12px 30px rgba(0, 0, 0, 0.6)
-      @include breakpoint(mobile)
-        height: 60px
-        width: 95%
-      .type
-        background: $main-color
-        display: flex
-        align-items: center
-        justify-content: center
-        font-family: 'Noto Sans TC', sans-serif
-        border-radius: 4px 0px 0px 4px
-        color: white
-        @include breakpoint(pc)
-          flex: 100px
-        @include breakpoint(mobile)
-          flex: 50px
-          padding: 9px
-      .title
-        flex: 999
-        padding: 10px
-        color: black
-        text-align: left
-        font-family: 'Noto Sans TC', sans-serif
-        text-overflow: ellipsis
-        overflow: hidden
-        display: -webkit-box
-        -webkit-line-clamp: 2
-        -webkit-box-orient: vertical
-        font-weight: 500
-        @include breakpoint(pc)
-          font-size: 1.2em
-          line-height: 1.5em
-          height: 3.2em
-        @include breakpoint(mobile)
-          font-size: 1em
-          line-height: 1.2em
-          height: 3em
-      .date
-        @include breakpoint(pc)
-          padding: 10px
-          flex: 100px
-          color: gray
-          font-family: 'Noto Sans TC', sans-serif
-        @include breakpoint(mobile)
-          display: none
+    @include breakpoint(pc)
+      width: 80vw
+    @include breakpoint(mobile)
+      width: 95vw
   .panigation
     display: flex
     @include breakpoint(pc)
