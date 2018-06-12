@@ -20,15 +20,14 @@ export default {
 }
 </script>
 
-
 <style lang="sass" scoped>
 #Performance
   display: flex
-  flex-wrap: wrap
   justify-content: center
   margin: 0px auto
   @include breakpoint(pc)
     width: 80vw
   @include breakpoint(mobile)
+    flex-wrap: wrap
     width: 100vw
 </style>

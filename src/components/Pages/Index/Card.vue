@@ -21,8 +21,8 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-$pc-width: 80vw
-$pc-height: 300px
+$pc-width: 100%
+$pc-height: 400px
 
 $mobile-width: 100%
 $mobile-height: 200px
@@ -33,7 +33,7 @@ $mobile-height: 200px
   text-decoration: none
   @include breakpoint(pc)
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-    margin: 10px 0px
+    margin: 10px 10px
     width: $pc-width
     height: $pc-height
     box-shadow: 0 0 10px rgba(0, 0, 0, .6)
