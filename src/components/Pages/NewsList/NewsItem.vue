@@ -17,7 +17,7 @@ const newsCategory = {
     hover: "#d05ce3"
   },
   enrollment: {
-    name: "newsCategory.enrollment",
+    name: "newsCategory.admission",
     color: "#2196f3",
     hover: "#6ec6ff"
 

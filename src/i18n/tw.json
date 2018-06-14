@@ -2,27 +2,29 @@
   "nav": {
     "news": "最新消息",
     "about_us": "系所簡介",
-    "重要記事": "重要記事",
-    "願景與策略": "願景與策略",
+    "history": "重要記事",
+    "mission_of_teaching": "願景與策略",
     "faculty_and_staff": "師資陣容",
     "project": "計畫成果",
-    "學年度": "學年度",
+    "academic_year": "學年度",
     "events": "活動花絮",
-    "戲劇公演": "戲劇公演"
+    "drama_performance": "戲劇公演"
+  },
+  "staff": {
+    "full_time_professors": "專任師資",
+    "part_time_professors": "兼任師資",
+    "chairperson": "歷屆系主任",
+    "staff": "行政人員",
+    "advisor": "各班導師"
   },
   "newsCategory": {
+    "all": "全部新聞",
     "school": "校內公告",
     "speech": "活動演講",
-    "enrollment": "招生資訊",
+    "admission": "招生資訊",
     "recruitment": "企業徵才",
     "scholarship": "獎助學金",
     "others": "其他訊息"
-  },
-  "panigation": {
-    "first": "第一頁",
-    "previous": "上一頁",
-    "next": "下一頁",
-    "last": "最後一頁"
   },
   "footer": {
     "departmentName": "淡江大學俄國語文學系",

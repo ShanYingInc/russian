@@ -1,26 +1,30 @@
 {
-  "test": "test",
   "nav": {
     "news": "News",
     "about_us": "About Us",
+    "history": "History",
+    "mission_of_teaching": "Mission of Teaching",
     "faculty_and_staff": "Faculty & Staff",
     "project": "Project",
+    "academic_year": "Academic Year",
     "events": "Events",
-    "international_activity": "International Activity"
+    "drama_performance": "Drama Performance"
+  },
+  "staff": {
+    "full_time_professors": "Full Time Professors",
+    "part_time_professors": "Part Time Professors",
+    "chairperson": "Chairperson",
+    "staff": "Staff",
+    "advisor": "Advisor"
   },
   "newsCategory": {
+    "all": "All News",
     "school": "校內公告",
     "speech": "活動演講",
-    "enrollment": "招生資訊",
+    "admission": "Admission",
     "recruitment": "企業徵才",
     "scholarship": "獎助學金",
     "others": "其他訊息"
-  },
-  "panigation": {
-    "first": "First Page",
-    "previous": "Previous Page",
-    "next": "Next Page",
-    "last": "Last Page"
   },
   "footer": {
     "departmentName": "淡江大學俄國語文學系",

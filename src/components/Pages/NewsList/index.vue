@@ -4,31 +4,31 @@
     button.all(
       type="button",
       @click="switchCategory(`all`)"
-    ) 全部新聞
+    ) {{ $t('newsCategory.all') }}
     button.school(
       type="button",
       @click="switchCategory(`school`)"
-    ) 校內公告
+    ) {{ $t('newsCategory.school') }}
     button.speech(
       type="button",
       @click="switchCategory(`speech`)"
-    ) 活動演講
+    ) {{ $t('newsCategory.speech') }}
     button.enrollment(
       type="button",
       @click="switchCategory(`enrollment`)"
-    ) 招生資訊
+    ) {{ $t('newsCategory.admission') }}
     button.recruitment(
       type="button",
       @click="switchCategory(`recruitment`)"
-    ) 企業徵才
+    ) {{ $t('newsCategory.recruitment') }}
     button.scholarship(
       type="button",
       @click="switchCategory(`scholarship`)"
-    ) 獎助學金
+    ) {{ $t('newsCategory.scholarship') }}
     button.others(
       type="button",
       @click="switchCategory(`others`)"
-    ) 其他訊息
+    ) {{ $t('newsCategory.others') }}
   .list
     NewsItem(
       v-for="newsItem in filterList",

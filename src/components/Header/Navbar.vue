@@ -30,12 +30,12 @@
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Introduction/Important"
-            ) 重要記事
+            ) {{ $t('nav.history') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Introduction/Vision"
-            ) 願景及策略
+            ) {{ $t('nav.mission_of_teaching') }}
         li.nav-item.dropdown
           a#nav2.nav-link.active.dropdown-toggle(
             href='#',
@@ -49,27 +49,27 @@
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Staff/Fulltime"
-            ) 專任師資
+            ) {{ $t('staff.full_time_professors') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Staff/Parttime"
-            ) 兼任師資
+            ) {{ $t('staff.part_time_professors') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Staff/Director"
-            ) 歷屆系主任
+            ) {{ $t('staff.chairperson') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Staff/Administrative"
-            ) 行政人員
+            ) {{ $t('staff.staff') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Staff/Tutor"
-            ) 各班導師
+            ) {{ $t('staff.advisor') }}
         li.nav-item.dropdown(
           v-for="(nav, index) in navigations",
           :key="index",
@@ -105,7 +105,7 @@
               v-for="year in teachingExcellenceYears",
               :key="year",
               :to="`/TeachingExcellenceList/` + year"
-            ) {{ year }}學年度
+            ) {{ year }} {{ $t('nav.academic_year') }}
         li.nav-item.dropdown
           a#nav4.nav-link.active.dropdown-toggle(
             href='#',
@@ -119,12 +119,12 @@
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/eventHighlignt"
-            ) 活動花絮
+            ) {{ $t('nav.events') }}
             router-link.dropdown-item(
               data-toggle="collapse",
               data-target="#navbarNav.show",
               to="/Performance"
-            ) 戲劇公演
+            ) {{ $t('nav.drama_performance') }}
 </template>
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'

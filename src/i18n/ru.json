@@ -1,26 +1,30 @@
 {
-  "test": "test ru",
   "nav": {
-    "news": "News",
-    "about_us": "About Us",
-    "faculty_and_staff": "Faculty & Staff",
-    "project": "Project",
-    "events": "Events",
-    "international_activity": "International Activity"
+    "news": "Новости",
+    "about_us": "О нас",
+    "history": "События",
+    "mission_of_teaching": "Миссия и стратегия",
+    "faculty_and_staff": "Наши преподаватели",
+    "project": "Наши проекты",
+    "academic_year": "-й учебный год",
+    "events": "Наши репортажи",
+    "drama_performance": "Выпускные спектакли"
+  },
+  "staff": {
+    "full_time_professors": "Профессора",
+    "part_time_professors": "Лекторы",
+    "chairperson": "Декан",
+    "staff": "Администраторы",
+    "advisor": "Кураторы"
   },
   "newsCategory": {
+    "all": "全部新聞",
     "school": "校內公告",
     "speech": "活動演講",
-    "enrollment": "招生資訊",
+    "admission": "Поступление",
     "recruitment": "企業徵才",
     "scholarship": "獎助學金",
     "others": "其他訊息"
-  },
-  "panigation": {
-    "first": "第一頁",
-    "previous": "上一頁",
-    "next": "下一頁",
-    "last": "最後一頁"
   },
   "footer": {
     "departmentName": "淡江大學俄國語文學系",
