@@ -56,14 +56,14 @@ $mobile-height: 200px
       border-radius: 5px
     @include breakpoint(mobile)
     .title
-      font-weight: 700
+      font-weight: 400
       line-height: 1.2em
       font-size: 2em
       text-align: left
       color: rgba(255, 255, 255, 1)
       letter-spacing: 3px
     .content
-      font-weight: 500
+      font-weight: 300
       line-height: 1.2em
       font-size: 1.5em
       text-align: left
