@@ -3,13 +3,11 @@
   .item
     router-link.btn.btn-link.btn-sm(
       to='/',
-      tabindex='-1',
       role='button'
     ) 回首頁
   .item
     a.btn.btn-link.btn-sm(
-      herf='http://www.tku.edu.tw/',
-      tabindex='-1',
+      href='http://www.tku.edu.tw/',
       role='button'
     ) 淡江大學
   .item
