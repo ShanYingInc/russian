@@ -15,10 +15,6 @@
       :class="{ active: index == 0 }"
     )
       img.d-block(:src="$api.rootLink + image.path", alt='First slide')
-      //- TODO: 完成底部標題
-      .carousel-caption.d-none.d-md-block(style="background: rgba(0, 0, 0, .3)")
-        h5 測試
-        p 測試
   a.carousel-control-prev(href='#carousel', role='button', data-slide='prev')
     span.carousel-control-prev-icon(aria-hidden='true')
     span.sr-only Previous
