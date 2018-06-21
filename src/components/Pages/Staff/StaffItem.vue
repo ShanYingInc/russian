@@ -32,7 +32,7 @@ export default {
   flex-direction: column
   z-index: 99
   padding: 20px
-  width: 300px
+  width: $staff-item-width
   margin: 0px auto 30px
   background: white
   break-inside: avoid

@@ -1,11 +1,11 @@
 <template lang="pug">
 #staff
   .switch
-    router-link(to="/Staff/Fulltime") 專任師資
-    router-link(to="/Staff/Parttime") 兼任師資
-    router-link(to="/Staff/Director") 歷屆系主任
-    router-link(to="/Staff/Administrative") 行政人員
-    router-link(to="/Staff/Tutor") 各班導師
+    router-link(to="/Staff/Fulltime") {{ $t('staff.full_time_professors') }}
+    router-link(to="/Staff/Parttime") {{ $t('staff.part_time_professors') }}
+    router-link(to="/Staff/Director") {{ $t('staff.chairperson') }}
+    router-link(to="/Staff/Administrative") {{ $t('staff.staff') }}
+    router-link(to="/Staff/Tutor") {{ $t('staff.advisor') }}
   transition-group.staff-container(name="fade")
     StaffItem(
       v-for='(staff, index) in filterList',
@@ -71,6 +71,6 @@ export default {
   .staff-container
     overflow: visible
     column-count: auto
-    column-width: 300px
-    column-gap: 0px
+    column-width: $staff-item-width
+    column-gap: 10px
 </style>
